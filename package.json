@@ -25,7 +25,7 @@
     "start": "NODE_ENV=production node server.js",
     "pretest": "eslint --ignore-path/ .gitignore .",
     "deploy": "now -e NODE_ENV=production --token $NOW_TOKEN --npm --public -T ofora",
-    "alias": "now alias fora-#TRAVIS_BRANCH --token=$NOW_TOKEN -T ofora"
+    "alias": "now alias fora-$TRAVIS_BRANCH --token=$NOW_TOKEN -T ofora"
   },
   "devDependencies": {
     "babel-eslint": "^8.2.2",
