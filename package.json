@@ -1,0 +1,61 @@
+{
+  "name": "fora",
+  "version": "1.0.0",
+  "description": "Fora website made with next.js and a headless CMS",
+  "main": "next",
+  "author": "Diogo Vianna",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.18.0",
+    "express": "^4.16.3",
+    "moment": "^2.22.0",
+    "next": "^5.1.0",
+    "nprogress": "^0.2.0",
+    "prismic-javascript": "^1.5.0-beta.2",
+    "prismic-reactjs": "^0.3.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-lazyload": "^2.3.0",
+    "react-responsive": "^4.1.0",
+    "recompose": "^0.26.0"
+  },
+  "scripts": {
+    "dev": "node server.js",
+    "build": "next build",
+    "start": "NODE_ENV=production node server.js",
+    "pretest": "eslint --ignore-path/ .gitignore .",
+    "deploy": "now -e NODE_ENV=production --token $NOW_TOKEN --npm --public -T brisa",
+    "alias": "now alias --token=$NOW_TOKEN -T brisa"
+  },
+  "devDependencies": {
+    "babel-eslint": "^8.2.2",
+    "babel-plugin-root-import": "^5.1.0",
+    "eslint": "^4.19.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-config-standard-react": "^6.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-react": "^7.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "i": "^0.3.6",
+    "npm": "^5.8.0"
+  },
+  "babel": {
+    "presets": [
+      "next/babel"
+    ],
+    "plugins": [
+      "babel-plugin-root-import"
+    ]
+  },
+  "now": {
+    "name": "fora",
+    "alias": [
+      "fora"
+    ],
+    "env": {
+      "NODE_ENV": "production"
+    }
+  }
+}
