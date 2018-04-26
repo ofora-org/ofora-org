@@ -24,7 +24,7 @@ export default class SliderTunnelImage extends React.Component {
       case 'story':
         return this.setState({photo: data.cover.cover ? data.cover.cover.url : data.cover.url})
       default:
-        return this.setState({photo: data.photos.length ? data.photos[Math.floor(Math.random() * data.photos.length)].photo.url : data.videos[0].video.thumbnail_url})
+        return this.setState({photo: data.photos.length ? data.photos[Math.floor(Math.random() * data.photos.length)].photo.cover.url : data.videos[0].video.thumbnail_url})
     }
   }
 
