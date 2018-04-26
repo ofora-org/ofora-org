@@ -12,11 +12,11 @@ export default class Footer extends React.Component {
           <P>
             <div className='contactText'>
               <div>Antes de dar o Fora, se quiser tirar dúvidas, dar sugestões ou colaborar, escreva para:</div>
-              <div><MenuLink style={linkStyle} href={{ pathname: '/o-que-e' }}>info@ofora.org</MenuLink></div>
+              <div><MenuLink href={{ pathname: '/o-que-e' }}>info@ofora.org</MenuLink></div>
             </div>
           </P>
         </ContentWrapper>
-        <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt_BR'>
+        <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt_BR' target='_blank'>
           <CC style={ccText} /><span style={ccText}>Todo o conteúdo produzido pelo Fora pode ser copiado, redistribuído e transformado para fins não comerciais, desde que atribuam o devido crédito e que licenciem as novas criações sob termos idênticos.</span>
         </a>
         <style jsx>{`
@@ -42,22 +42,11 @@ export default class Footer extends React.Component {
   }
 }
 const ccText = {
-  fontSize: 11,
-  fontFamily: 'IntervalBook, monospace',
+  fontSize: 12,
+  fontFamily: "'Source Sans Pro', sans-serif",
   maxWidth: 300,
   display: 'inline-block',
   verticalAlign: 'top',
   marginLeft: 10,
   lineHeight: '1.3em'
-}
-
-const contactTextStyle = {
-  fontSize: 29,
-  fontFamily: "'Source Serif Pro', serif",
-  fontWeight: 600,
-  margin: '80px 0 50px 0'
-}
-
-const linkStyle = {
-  fontSize: 26
 }
