@@ -14,7 +14,7 @@ export default class SignupForm extends React.Component {
           <p style={textStyle}>Digite aqui seu e-mail e aperte ENTER para ficar por dentro do Fora:</p>
           <input type='text' style={inputStyle} onKeyDown={this.handleKeyDown} />
           {this.state.success && <p style={textStyle}>Seu e-mail foi adicionado com sucesso.</p>}
-          {this.state.error && <p style={{...textStyle, color: 'red'}}>O e-mail inserido não é valido.</p>}
+          {this.state.error && <p style={{...textStyle, color: 'red'}}>Esse e-mail não é válido. Quer tentar de novo?</p>}
         </div>
       </div>
     )
@@ -57,11 +57,11 @@ const wrapperStyle = {
   position: 'absolute',
   left: '50%',
   right: 0,
-  bottom: '50%',
+  top: '50%',
   width: '80%',
   minWidth: 200,
   maxWidth: 800,
-  transform: 'translateX(-50%)',
+  transform: 'translate3d(-50%, -180px, 0)',
   color: 'rgb(0,17,254)'
 }
 
