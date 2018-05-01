@@ -17,7 +17,7 @@ export default class Footer extends React.Component {
           </P>
         </ContentWrapper>
         <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt_BR' target='_blank'>
-          <CC style={ccText} /><span style={ccText}>Todo o conteúdo produzido pelo Fora pode ser copiado, redistribuído e transformado para fins não comerciais, desde que atribuam o devido crédito e que licenciem as novas criações sob termos idênticos.</span>
+          <CC style={ccText} /><span style={ccText}>Todo o conteúdo produzido pelo Fora pode ser copiado, redistribuído e transformado para fins não comerciais, desde que atribuam o devido crédito e que licenciem as novas criações sob termos idênticos. (CC BY-NC-SA 4.0)</span>
         </a>
         <style jsx>{`
           .contactText {
