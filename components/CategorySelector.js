@@ -18,6 +18,7 @@ export default class CategorySelector extends React.Component {
           @media only screen and (min-width: 752px) {
             div {
               font-size: 41px;
+              max-width: 790px;
             }
           }
         `}</style>
