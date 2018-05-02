@@ -32,8 +32,8 @@ export const ImageGalery = ({
       />
     }
     <div style={{position: 'absolute', top: 0, right: 0}}>
-      {photos.length > 1 && <MenuLink onClick={togglePhotoModal} style={{marginRight: 20}}>Ver imagens</MenuLink>}
-      {videos.length > 1 || (videos.length === 1 && photos.length > 0) ? <MenuLink onClick={toggleVideoModal}>Ver vídeos</MenuLink> : null}
+      {photos.length > 1 && <MenuLink onClick={togglePhotoModal}>Ver imagens</MenuLink>}
+      {videos.length > 1 || (videos.length === 1 && photos.length > 0) ? <MenuLink onClick={toggleVideoModal} style={{marginLeft: 20}}>Ver vídeos</MenuLink> : null}
     </div>
     <GalleryModal
       items={photos}
