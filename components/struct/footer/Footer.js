@@ -48,5 +48,6 @@ const ccText = {
   display: 'inline-block',
   verticalAlign: 'top',
   marginLeft: 10,
+  marginTop: 4,
   lineHeight: '1.3em'
 }

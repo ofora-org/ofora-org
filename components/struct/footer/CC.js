@@ -6,8 +6,8 @@ const CC = ({style}) => (
     version={1.0}
     x='0px'
     y='0px'
-    width='64px'
-    height='64px'
+    width='30px'
+    height='30px'
     viewBox='5.5 -3.5 64 64'
     enableBackground='new 5.5 -3.5 64 64'
     xmlSpace='preserve'
