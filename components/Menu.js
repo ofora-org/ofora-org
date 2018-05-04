@@ -20,10 +20,10 @@ export default class Menu extends React.Component {
           <MenuLink href={{ pathname: '/o-que-e' }}>O que é;</MenuLink>{' '}
           <MenuLink href={{ pathname: '/acoes' }}>Ações & imaginações;</MenuLink>
         </div>
-        <div style={secondaryMenuWrapperStyle}>
-          <MenuLink onClick={toggleSignup}>Informativo;</MenuLink>
-        </div>
         <div style={socialMenuWrapperStyle}>
+          <div style={secondaryMenuWrapperStyle}>
+            <MenuLink onClick={toggleSignup}>Informativo;</MenuLink>
+          </div>
           <MenuLink href={{ pathname: 'https://www.facebook.com/Fora-330807067434593/' }} >Facebook;</MenuLink>{' '}
           <MenuLink href={{ pathname: 'https://twitter.com/foraofora' }}>Twitter;</MenuLink>{' '}
           <MenuLink href={{ pathname: 'https://www.instagram.com/foraofora/' }} >Instagram;</MenuLink>{' '}
@@ -55,10 +55,6 @@ const mainMenuWrapperStyle = {
 }
 
 const secondaryMenuWrapperStyle = {
-  position: 'fixed',
-  right: 20,
-  top: '50%',
-  transform: 'translateY(-50%)',
   textAlign: 'right',
   fontWeight: 600
 }
