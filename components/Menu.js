@@ -2,19 +2,17 @@ import React from 'react'
 import Modal from '~/components/struct/Modal'
 import MenuLink from './MenuLink'
 import SignupForm from './SignupForm'
-import SiteMap from '~/components/SiteMap'
 
 export default class Menu extends React.Component {
   state = {
-    showSignup: false,
-    showSitemap: false
+    showSignup: false
   }
 
   render () {
     const {
-      props, state, handleMenuMouseEnter, handleMenuMouseLeave, toggleSignup, toggleSitemap
+      props, state, toggleSignup
     } = this
-    const { showSignup, showSitemap, background } = state
+    const { showSignup, background } = state
     const { visible, onBgClick } = props
     return (
       <Modal visible={visible} style={{ ...menuModalStyle, backgroundImage: background }} onBgClick={onBgClick}>
@@ -23,7 +21,6 @@ export default class Menu extends React.Component {
           <MenuLink href={{ pathname: '/acoes' }}>Ações & imaginações;</MenuLink>
         </div>
         <div style={secondaryMenuWrapperStyle}>
-          <MenuLink onClick={toggleSitemap}>Mapa do site;</MenuLink><br />
           <MenuLink onClick={toggleSignup}>Informativo;</MenuLink>
         </div>
         <div style={socialMenuWrapperStyle}>
@@ -35,15 +32,11 @@ export default class Menu extends React.Component {
         <Modal visible={showSignup} onBgClick={this.toggleSignup}>
           <SignupForm />
         </Modal>
-        <Modal visible={showSitemap} onBgClick={this.toggleSitemap}>
-          <SiteMap />
-        </Modal>
       </Modal>
     )
   }
 
   toggleSignup = (event) => this.setState({ showSignup: !this.state.showSignup })
-  toggleSitemap = (event) => this.setState({ showSitemap: !this.state.showSitemap })
 }
 
 const menuModalStyle = {
@@ -57,7 +50,8 @@ const menuModalStyle = {
 const mainMenuWrapperStyle = {
   position: 'fixed',
   left: 175,
-  top: 21
+  top: 21,
+  fontWeight: 600
 }
 
 const secondaryMenuWrapperStyle = {
@@ -65,11 +59,13 @@ const secondaryMenuWrapperStyle = {
   right: 20,
   top: '50%',
   transform: 'translateY(-50%)',
-  textAlign: 'right'
+  textAlign: 'right',
+  fontWeight: 600
 }
 
 const socialMenuWrapperStyle = {
   position: 'fixed',
   right: 20,
-  bottom: 20
+  bottom: 20,
+  fontWeight: 600
 }

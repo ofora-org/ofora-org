@@ -3,22 +3,28 @@ import ContentWrapper from '~/components/struct/ContentWrapper'
 import P from '~/components/base/Paragraph'
 import MenuLink from '~/components/MenuLink'
 import CC from './CC'
+import SiteMap from '~/components/SiteMap'
 
 export default class Footer extends React.Component {
   render () {
     return (
       <div>
-        <ContentWrapper>
+        <div style={{background: 'rgb(223,223,223)'}}>
           <P>
             <div className='contactText'>
               <div>Antes de dar o Fora, se quiser tirar dúvidas, dar sugestões ou colaborar, escreva para:</div>
               <div><MenuLink href={{ pathname: '/o-que-e' }}>info@ofora.org</MenuLink></div>
             </div>
           </P>
+        </div>
+        <ContentWrapper style={{background: 'rgb(207,207,207)'}}>
+          <SiteMap />
         </ContentWrapper>
-        <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt_BR' target='_blank'>
-          <CC style={ccText} /><span style={ccText}>Todo o conteúdo produzido pelo Fora pode ser copiado, redistribuído e transformado para fins não comerciais, desde que atribuam o devido crédito e que licenciem as novas criações sob termos idênticos. (CC BY-NC-SA 4.0)</span>
-        </a>
+        <ContentWrapper  style={{background: 'rgb(207,207,207)'}}>
+          <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt_BR' target='_blank'>
+            <CC style={ccText} /><span style={ccText}>Todo o conteúdo produzido pelo Fora pode ser copiado, redistribuído e transformado para fins não comerciais, desde que atribuam o devido crédito e que licenciem as novas criações sob termos idênticos. (CC BY-NC-SA 4.0)</span>
+          </a>
+        </ContentWrapper>
         <style jsx>{`
           .contactText {
             font-size: 24px;
@@ -33,7 +39,7 @@ export default class Footer extends React.Component {
           @media only screen and (min-width: 752px) {
             .contactText {
               font-size: 29px;
-              margin: 80px 0 50px 0;
+              margin: 50px 0 50px 0;
             }
           }
         `}</style>

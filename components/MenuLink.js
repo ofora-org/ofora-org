@@ -31,8 +31,7 @@ export default class MenuLink extends React.Component {
 }
 const wrapperStyle = {
   position: 'relative',
-  display: 'inline-block',
-  fontWeight: 600
+  display: 'inline-block'
 }
 const menuTextStyle = {
   textDecoration: 'none',

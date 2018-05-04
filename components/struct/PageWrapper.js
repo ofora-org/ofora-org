@@ -11,9 +11,7 @@ export default class PageWrapper extends React.Component {
         <Head {...this.props} />
         <LogoWithMenu invert={this.props.invert} />
         {this.props.children}
-        <ContentWrapper style={{background: 'white'}}>
-          <Footer />
-        </ContentWrapper>
+        <Footer />
       </div>
     )
   }
