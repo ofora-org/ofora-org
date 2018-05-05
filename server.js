@@ -31,7 +31,7 @@ app.prepare()
       axios({
         method: 'POST',
         url: 'https://us12.api.mailchimp.com/3.0/lists/653ed43bc3/members',
-        headers: {Authorization: 'apikey 1abb2200ade55136563d9674145b25ee-us12'},
+        headers: {Authorization: 'apikey '+apiKey},
         data: {
           "email_address": req.params.email,
           "status": "subscribed"
