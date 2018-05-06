@@ -23,11 +23,10 @@ export default class SignupForm extends React.Component {
   handleKeyDown = (e) => {
     const self = this
     if (e.keyCode !== 13) return
-    if (!validateEmail(e.target.value)) return self.setState({
-      success: false,
-      error: true
-    })
-
+    if (!validateEmail(e.target.value)) {
+      return self.setState({ success: false, error: true})
+    }
+    self.setState({ success: false, error: false })
     axios.post('/signup/' + e.target.value, {
     })
       .then(function (response) {
