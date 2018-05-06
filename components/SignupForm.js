@@ -30,18 +30,13 @@ export default class SignupForm extends React.Component {
     axios.post('/signup/' + e.target.value, {
     })
       .then(function (response) {
-        self.setState({
-          success: true,
-          error: false
-        })
+        self.setState({ success: true, error: false })
+        e.target.value = ''
       })
       .catch(function (error) {
         if (error) {
           console.log('mailchimp request error')
-          self.setState({
-            error: true,
-            success: false
-          })
+          self.setState({ error: true, success: false })
         }
       })
   }
