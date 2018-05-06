@@ -24,7 +24,7 @@
     "build": "next build",
     "start": "NODE_ENV=production node server.js",
     "pretest": "eslint --ignore-path/ .gitignore .",
-    "deploy": "now -e NODE_ENV=production --token $NOW_TOKEN --npm --public -T ofora",
+    "deploy": "now -e NODE_ENV=production -e MAILCHIMP_K=$MAILCHIMP_K --token $NOW_TOKEN --npm --public -T ofora",
     "alias": "now alias fora-$TRAVIS_BRANCH --token=$NOW_TOKEN -T ofora"
   },
   "devDependencies": {
