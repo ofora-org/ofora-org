@@ -41,7 +41,7 @@ app.prepare()
         res.send('success')
       })
       .catch(function (error) {
-        res.status(500)
+        res.status(500).send('error')
         console.log(error);
       });
     });
