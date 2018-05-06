@@ -41,10 +41,11 @@ app.prepare()
         res.send('success')
       })
       .catch(function (error) {
+        res.status(500)
         console.log(error);
       });
     });
-    
+
     server.get('*', (req, res) => {
       return handle(req, res)
     })
