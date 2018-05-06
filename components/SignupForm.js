@@ -38,6 +38,7 @@ export default class SignupForm extends React.Component {
       })
       .catch(function (error) {
         if (error) {
+          console.log('mailchimp request error')
           self.setState({
             error: true,
             success: false
