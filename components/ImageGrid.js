@@ -9,9 +9,9 @@ export default class ImageGrid extends React.Component {
       <div style={{overflow: 'hidden'}}>
         <div style={wrapperStyle}>
           {this.renderItems()}
-          <div style={{ width: 250, margin: '0 2%' }} />
-          <div style={{ width: 250, margin: '0 2%' }} />
-          <div style={{ width: 250, margin: '0 2%' }} />
+          <div style={{ width: 280, margin: '0 1.3%' }} />
+          <div style={{ width: 280, margin: '0 1.3%' }} />
+          <div style={{ width: 280, margin: '0 1.3%' }} />
         </div>
       </div>
     )
