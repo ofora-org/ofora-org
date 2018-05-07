@@ -9,7 +9,7 @@ export default class CustomLink extends React.Component {
     }
     if (!href) return null
     return (
-      <Link href={href} prefetch>
+      <Link href={href}>
         <a style={{ ...linkStyle, ...style }} target={(/^(f|ht)tps?:\/\//i.test(href.pathname)) && '_blank'}>
           {children}
         </a>
