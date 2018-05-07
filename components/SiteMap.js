@@ -1,16 +1,10 @@
 import React from 'react'
 import MenuLink from '~/components/MenuLink'
 
-const rootStyle = {
-  display: 'flex',
-  width: '60%',
-  justifyContent: 'space-evenly',
-}
-
 const SiteMap = ({style}) => (
   <div className='wrapper'>
     <div><span style={{margin: '0 60px 60px'}}>/Mapa do Site</span><br /><br /><br /></div>
-    <div style={{...rootStyle, ...style}}>
+    <div className='content' style={style}>
       <div>
         <div>
           <MenuLink href={{ pathname: '/o-que-e' }} >O que é</MenuLink>
@@ -38,6 +32,15 @@ const SiteMap = ({style}) => (
         font-size: 16px;
         line-height: 1.25;
         margin-bottom: 20px;
+      }
+      .content {
+        display: flex;
+      }
+      .content > div {
+        width: 50%;
+      }
+      @media only screen and (min-width: 752px) {
+        .content { width: 600px; margin: 0 auto; }
       }
     `}</style>
   </div>

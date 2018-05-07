@@ -30,7 +30,7 @@ export default class Footer extends React.Component {
             font-size: 24px;
             font-family: 'Source Serif Pro', serif;
             font-weight: 600;
-            margin: 40px 0 50px 0;
+            margin: 40px 10px 50px 10px;
           }
           a:hover {
             color: blue;

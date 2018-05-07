@@ -12,7 +12,7 @@ export default class ImageGridItem extends React.Component {
     const types = { article: 'artigo', story: 'materia', pictures_and_video: 'fotoevideo' }
 
     return (
-      <div style={wrapperStyle} className='image-grid-item'>
+      <div className='image-grid-item'>
         <Link href={{ pathname: `/acoes/${types[type]}/${id}/${this.props.slugs[0]}` }}>
           <div style={imageStackStyle}>
             {this.renderPhotos()}
@@ -24,11 +24,30 @@ export default class ImageGridItem extends React.Component {
           </h3>
         </Link>
         <style jsx global>{`
+          .image-grid-item {
+            width: 300px;
+            margin: 0 auto 50px;
+          }
           .image-grid-item:hover {
             color: rgb(0,17,254);
           }
-          .image-grid-item:hover img {
-            -webkit-filter: grayscale(1)
+          @media only screen and (min-width: 600px) {
+            .image-grid-item {
+              width: 220px;
+              margin: 0 5px 50px;
+            }
+          }
+          @media only screen and (min-width: 752px) {
+            .image-grid-item { width: 200px; }
+          }
+          @media only screen and (min-width: 980px) {
+            .image-grid-item { width: 210px; }
+          }
+          @media only screen and (min-width: 1100px) {
+            .image-grid-item { width: 240px; }
+          }
+          @media only screen and (min-width: 1280px) {
+            .image-grid-item { width: 280px; }
           }
         `}</style>
       </div>
@@ -62,10 +81,6 @@ export default class ImageGridItem extends React.Component {
 
 const itemWidth = 280
 
-const wrapperStyle = {
-  width: itemWidth,
-  margin: '0 1.3% 20px'
-}
 const headerStyle = {
   fontFamily: 'IntervalBook, monospace',
   fontSize: 13,
@@ -73,8 +88,7 @@ const headerStyle = {
   lineHeight: '1.3em'
 }
 const imageStackStyle = {
-  width: itemWidth,
-  height: itemWidth * 0.85,
+  paddingBottom: '85%',
   position: 'relative'
 }
 const imageWrapperStyle = {

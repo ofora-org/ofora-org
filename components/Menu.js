@@ -34,6 +34,7 @@ export default class Menu extends React.Component {
           .menu {
             font-weight: 600;
             position: fixed;
+            font-size: 31px;
           }
           .mainMenu {
             top: 120px; left: 7px;
@@ -44,9 +45,8 @@ export default class Menu extends React.Component {
             text-align: right;
           }
           @media only screen and (min-width: 752px) {
-            .mainMenu {
-              top: 21px; left: 175px;
-            }
+            .menu { font-size: 41px }
+            .mainMenu { top: 21px; left: 175px; }
           }
         `}</style>
       </Modal>
