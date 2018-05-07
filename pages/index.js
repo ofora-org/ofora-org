@@ -15,13 +15,13 @@ export default class Index extends React.Component {
   }
 
   componentDidMount() {
-
+    document.getElementById('index-loader').style.opacity = '1';
   }
 
   render () {
     const { title, documents } = this.props
     return (
-      <div>
+      <div id='index-loader' style={{opacity: 0}}>
         <LogoWithMenu animation='pulse' slogan={title} />
         <Head />
         <SliderTunnel documents={documents} />

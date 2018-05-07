@@ -88,3 +88,35 @@ div {
   0%   { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
+
+
+/* Fonts */
+
+@font-face {
+    font-family: 'IntervalBold';
+    src: url('/static/fonts/interval/interval_bold-webfont.woff2') format('woff2'),
+         url('/static/fonts/interval/interval_bold-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'IntervalSlanted';
+    src: url('/static/fonts/interval/interval_slanted-webfont.woff2') format('woff2'),
+         url('/static/fonts/interval/interval_slanted-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'IntervalBook';
+    src: url('/static/fonts/interval/interval-webfont.woff2') format('woff2'),
+         url('/static/fonts/interval/interval-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'IntervalBoldSlanted';
+    src: url('/static/fonts/interval/interval_bold_slanted-webfont.woff2') format('woff2'),
+         url('/static/fonts/interval/interval_bold_slanted-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
