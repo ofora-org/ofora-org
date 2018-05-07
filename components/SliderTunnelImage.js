@@ -54,7 +54,7 @@ export default class SliderTunnelImage extends React.Component {
           ...baseStyle,
           left: `${xOffset}%`,
           top: `${yOffset}%`,
-          transform: 'translate3d(-50%, -50%, 10000px)',
+          transform: 'translate3d(-50%, -50%, 7000px)',
           transition: '0.8s opacity',
           opacity: 0
         }

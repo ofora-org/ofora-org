@@ -14,6 +14,10 @@ export default class Index extends React.Component {
     return { title, documents }
   }
 
+  componentDidMount() {
+
+  }
+
   render () {
     const { title, documents } = this.props
     return (

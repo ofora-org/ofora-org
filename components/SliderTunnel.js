@@ -11,9 +11,9 @@ export default class SliderTunnel extends React.Component {
 
   componentDidMount () {
     this.setState({shufledDocuments: shuffleArray(this.props.documents)})
-    setTimeout(this.renderNextImage(), 100)
-    setTimeout(this.renderNextImage(), 110)
-    setTimeout(this.renderNextImage(), 130)
+    setTimeout(this.renderNextImage(), 10)
+    setTimeout(this.renderNextImage(), 20)
+    setTimeout(this.renderNextImage(), 30)
     setInterval(this.renderNextImage, 2000)
   }
 
