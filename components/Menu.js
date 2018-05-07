@@ -16,14 +16,12 @@ export default class Menu extends React.Component {
     const { visible, onBgClick } = props
     return (
       <Modal visible={visible} style={{ ...menuModalStyle, backgroundImage: background }} onBgClick={onBgClick}>
-        <div style={mainMenuWrapperStyle}>
+        <div className='menu mainMenu'>
           <MenuLink href={{ pathname: '/o-que-e' }}>O que é;</MenuLink>{' '}
           <MenuLink href={{ pathname: '/acoes' }}>Ações & imaginações;</MenuLink>
         </div>
-        <div style={socialMenuWrapperStyle}>
-          <div style={secondaryMenuWrapperStyle}>
-            <MenuLink onClick={toggleSignup}>Informativo;</MenuLink>
-          </div>
+        <div className='menu secondaryMenu'>
+          <div><MenuLink onClick={toggleSignup}>Informativo;</MenuLink></div>
           <MenuLink href={{ pathname: 'https://www.facebook.com/Fora-330807067434593/' }} >Facebook;</MenuLink>{' '}
           <MenuLink href={{ pathname: 'https://twitter.com/foraofora' }}>Twitter;</MenuLink>{' '}
           <MenuLink href={{ pathname: 'https://www.instagram.com/foraofora/' }} >Instagram;</MenuLink>{' '}
@@ -32,6 +30,25 @@ export default class Menu extends React.Component {
         <Modal visible={showSignup} onBgClick={this.toggleSignup}>
           <SignupForm />
         </Modal>
+        <style jsx>{`
+          .menu {
+            font-weight: 600;
+            position: fixed;
+          }
+          .mainMenu {
+            top: 120px; left: 7px;
+          }
+          .secondaryMenu {
+            bottom: 20px;
+            right: 7px;
+            text-align: right;
+          }
+          @media only screen and (min-width: 752px) {
+            .mainMenu {
+              top: 21px; left: 175px;
+            }
+          }
+        `}</style>
       </Modal>
     )
   }
@@ -45,23 +62,4 @@ const menuModalStyle = {
   fontFamily: "'Source Serif Pro', serif",
   fontSize: 40,
   zIndex: 10
-}
-
-const mainMenuWrapperStyle = {
-  position: 'fixed',
-  left: 175,
-  top: 21,
-  fontWeight: 600
-}
-
-const secondaryMenuWrapperStyle = {
-  textAlign: 'right',
-  fontWeight: 600
-}
-
-const socialMenuWrapperStyle = {
-  position: 'fixed',
-  right: 20,
-  bottom: 20,
-  fontWeight: 600
 }
