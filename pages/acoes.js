@@ -24,11 +24,11 @@ export default class pageAcoes extends React.Component {
     return (
       <PageWrapper title='Ações & imaginações' style={{ background: '#DFDFDF' }}>
         <ContentWrapper>
-          <div style={filtersWrapperStyle}>
+          <div className='filterLine'>
             <Title>/Ações & imaginações:</Title>
             <Link href={{ pathname: '/acoes/tags' }}>Palavras-chave;</Link>
           </div>
-          <div style={{...filtersWrapperStyle, marginBottom: 50}}>
+          <div  className='filterLine' style={{marginBottom: 50}}>
             <CategorySelector
               categories={categories}
               selected={selectedCategory || initialCategory}
@@ -38,6 +38,21 @@ export default class pageAcoes extends React.Component {
           </div>
           <ImageGrid items={documents} category={selectedCategory || initialCategory} />
         </ContentWrapper>
+        <style jsx>{`
+          .filterLine {
+            justify-content: space-between;
+            font-family: 'Source Serif Pro', serif;
+            font-weight: 600;
+            align-items: flex-start;
+            font-size: 29px;
+          }
+          @media only screen and (min-width: 752px) {
+            .filterLine {
+              font-size: 41px;
+              display: flex;
+            }
+          }
+        `}</style>
       </PageWrapper>
     )
   }
@@ -45,13 +60,4 @@ export default class pageAcoes extends React.Component {
   handleCategorySelection = (category) => {
     this.setState({ selectedCategory: category })
   }
-}
-
-const filtersWrapperStyle = {
-  display: 'flex',
-  justifyContent: 'space-between',
-  fontFamily: "'Source Serif Pro', serif",
-  fontWeight: 600,
-  fontSize: 41,
-  alignItems: 'flex-start'
 }

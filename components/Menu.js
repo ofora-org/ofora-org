@@ -34,7 +34,7 @@ export default class Menu extends React.Component {
           .menu {
             font-weight: 600;
             position: fixed;
-            font-size: 31px;
+            font-size: 29px;
           }
           .mainMenu {
             top: 120px; left: 7px;

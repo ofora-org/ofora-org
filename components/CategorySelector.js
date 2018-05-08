@@ -13,7 +13,7 @@ export default class CategorySelector extends React.Component {
           div {
             font-family: 'Source Serif Pro', serif;
             font-weight: 600;
-            font-size: 33px;
+            font-size: 29px;
           }
           @media only screen and (min-width: 752px) {
             div {

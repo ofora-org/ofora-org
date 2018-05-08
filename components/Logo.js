@@ -60,9 +60,15 @@ class LogoSvg extends React.Component {
         />
         <style jsx>{`
           svg {
-            width: 114px;
-            height: 43px;
+            width: 76px;
+            height: 29px;
             margin-bottom: -2px;
+          }
+          @media only screen and (min-width: 752px) {
+            svg {
+              width: 114px;
+              height: 43px;
+            }
           }
         `}</style>
       </svg>

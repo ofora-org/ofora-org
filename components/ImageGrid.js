@@ -6,16 +6,17 @@ export default class ImageGrid extends React.Component {
   render () {
     if (!this.props.items) return null
     return (
-      <div>
+      <div className='root'>
         {this.renderItems()}
         <div className='image-grid-item' />
         <div className='image-grid-item' />
         <div className='image-grid-item' />
         <style jsx>{`
-          div {
+          .root {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            margin-top: 70px;
           }
         `}</style>
       </div>

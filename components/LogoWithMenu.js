@@ -34,11 +34,13 @@ class LogoWithMenu extends React.Component {
             top: 10px;
             left: 10px;
             max-width: 770px;
+            font-size: 29px;
           }
           @media only screen and (min-width: 752px) {
             .root {
               top: 18px;
               left: 29px;
+              font-size: 41px;
             }
           }
         `}</style>
@@ -56,7 +58,6 @@ class LogoWithMenu extends React.Component {
 const textStyle = {
   fontFamily: "'Source Serif Pro', serif",
   fontWeight: 600,
-  fontSize: 40,
   padding: 10
 }
 
