@@ -49,7 +49,7 @@ export default class Footer extends React.Component {
             }
             .ccText {
               margin: 4px 0 0 10px;
-              max-width: 300px;
+              max-width: 400px;
               vertical-align: top;
             }
           }

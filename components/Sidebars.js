@@ -25,7 +25,9 @@ export const Sidebars = (props) => {
           display: none;
         }
         @media only screen and (min-width: 752px) {
-          display: block;
+          .root {
+            display: block;
+          }
         }
       `}</style>
     </div>
