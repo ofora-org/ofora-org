@@ -51,12 +51,15 @@ export const ImageGalery = ({
       .galeryCover {
         padding-top: 1.3em;
         font-size: 24px;
+        position: relative;
       }
-      .galeryCover .galleryNav {
-        opacity: 0;
-      }
-      .galeryCover > div:hover .galleryNav {
-        opacity: 1;
+      @media only screen and (min-width: 752px) {
+        .galeryCover .galleryNav {
+          opacity: 0;
+        }
+        .galeryCover > div:hover .galleryNav {
+          opacity: 1;
+        }
       }
     `}</style>
   </div>

@@ -3,11 +3,13 @@ import ContentWrapper from '~/components/struct/ContentWrapper'
 import Title from '~/components/Title'
 import MenuLink from '~/components/MenuLink'
 import ImageGalery from '~/components/base/ImageGalery'
+import moment from 'moment'
+import { Date } from 'prismic-reactjs'
 
 export default class PhotosAndVideosCover extends React.Component {
   render () {
-    const { doc } = this.props
-    const { author, photos, category, videos } = doc.data
+    const doc = this.props.doc
+    const { author, photos, category, videos, date } = doc.data
     const authorName = author.data && author.data.name[0].text
     const categoryName = category.data && category.data.name[0].text
 
@@ -17,42 +19,63 @@ export default class PhotosAndVideosCover extends React.Component {
           <MenuLink href={{ pathname: '/acoes' }}>/Ações & imaginações</MenuLink>{' '}
           <MenuLink href={{ pathname: '/acoes', query: {initialCategory: categoryName} }}>{`/${categoryName}`}</MenuLink>
         </Title>
-        <ImageGalery media={{videos, photos}} />
-        <br />
-        <div style={{display: 'flex', marginTop: 40}}>
+        <div>
+          <ImageGalery media={{videos, photos}} style={{flex: 1, textAlign: 'right', position: 'relative'}}/>
           <h1 style={h1Style}>{ doc.data.title[0].text }</h1>
-          <p style={dateStyle}>18.02.18</p>
         </div>
-        <p style={authorStyle}>{ authorName && `Por ${authorName}` }</p>
+        <div style={coverBotStyle}>
+          <p style={dateStyle} />
+          <p style={authorStyle}>{ authorName && <span><span style={{fontSize: 24, fontWeight: 600}}>Por</span> {authorName}</span> }</p>
+          <p style={dateStyle}>{moment(Date(date)).format('DD.MM.YY')}</p>
+        </div>
       </ContentWrapper>
     )
   }
 }
 
-const coverWrapperStyle = {
+const invertStyle = {
   background: '#000',
   color: 'white',
-  fontFamily: "'Source Serif Pro', serif",
-  paddingBottom: 10
+  fontFamily: "'Source Serif Pro', serif"
+}
+
+const coverWrapperStyle = {
+  ...invertStyle,
+  //height: '100vh',
+  display: 'flex',
+  flexDirection: 'column',
+  justifyContent: 'space-between'
+}
+
+const coverBotStyle = {
+  display: 'flex',
+  justifyContent: 'space-between',
+  paddingTop: 10,
+  maxHeight: 52
 }
 
 const h1Style = {
-  fontSize: 33,
+  paddingRight: 50,
+  fontSize: 41,
   fontWeight: 600,
-  margin: 0
-}
-
-const dateStyle = {
-  fontSize: 33,
-  textAlign: 'right',
-  width: 120,
-  margin: '0 0 0 20px',
-  alignSelf: 'flex-end'
+  margin: 0,
+  flex: 0.56,
+  alignSelf: 'flex-end',
+  marginBottom: '-0.30em'
 }
 
 const authorStyle = {
-  fontSize: 28,
+  fontSize: 41,
   textAlign: 'center',
-  padding: '0 20px',
-  marginTop: 40
+  margin: 0,
+  maxHeight: 85,
+  maxWidth: '40%',
+  zIndex: 1
+}
+
+const dateStyle = {
+  width: 200,
+  textAlign: 'right',
+  fontSize: 41,
+  margin: 0
 }

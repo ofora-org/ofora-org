@@ -51,8 +51,7 @@ const Gallery = ({
         })}
       {selected !== 0 && (
         <span
-          style={leftNavStyle}
-          className='galleryNav'
+          className='galleryNav left'
           onClick={handleLeftClick}
         >
           ←
@@ -60,29 +59,30 @@ const Gallery = ({
       )}
       {items.length > 1 && (
         <span
-          style={rightNavStyle}
-          className='galleryNav'
+          className='galleryNav right'
           onClick={handleRightClick}
         >
           →
         </span>
       )}
+      <style jsx>{`
+        .galleryNav {
+          position: absolute;
+          top: 38%;
+          font-size: 90px;
+          font-family: Arial;
+          cursor: pointer;
+        }
+        .galleryNav.right { right: 0; }
+        .galleryNav { left: 0; }
+        @media only screen and (min-width: 752px) {
+          .galleryNav { top: 45%; }
+          .galleryNav.right { right: -28px; }
+          .galleryNav.left { left: -28px; }
+        }
+      `}</style>
     </div>
   )
-}
-
-const leftNavStyle = {
-  position: 'absolute',
-  top: '45%',
-  left: -28,
-  fontSize: 90,
-  fontFamily: 'Arial',
-  cursor: 'pointer'
-}
-const rightNavStyle = {
-  ...leftNavStyle,
-  left: 'auto',
-  right: -28
 }
 
 export default enhance(Gallery)

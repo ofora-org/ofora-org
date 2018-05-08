@@ -33,11 +33,11 @@ class LogoSvg extends React.Component {
           }
           .fade #teste {
             -webkit-animation-name: fade;
-            -webkit-animation-duration: 15s;
+            -webkit-animation-duration: 20s;
             -webkit-animation-iteration-count: infinite;
             -webkit-animation-timing-function: linear;
-            -moz-animation: fade 15s linear infinite;
-            animation: fade 15s linear infinite;
+            -moz-animation: fade 20s linear infinite;
+            animation: fade 20s linear infinite;
           }
           @keyframes pulse {
             0% {fill: initial;}
@@ -47,8 +47,8 @@ class LogoSvg extends React.Component {
           }
           @keyframes fade {
             0% {opacity: 0}
-            30% {opacity: 1;}
-            70% {opacity: 1;}
+            35% {opacity: 1;}
+            65% {opacity: 1;}
             100% {opacity: 0;}
           }
         `}}

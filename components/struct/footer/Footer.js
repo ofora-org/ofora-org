@@ -9,6 +9,9 @@ export default class Footer extends React.Component {
   render () {
     return (
       <div>
+        <ContentWrapper style={{background: 'rgb(207,207,207)'}}>
+          <SiteMap />
+        </ContentWrapper>
         <div style={{background: 'rgb(223,223,223)'}}>
           <P>
             <div className='contactText'>
@@ -17,9 +20,6 @@ export default class Footer extends React.Component {
             </div>
           </P>
         </div>
-        <ContentWrapper style={{background: 'rgb(207,207,207)'}}>
-          <SiteMap />
-        </ContentWrapper>
         <ContentWrapper  style={{background: 'rgb(207,207,207)'}}>
           <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt_BR' target='_blank'>
             <CC style={ccText} /><span className='ccText'>Todo o conteúdo produzido pelo Fora pode ser copiado, redistribuído e transformado para fins não comerciais, desde que atribuam o devido crédito e que licenciem as novas criações sob termos idênticos. (CC BY-NC-SA 4.0)</span>

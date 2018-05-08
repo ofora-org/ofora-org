@@ -11,7 +11,7 @@ export const Sidebars = (props) => {
   const authorName = author.data && author.data.name[0].text
 
   return (
-    <div>
+    <div className='root'>
       <FloatingTitle author={authorName} title={title} />
       <div style={{ position: 'relative' }}>
         <div style={{ position: 'absolute', right: 0, width: 190 }}>
@@ -20,6 +20,14 @@ export const Sidebars = (props) => {
           <TecnicalData tecnicalData={props.doc.data.tecnical_data} />
         </div>
       </div>
+      <style jsx>{`
+        .root {
+          display: none;
+        }
+        @media only screen and (min-width: 752px) {
+          display: block;
+        }
+      `}</style>
     </div>
   )
 }
