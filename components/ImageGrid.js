@@ -8,6 +8,9 @@ export default class ImageGrid extends React.Component {
     return (
       <div>
         {this.renderItems()}
+        <div className='image-grid-item' />
+        <div className='image-grid-item' />
+        <div className='image-grid-item' />
         <style jsx>{`
           div {
             display: flex;
@@ -28,11 +31,4 @@ export default class ImageGrid extends React.Component {
       return <ImageGridItem {...item} />
     }
   })
-}
-
-const wrapperStyle = {
-  //display: 'flex',
-  //justifyContent: 'space-between',
-  //margin: '50px -1.3% 0',
-  //flexWrap: 'wrap'
 }
