@@ -10,7 +10,7 @@ export default class Title extends React.Component {
             font-family: 'Source Serif Pro', serif;
             font-weight: 600;
             font-size: 29px;
-            margin: 36px 0 50px 0px;
+            margin: 36px 0 0px 0px;
           }
           @media only screen and (min-width: 752px) {
             div {

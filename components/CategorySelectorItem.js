@@ -15,7 +15,7 @@ export default class CategorySelectorItem extends React.Component {
         onMouseLeave={() => this.setState({ hover: false })}
         onClick={this.handlePress}
       >
-        {name} (<span style={{ marginLeft: 22 }}>);</span>
+        {name} (<span style={{ marginLeft: '.5em' }}>);</span>
         <span style={this.checkStyle()}>X</span>
       </a>
     )
@@ -44,7 +44,7 @@ const wrapperStyle = {
 
 const checkStyle = {
   position: 'absolute',
-  right: 24,
+  right: '.6em',
   opacity: 0
 }
 const checkHoverStyle = {
