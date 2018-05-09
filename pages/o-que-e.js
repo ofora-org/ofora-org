@@ -7,7 +7,7 @@ import Title from '~/components/Title'
 import Paragraph from '~/components/base/Paragraph'
 import Img from '~/components/base/Image'
 
-const P = ({children}) => <Paragraph style={{maxWidth: 770}}>{children}</Paragraph>
+const P = ({children}) => <Paragraph style={{maxWidth: 710}}>{children}</Paragraph>
 
 export default class Oquee extends React.Component {
   static async getInitialProps ({ req }) {
@@ -105,7 +105,7 @@ export default class Oquee extends React.Component {
           }
           .cover span {
             position: absolute;
-            font-size: 24px;
+            font-size: 29px;
             top: 44%;
             max-width: 415px;
           }
