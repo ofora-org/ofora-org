@@ -66,7 +66,8 @@ export default class Oquee extends React.Component {
             </span></P>
           </ContentWrapper>
         </div>
-        <div className='equipe'>
+        <div className='info'>
+          <span className='float-title'>/Mais Informações</span>
           <ContentWrapper style={{ ...pageStyle, background: '#cfcfcf'}}>
             <P><div className='title'>/Equipe</div></P>
             <P><div className='grid'>
@@ -112,13 +113,10 @@ export default class Oquee extends React.Component {
             font-size: 24px;
             margin: 1.5em 0 1em 30px;
           }
-          .content span {
-            font-size: 24px;
-          }
           .content .heading span {
             font-size: 29px;
           }
-          .equipe .grid {
+          .info .grid {
             display: flex;
             justify-content: space-between;
             font-family: 'Source Sans Pro', sans-serif;
