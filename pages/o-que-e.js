@@ -88,12 +88,12 @@ export default class Oquee extends React.Component {
           .cover span {
             position: absolute;
             font-size: 29px;
-            top: 45%;
-            font-weight: 600;
+            top: 44%;
             max-width: 415px;
           }
           .title {
             margin-left: 30px;
+            font-size: 24px;
           }
           .content span {
             font-size: 29px;
