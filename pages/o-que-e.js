@@ -4,8 +4,10 @@ import LogoWithMenu from '~/components/LogoWithMenu'
 import ContentWrapper from '~/components/struct/ContentWrapper'
 import PageWrapper from '~/components/struct/PageWrapper'
 import Title from '~/components/Title'
-import P from '~/components/base/Paragraph'
+import Paragraph from '~/components/base/Paragraph'
 import Img from '~/components/base/Image'
+
+const P = ({children}) => <Paragraph style={{maxWidth: 770}}>{children}</Paragraph>
 
 export default class Oquee extends React.Component {
   static async getInitialProps ({ req }) {
@@ -61,14 +63,16 @@ export default class Oquee extends React.Component {
               Para atuar na paisagem urbana o Fora investiga o que se pode ver, ouvir, cheirar, provar e tocar na cidade. Promove práticas paisagísticas com pequenas infraestruturas, mobiliários, vestuários e composições botânicas. A partir da pesquisa social e das experiências artísticas e pedagógicas, buscará também desenvolver projetos para atuar na criação de espaços comuns.
             </span></P>
           </ContentWrapper>
+        </div>
+        <div className='equipe'>
           <ContentWrapper style={{ ...pageStyle, background: 'rgb(223, 223, 223)'}}>
             <P><div className='title'>/Equipe</div></P>
-            <div>
-              <div>bloco1</div>
-              <div>bloco2</div>
-              <div>bloco3</div>
-              <div>bloco4</div>
-            </div>
+            <P><div className='grid'>
+              <div>_Pesquisa social e análise de dados</div>
+              <div><b>Fabricia Ramos</b><br />Pesquisadora social e advogada, é coordenadora da área de pesquisa social e qualitativa do Fora.</div>
+              <div><b>Fernanda Moraes</b><br />Jornalista livre e graduanda em Gestão de Políticas Públicas pela USP, é pesquisadora do Fora.</div>
+              <div><b>Glória Maria</b><br />Jornalista livre e produtora cultural, é pesquisadora do Fora.</div>
+            </div></P>
           </ContentWrapper>
         </div>
         <style jsx>{`
@@ -94,6 +98,14 @@ export default class Oquee extends React.Component {
           .content span {
             font-size: 29px;
           }
+          .equipe .grid {
+            display: flex;
+            justify-content: space-between;
+            font-family: 'Source Sans Pro', sans-serif;
+          }
+          .equipe .grid > div {
+            max-width: 20%;
+          }
         `}</style>
       </PageWrapper>
     )
@@ -101,6 +113,5 @@ export default class Oquee extends React.Component {
 }
 
 const pageStyle = {
-  fontFamily: "'Source Serif Pro', serif",
-  fontSize: 29
+  fontFamily: "'Source Serif Pro', serif"
 }
