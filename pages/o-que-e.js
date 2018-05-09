@@ -26,23 +26,25 @@ export default class Oquee extends React.Component {
             <span>O Fora é sobre possibilidades de viver a cidade e acontece por meio de pesquisas sociais, manifestações culturais e ações na paisagem urbana.</span>
           </ContentWrapper>
         </div>
-        <div className='content'>
+        <div className='content' style={{background: '#dfdfdf'}}>
           <ContentWrapper style={pageStyle}>
             <P><div className='title'>
               /Sobre
             </div></P>
-            <P><span>
-              Para levantar histórias, urgências e possíveis futuros dos grandes centros urbanos, o Fora parte da escuta da população e da análise de dados para trazer à tona pontos de vista, impressões e demandas ligadas ao espaço público em São Paulo.
-            </span></P>
-            <P><span>
-              A partir dessas pesquisas, o Fora impulsiona uma programação de práticas artísticas, atividades educativas e ações que repensam as paisagens de diferentes áreas da cidade.
-            </span></P>
-            <P><span>
-              Atuando também como canal de cultura e comunicação nas ruas e na internet, o Fora estimula uma diversidade de práticas, narrativas e encontros para refletir e imaginar sobre o que nos é comum.
-            </span></P>
-            <P><span>
-              Diante dos atuais esgotamentos históricos e políticos, é no Fora que nos encontramos para conhecer e exercer diferentes formas de vida.
-            </span></P>
+            <div className='heading'>
+              <P><span>
+                Para levantar histórias, urgências e possíveis futuros dos grandes centros urbanos, o Fora parte da escuta da população e da análise de dados para trazer à tona pontos de vista, impressões e demandas ligadas ao espaço público em São Paulo.
+              </span></P>
+              <P><span>
+                A partir dessas pesquisas, o Fora impulsiona uma programação de práticas artísticas, atividades educativas e ações que repensam as paisagens de diferentes áreas da cidade.
+              </span></P>
+              <P><span>
+                Atuando também como canal de cultura e comunicação nas ruas e na internet, o Fora estimula uma diversidade de práticas, narrativas e encontros para refletir e imaginar sobre o que nos é comum.
+              </span></P>
+              <P><span>
+                Diante dos atuais esgotamentos históricos e políticos, é no Fora que nos encontramos para conhecer e exercer diferentes formas de vida.
+              </span></P>
+            </div>
             <div style={{textAlign: 'center'}}>
               <Img src='/static/oquee.gif' />
             </div>
@@ -65,7 +67,7 @@ export default class Oquee extends React.Component {
           </ContentWrapper>
         </div>
         <div className='equipe'>
-          <ContentWrapper style={{ ...pageStyle, background: 'rgb(223, 223, 223)'}}>
+          <ContentWrapper style={{ ...pageStyle, background: '#cfcfcf'}}>
             <P><div className='title'>/Equipe</div></P>
             <P><div className='grid'>
               <div>_Pesquisa social e análise de dados</div>
@@ -73,7 +75,22 @@ export default class Oquee extends React.Component {
               <div><b>Fernanda Moraes</b><br />Jornalista livre e graduanda em Gestão de Políticas Públicas pela USP, é pesquisadora do Fora.</div>
               <div><b>Glória Maria</b><br />Jornalista livre e produtora cultural, é pesquisadora do Fora.</div>
             </div></P>
+            <P><div className='title'>/Colaboradores</div></P>
+            <P><div className='grid'>
+              <div>_Pesquisa social e análise de dados</div>
+              <div><b>Fabricia Ramos</b><br />Pesquisadora social e advogada, é coordenadora da área de pesquisa social e qualitativa do Fora.</div>
+              <div><b>Fernanda Moraes</b><br />Jornalista livre e graduanda em Gestão de Políticas Públicas pela USP, é pesquisadora do Fora.</div>
+              <div><b>Glória Maria</b><br />Jornalista livre e produtora cultural, é pesquisadora do Fora.</div>
+            </div></P>
+            <P><div className='title'>/Financiamento</div></P>
+            <P><div className='grid'>
+              <div>_Pesquisa social e análise de dados</div>
+              <div><b>Fabricia Ramos</b><br />Pesquisadora social e advogada, é coordenadora da área de pesquisa social e qualitativa do Fora.</div>
+              <div><b>Fernanda Moraes</b><br />Jornalista livre e graduanda em Gestão de Políticas Públicas pela USP, é pesquisadora do Fora.</div>
+              <div><b>Glória Maria</b><br />Jornalista livre e produtora cultural, é pesquisadora do Fora.</div>
+            </div></P>
           </ContentWrapper>
+
         </div>
         <style jsx>{`
           .cover {
@@ -87,15 +104,18 @@ export default class Oquee extends React.Component {
           }
           .cover span {
             position: absolute;
-            font-size: 29px;
+            font-size: 24px;
             top: 44%;
             max-width: 415px;
           }
           .title {
-            margin-left: 30px;
             font-size: 24px;
+            margin: 1.5em 0 1em 30px;
           }
           .content span {
+            font-size: 24px;
+          }
+          .content .heading span {
             font-size: 29px;
           }
           .equipe .grid {
