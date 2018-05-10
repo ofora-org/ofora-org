@@ -40,6 +40,10 @@ app.prepare()
       .then(function (response) {
         res.send('success')
       })
+      .catch(function (error) {
+        res.status(500).send('error')
+        console.log('mailchimp error', error);
+      });
     });
 
     server.get('*', (req, res) => {
