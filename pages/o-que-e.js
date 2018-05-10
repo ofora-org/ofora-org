@@ -194,7 +194,7 @@ export default class Oquee extends React.Component {
             margin: 1.5em 0 1em 30px;
           }
           .subtitle {
-            margin-left: -9px;
+            margin-left: 30px;
             margin-top: 1.5em
           }
           .content span {
@@ -212,6 +212,8 @@ export default class Oquee extends React.Component {
             font-size: 24px;
             /* max-width: 180px; */
             /* position: absolute; */
+            margin-bottom: -10px;
+            display: block;
           }
           .info .grid {
             display: flex;
