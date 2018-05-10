@@ -216,7 +216,7 @@ export default class Oquee extends React.Component {
             justify-content: space-between;
           }
           .info .grid > div {
-            width: 20%;
+            width: 22%;
           }
         `}</style>
       </PageWrapper>
