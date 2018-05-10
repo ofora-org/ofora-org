@@ -68,7 +68,7 @@ export default class Oquee extends React.Component {
         </div>
         <div className='info'>
           <ContentWrapper style={{ ...pageStyle, background: '#cfcfcf', position: 'relative'}}>
-            <span className='float-title'>Informações gerais</span>
+            <span className='float-title'>/Informações gerais</span>
 
             <P><div className='title'>/Equipe</div></P>
             <P><div className='subtitle'>_Pesquisa social e análise de dados</div></P>
@@ -218,6 +218,9 @@ export default class Oquee extends React.Component {
             /* position: absolute; */
             margin-bottom: -10px;
             display: block;
+            font-family: IntervalBook, monospace;
+            font-size: 16px;
+            margin-left: 60px;
           }
           .info .grid {
             display: flex;
