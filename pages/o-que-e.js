@@ -70,15 +70,16 @@ export default class Oquee extends React.Component {
           <ContentWrapper style={{ ...pageStyle, background: '#cfcfcf', position: 'relative'}}>
             <span className='float-title'>Informações gerais</span>
             <P><div className='title'>/Equipe</div></P>
+            <P><div className='subtitle'>_Pesquisa social e análise de dados</div></P>
             <P><div className='grid'>
-              <div>_Pesquisa social e análise de dados</div>
               <div><b>Fabricia Ramos</b><br />Pesquisadora social e advogada, é coordenadora da área de pesquisa social e qualitativa do Fora.</div>
               <div><b>Fernanda Moraes</b><br />Jornalista livre e graduanda em Gestão de Políticas Públicas pela USP, é pesquisadora do Fora.</div>
               <div><b>Glória Maria</b><br />Jornalista livre e produtora cultural, é pesquisadora do Fora.</div>
+              <div><b>Glória Maria</b><br />Jornalista livre e produtora cultural, é pesquisadora do Fora.</div>
             </div></P>
             <P><div className='title'>/Colaboradores</div></P>
+            <P><div className='title'>_Pesquisa social e análise de dados</div></P>
             <P><div className='grid'>
-              <div>_Pesquisa social e análise de dados</div>
               <div><b>Fabricia Ramos</b><br />Pesquisadora social e advogada, é coordenadora da área de pesquisa social e qualitativa do Fora.</div>
               <div><b>Fernanda Moraes</b><br />Jornalista livre e graduanda em Gestão de Políticas Públicas pela USP, é pesquisadora do Fora.</div>
               <div><b>Glória Maria</b><br />Jornalista livre e produtora cultural, é pesquisadora do Fora.</div>
@@ -112,6 +113,12 @@ export default class Oquee extends React.Component {
           .title {
             font-size: 24px;
             margin: 1.5em 0 1em 30px;
+          }
+          .subtitle {
+            margin-left: -9px;
+          }
+          .content span {
+            font-size: 24px;
           }
           .content .heading span {
             font-size: 29px;
