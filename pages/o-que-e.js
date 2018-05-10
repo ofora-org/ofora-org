@@ -45,7 +45,7 @@ export default class Oquee extends React.Component {
                 Diante dos atuais esgotamentos históricos e políticos, é no Fora que nos encontramos para conhecer e exercer diferentes formas de vida.
               </span></P>
             </div>
-            <div style={{textAlign: 'center', marginTop: 40}}>
+            <div style={{textAlign: 'center', marginTop: 25}}>
               <Img src='/static/oquee.gif' />
             </div>
             <P><div className='title'>
@@ -202,6 +202,8 @@ export default class Oquee extends React.Component {
           }
           .content .heading span {
             font-size: 29px;
+            padding-bottom: 0.45em;
+            display: block;
           }
           .info {
             font-family: 'Source Sans Pro', sans-serif;
