@@ -12,7 +12,7 @@ export default class Footer extends React.Component {
         <ContentWrapper style={{background: 'rgb(207,207,207)'}}>
           <SiteMap />
         </ContentWrapper>
-        <div style={{background: 'rgb(223,223,223)'}}>
+        <div style={{background: 'rgb(223,223,223)', overflow: 'hidden'}}>
           <P>
             <div className='contactText'>
               <div>Antes de dar o Fora, se quiser tirar dúvidas, dar sugestões ou colaborar, escreva para:</div>

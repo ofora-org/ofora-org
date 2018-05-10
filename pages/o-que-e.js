@@ -45,7 +45,7 @@ export default class Oquee extends React.Component {
                 Diante dos atuais esgotamentos históricos e políticos, é no Fora que nos encontramos para conhecer e exercer diferentes formas de vida.
               </span></P>
             </div>
-            <div style={{textAlign: 'center'}}>
+            <div style={{textAlign: 'center', marginTop: 45}}>
               <Img src='/static/oquee.gif' />
             </div>
             <P><div className='title'>
@@ -68,7 +68,7 @@ export default class Oquee extends React.Component {
         </div>
         <div className='info'>
           <ContentWrapper style={{ ...pageStyle, background: '#cfcfcf', position: 'relative'}}>
-            <span className='float-title'>/Mais Informações</span>
+            <span className='float-title'>Informações gerais</span>
             <P><div className='title'>/Equipe</div></P>
             <P><div className='grid'>
               <div>_Pesquisa social e análise de dados</div>
@@ -120,7 +120,7 @@ export default class Oquee extends React.Component {
             font-family: 'Source Sans Pro', sans-serif;
           }
           .info .float-title {
-            font-size: 29px;
+            font-size: 24px;
             /* max-width: 180px; */
             /* position: absolute; */
           }
