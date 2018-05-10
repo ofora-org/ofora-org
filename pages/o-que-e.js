@@ -69,27 +69,106 @@ export default class Oquee extends React.Component {
         <div className='info'>
           <ContentWrapper style={{ ...pageStyle, background: '#cfcfcf', position: 'relative'}}>
             <span className='float-title'>Informações gerais</span>
+
             <P><div className='title'>/Equipe</div></P>
             <P><div className='subtitle'>_Pesquisa social e análise de dados</div></P>
             <P><div className='grid'>
               <div><b>Fabricia Ramos</b><br />Pesquisadora social e advogada, é coordenadora da área de pesquisa social e qualitativa do Fora.</div>
               <div><b>Fernanda Moraes</b><br />Jornalista livre e graduanda em Gestão de Políticas Públicas pela USP, é pesquisadora do Fora.</div>
               <div><b>Glória Maria</b><br />Jornalista livre e produtora cultural, é pesquisadora do Fora.</div>
-              <div><b>Glória Maria</b><br />Jornalista livre e produtora cultural, é pesquisadora do Fora.</div>
+              <div><b>João Meirelles</b><br />Engenheiro e cientista de dados, é coordenador da área de coleta de dados quantitativos no Fora.</div>
             </div></P>
-            <P><div className='title'>/Colaboradores</div></P>
-            <P><div className='title'>_Pesquisa social e análise de dados</div></P>
             <P><div className='grid'>
-              <div><b>Fabricia Ramos</b><br />Pesquisadora social e advogada, é coordenadora da área de pesquisa social e qualitativa do Fora.</div>
-              <div><b>Fernanda Moraes</b><br />Jornalista livre e graduanda em Gestão de Políticas Públicas pela USP, é pesquisadora do Fora.</div>
-              <div><b>Glória Maria</b><br />Jornalista livre e produtora cultural, é pesquisadora do Fora.</div>
+              <div><b>Karol Oliveira</b><br />Produtora cultural e educadora popular, é pesquisadora do Fora.</div>
+              <div></div>
+              <div></div>
+              <div></div>
             </div></P>
+            <P><div className='subtitle'>_Cultura e comunicação</div></P>
+            <P><div className='grid'>
+              <div><b>Germano Dushá</b><br />Escritor, curador e produtor cultural, é co-idealizador do Fora e trabalha com a articulação geral da equipe do projeto e da área de Cultura e comunicação.</div>
+              <div><b>Gilberto Vieira</b><br />Comunicador e pesquisador sobre culturas e territórios, articula estratégias, tecnologia e ferramentas de comunicação.</div>
+              <div><b>Johanna Stein</b><br />Pesquisadora em artes visuais, é co-idealizadora do Fora e atua no posicionamento público e captação de recursos.</div>
+              <div><b>Manuela Rached</b><br />Jornalista, é responsável pela articulação interna e assessoria na área de Cultura e comunicação do Fora.</div>
+            </div></P>
+            <P><div className='grid'>
+              <div><b>Ramon Brandão</b><br />Cientista Social, professor e pesquisador na área de ética e filosofia política, é responsável pela fundamentação conceitual e coordena a área de Ensaios do Fora.</div>
+              <div><b>Raphael Escobar</b><br />Artista visual e educador social, no Fora trabalha com inserções em territórios e atividades locais.</div>
+              <div><b>Veronica Deviá</b><br />Jornalista, cientista política e pesquisadora na área de gênero, no Fora coordena a área de Jornalismo.</div>
+              <div></div>
+            </div></P>
+            <P><div className='subtitle'>_Paisagem</div></P>
+            <P><div className='grid'>
+              <div><b>Guil Blanche</b><br />Escritor, curador e produtor cultural, é co-idealizador do Fora e trabalha com a articulação geral da equipe do projeto e da área de Cultura e comunicação.</div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div></P>
+            <P><div className='subtitle'>_Gestão</div></P>
+            <P><div className='grid'>
+              <div><b>Leticia Rheingantz</b><br />Cineasta e produtora, é co-responsável pela gestão e desenvolvimento da linha do tempo do Fora.</div>
+              <div><b>Inez Lisboa</b><br />Economista e especialista em finanças, é responsável pelos processos administrativos e financeiros do Fora.</div>
+              <div></div>
+              <div></div>
+            </div></P>
+            <P><div className='subtitle'>_Design Grafico</div></P>
+            <P><div className='grid'>
+              <div><b>Frederico Dietzsch</b><br />Designer gráfico e calígrafo, é o criador do logo, identidade visual, desenho do site e responsável pelos demais projetos gráficos do Fora.</div>
+              <div><b>Raul Luna</b><br />Diretor de arte, é responsável pela identidade visual, desenho do site e pelos projetos gráficos editoriais do Fora.</div>
+              <div></div>
+              <div></div>
+            </div></P>
+            <P><div className='subtitle'>_Programação</div></P>
+            <P><div className='grid'>
+              <div><b>Diogo Vianna</b><br />Programador, é responsável pelo desenvolvimento do site do Fora.</div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div></P>
+
+            <P><div className='title'>/Colaboradores</div></P>
+            <P><div className='subtitle'>_Pesquisa Social e Análise de dados</div></P>
+            <P><div className='grid'>
+              <div><b>Marcela Amorozo</b><br />Geógrafa e educadora, é pesquisadora na área de levantamento e processamento de dados quantitativos do Fora.</div>
+              <div><b>Ronaldo</b><br /></div>
+              <div></div>
+              <div></div>
+            </div></P>
+            <P><div className='subtitle'>_Programação</div></P>
+            <P><div className='grid'>
+              <div><b>Vinicius Pereira</b><br />Desenvolvedor web e designer, é responsável pela programação do questionário online do Fora.</div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div></P>
+            <P><div className='subtitle'>_Assessoria de projeto</div></P>
+            <P><div className='grid'>
+              <div><b>AeF Soluções em Gestão</b><br /></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div></P>
+            <P><div className='subtitle'>_Assessoria jurídica</div></P>
+            <P><div className='grid'>
+              <div><b>Tilkian Marinelli Marrey Advogados</b><br /></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div></P>
+            <P><div className='subtitle'>_Assessoria de imprensa</div></P>
+            <P><div className='grid'>
+              <div><b>Index</b><br /></div>
+              <div></div>
+              <div></div>
+              <div></div>
+            </div></P>
+
             <P><div className='title'>/Financiamento</div></P>
             <P><div className='grid'>
-              <div>_Pesquisa social e análise de dados</div>
-              <div><b>Fabricia Ramos</b><br />Pesquisadora social e advogada, é coordenadora da área de pesquisa social e qualitativa do Fora.</div>
-              <div><b>Fernanda Moraes</b><br />Jornalista livre e graduanda em Gestão de Políticas Públicas pela USP, é pesquisadora do Fora.</div>
-              <div><b>Glória Maria</b><br />Jornalista livre e produtora cultural, é pesquisadora do Fora.</div>
+              <div>O Fora é um projeto <b>autofinanciado.</b></div>
+              <div></div>
+              <div></div>
+              <div></div>
             </div></P>
           </ContentWrapper>
 
@@ -136,7 +215,7 @@ export default class Oquee extends React.Component {
             justify-content: space-between;
           }
           .info .grid > div {
-            max-width: 20%;
+            width: 20%;
           }
         `}</style>
       </PageWrapper>
