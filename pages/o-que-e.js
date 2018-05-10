@@ -195,6 +195,7 @@ export default class Oquee extends React.Component {
           }
           .subtitle {
             margin-left: -9px;
+            marginTop: 2em
           }
           .content span {
             font-size: 24px;
@@ -224,5 +225,6 @@ export default class Oquee extends React.Component {
 }
 
 const pageStyle = {
-  fontFamily: "'Source Serif Pro', serif"
+  fontFamily: "'Source Serif Pro', serif",
+  paddingBottom: 40
 }
