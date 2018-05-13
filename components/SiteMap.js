@@ -1,27 +1,40 @@
 import React from 'react'
 import MenuLink from '~/components/MenuLink'
+import { withState, withHandlers, lifecycle, compose } from 'recompose'
+import { getCategories } from '~/lib/backend'
 
-const SiteMap = ({style}) => (
+const enhance = compose(
+  lifecycle({
+    componentDidMount() {
+      const self = this
+      getCategories().then(categories => this.setState(categories))
+    }
+  })
+)
+
+const SiteMap = ({ style, categories }) => (
   <div className='wrapper'>
     <div><span style={{margin: '0 60px 60px'}}>/Mapa do Site</span><br /><br /><br /></div>
     <div className='content' style={style}>
       <div>
         <div>
-          <MenuLink href={{ pathname: '/o-que-e' }} >O que é</MenuLink>
+          <MenuLink href='/o-que-e' >O que é</MenuLink>
         </div><br /><br />
-        <div><MenuLink href={{ pathname: '/acoes/tags' }}>Sobre;</MenuLink></div>
-        <div><MenuLink href={{ pathname: '/acoes/tags' }}>Equipe;</MenuLink></div>
-        <div><MenuLink href={{ pathname: '/acoes/tags' }}>Parceiros;</MenuLink></div>
-        <div><MenuLink href={{ pathname: '/acoes/tags' }}>Escutando a Cidade;</MenuLink></div>
-        <div><MenuLink href={{ pathname: '/acoes/tags' }}>Formularios;</MenuLink></div>
+        <div><MenuLink href='/o-que-e#about'>Sobre;</MenuLink></div>
+        <div><MenuLink href='/o-que-e#research'>Pesquisas;</MenuLink></div>
+        <div><MenuLink href='/o-que-e#cultures'>Culturas;</MenuLink></div>
+        <div><MenuLink href='/o-que-e#landscapes'>Paisagens;</MenuLink></div>
+        <div><MenuLink href='/o-que-e#info'>Informações gerais;</MenuLink></div>
       </div>
       <div>
         <div>
           <MenuLink href={{ pathname: '/acoes' }} >Ações & imaginações</MenuLink>
         </div><br /><br />
-        <div><MenuLink href={{ pathname: '/acoes/tags' }}>Arte;</MenuLink></div>
-        <div><MenuLink href={{ pathname: '/acoes/tags' }}>Ensaios;</MenuLink></div>
-        <div><MenuLink href={{ pathname: '/acoes/tags' }}>Jornalismo;</MenuLink></div>
+        {categories && categories.map(p =>
+          <div><MenuLink href={{ pathname: '/acoes', query: { initialCategory: p.data.name[0].text } }}>
+            {p.data.name[0].text};
+          </MenuLink></div>
+        )}
         <div><MenuLink href={{ pathname: '/acoes/tags' }} >Palavras-Chave;</MenuLink></div>
         <div><MenuLink href={{ pathname: '/acoes/athors' }} >Participantes;</MenuLink></div>
       </div>
@@ -46,4 +59,4 @@ const SiteMap = ({style}) => (
   </div>
 )
 
-export default SiteMap
+export default enhance(SiteMap)

@@ -28,7 +28,7 @@ export default class Oquee extends React.Component {
         </div>
         <div className='content' style={{background: '#dfdfdf'}}>
           <ContentWrapper style={pageStyle}>
-            <P><div className='title'>
+            <P><div className='title' id="about">
               /Sobre
             </div></P>
             <div className='heading'>
@@ -48,25 +48,25 @@ export default class Oquee extends React.Component {
             <div style={{textAlign: 'center', marginTop: 25}}>
               <Img src='/static/oquee.gif' />
             </div>
-            <P><div className='title'>
+            <P><div className='title' id='research'>
               /Pesquisas
             </div></P>
             <P><span>
               Para propor reflexões públicas e nortear as ações do Fora, a área de pesquisa social atua por meios digitais e trabalhos de campo, colhendo dados e realizando escutas de diferentes vivências, visões e vozes na cidade de São Paulo. Investiga possibilidades de vida no espaço público e o que se perde na ausência desses locais, refletindo sobre formas viáveis de criar, manter e viver a rua.
             </span></P>
-            <P><div className='title'>
+            <P><div className='title' id='cultures'>
               /Culturas
             </div></P>
             <P><span>
               Como canal de comunicação e cultura o Fora reúne um grupo diverso e multidisciplinar para promover encontros e disparar imaginações sobre nossos corpos, a cidade e a vida comum. Por meio da produção e difusão de conteúdo na esfera digital e de um programa de arte e pedagogia nas ruas, aborda assuntos de interesse global a partir de perspectivas locais, fazendo circular afetos e maneiras de viver espaços públicos.
             </span></P>
-            <P><div className='title'>/Paisagens</div></P>
+            <P><div className='title' id='landscapes'>/Paisagens</div></P>
             <P><span>
               Para atuar na paisagem urbana o Fora investiga o que se pode ver, ouvir, cheirar, provar e tocar na cidade. Promove práticas paisagísticas com pequenas infraestruturas, mobiliários, vestuários e composições botânicas. A partir da pesquisa social e das experiências artísticas e pedagógicas, buscará também desenvolver projetos para atuar na criação de espaços comuns.
             </span></P>
           </ContentWrapper>
         </div>
-        <div className='info'>
+        <div className='info' id='info'>
           <ContentWrapper style={{ ...pageStyle, background: '#cfcfcf', position: 'relative'}}>
             <span className='float-title'>/Informações gerais</span>
 
