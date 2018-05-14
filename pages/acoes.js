@@ -26,7 +26,6 @@ export default class pageAcoes extends React.Component {
         <ContentWrapper>
           <div className='filterLine'>
             <Title>/Ações & imaginações:</Title>
-            <Link href={{ pathname: '/acoes/tags' }}>Palavras-chave;</Link>
           </div>
           <div  className='filterLine' style={{marginBottom: 50}}>
             <CategorySelector
@@ -34,7 +33,7 @@ export default class pageAcoes extends React.Component {
               selected={selectedCategory || initialCategory}
               onClick={this.handleCategorySelection}
             />
-            <Link href={{ pathname: '/acoes/authors' }}>Participantes;</Link>
+            <Link href={{ pathname: '/acoes/tags' }}>Palavras-chave;</Link>
           </div>
           <ImageGrid items={documents} category={selectedCategory || initialCategory} />
         </ContentWrapper>
