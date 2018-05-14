@@ -8,6 +8,7 @@ import AuthorTeaser from '~/components/AuthorTeaser'
 import Sidebars from '~/components/Sidebars'
 import P from '~/components/base/Paragraph'
 import RelatedContentWrapper from '~/components/RelatedContentWrapper'
+import SiteMap from '~/components/SiteMap'
 
 export default class Index extends React.Component {
   static async getInitialProps ({ query }) {
@@ -32,6 +33,9 @@ export default class Index extends React.Component {
           <AuthorTeaser author={author} style={{ marginTop: 80, paddingLeft: 0 }} />
         </ContentWrapper>
         <RelatedContentWrapper related={related} />
+        <ContentWrapper style={{background: 'rgb(207,207,207)'}}>
+          <SiteMap />
+        </ContentWrapper>
         <style jsx>{`
           @media only screen and (max-width: 752px) {
             div.desktop-only { display: none; }

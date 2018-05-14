@@ -14,6 +14,7 @@ import RelatedContentWrapper from '~/components/RelatedContentWrapper'
 import ImageGalery from '~/components/base/ImageGalery'
 import Video from '~/components/base/Video'
 import moment from 'moment'
+import SiteMap from '~/components/SiteMap'
 
 export default class Story extends React.Component {
   static async getInitialProps ({ query }) {
@@ -67,6 +68,10 @@ export default class Story extends React.Component {
         </ContentWrapper>
 
         <RelatedContentWrapper related={related} />
+
+        <ContentWrapper style={{background: 'rgb(207,207,207)'}}>
+          <SiteMap />
+        </ContentWrapper>
       </PageWrapper>
     )
   }

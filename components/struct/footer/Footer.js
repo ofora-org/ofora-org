@@ -3,15 +3,11 @@ import ContentWrapper from '~/components/struct/ContentWrapper'
 import P from '~/components/base/Paragraph'
 import MenuLink from '~/components/MenuLink'
 import CC from './CC'
-import SiteMap from '~/components/SiteMap'
 
 export default class Footer extends React.Component {
   render () {
     return (
       <div>
-        <ContentWrapper style={{background: 'rgb(207,207,207)'}}>
-          <SiteMap />
-        </ContentWrapper>
         <div style={{background: 'rgb(223,223,223)', overflow: 'hidden'}}>
           <P>
             <div className='contactText'>
