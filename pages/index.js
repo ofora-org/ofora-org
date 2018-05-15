@@ -9,7 +9,7 @@ export default class Index extends React.Component {
     const api = await Prismic.api('https://fora.prismic.io/api/v2')
     const homeDocument = await api.getSingle('home')
     const title = homeDocument.data.title[0].text
-    const query = await api.query(Prismic.Predicates.any('document.type', ['article', 'pictures_and_video', 'story']))
+    const query = await api.query(Prismic.Predicates.any('document.type', ['article', 'pictures_and_video', 'story', 'post']))
     const documents = query.results
     return { title, documents }
   }
