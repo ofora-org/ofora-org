@@ -111,7 +111,7 @@ export default class Oquee extends React.Component {
               <div></div>
               <div></div>
             </div></P>
-            <P><div className='subtitle'>_Design Grafico</div></P>
+            <P><div className='subtitle'>_Design gráfico</div></P>
             <P><div className='grid'>
               <div><b>Frederico Dietzsch</b><br />Designer gráfico, criador da identidade visual e responsável pelos projetos gráficos do Fora.</div>
               <div><b>Raul Luna</b><br />Diretor de arte, é responsável pelo desenho do site e pelos projetos gráficos do Fora.</div>
@@ -127,7 +127,7 @@ export default class Oquee extends React.Component {
             </div></P>
 
             <P><div className='title'>/Colaboradores</div></P>
-            <P><div className='subtitle'>_Pesquisa Social e Análise de dados</div></P>
+            <P><div className='subtitle'>_Pesquisa social e análise de dados</div></P>
             <P><div className='grid'>
               <div><b>Marcela Amorozo</b><br />Geógrafa e educadora, é pesquisadora na área de levantamento e processamento de dados quantitativos do Fora.</div>
               <div></div>
