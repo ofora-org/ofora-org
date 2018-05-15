@@ -50,8 +50,7 @@ const coverMidStyle = {
 const coverBotStyle = {
   display: 'flex',
   justifyContent: 'space-between',
-  paddingTop: 10,
-  maxHeight: 52
+  paddingTop: 10
 }
 
 const h1Style = {
