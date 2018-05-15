@@ -57,6 +57,7 @@ const h1Style = {
   paddingRight: 50,
   fontSize: 41,
   fontWeight: 600,
+  alignSelf: 'center',
   margin: 0,
   flex: 0.56,
   marginBottom: '-0.30em'
