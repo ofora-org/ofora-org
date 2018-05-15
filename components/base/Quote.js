@@ -6,7 +6,7 @@ export default class Quote extends React.Component {
     const sourceText = source.length && source[0].text
     return (
       <P style={{...style, ...wrapperStyle}}>
-        <div style={{paddingLeft: '20%'}}>
+        <div style={{paddingLeft: '150px'}}>
           <div style={quoteStyle}>{quote[0].text}</div>
           {sourceText ? <div style={sourceStyle}>{sourceText}</div> : null}
         </div>
@@ -29,5 +29,6 @@ const sourceStyle = {
   fontFamily: 'IntervalBook, monospace',
   maxWidth: '55%',
   marginTop: 26,
+  paddingLeft: 150,
   lineHeight: '1.3em'
 }
