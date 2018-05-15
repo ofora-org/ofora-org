@@ -35,8 +35,7 @@ const SiteMap = ({ style, categories }) => (
             {p.data.name[0].text};
           </MenuLink></div>
         )}
-        <div><MenuLink href={{ pathname: '/acoes/tags' }} >Palavras-Chave;</MenuLink></div>
-        <div><MenuLink href={{ pathname: '/acoes/athors' }} >Participantes;</MenuLink></div>
+        <div><MenuLink href={{ pathname: '/acoes/tags' }} >Palavras-chave;</MenuLink></div>
       </div>
     </div>
     <style jsx>{`
