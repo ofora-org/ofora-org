@@ -7,7 +7,7 @@ export default class ContentWrapper extends React.Component {
         {this.props.children}
         <style jsx>{`
           div {
-            padding: 10px;
+            padding: 20px;
             box-sizing: border-box;
           }
           @media only screen and (min-width: 752px) {

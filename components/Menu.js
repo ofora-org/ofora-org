@@ -37,11 +37,11 @@ export default class Menu extends React.Component {
             font-size: 29px;
           }
           .mainMenu {
-            top: 120px; left: 7px;
+            top: 120px; left: 20px;
           }
           .secondaryMenu {
             bottom: 20px;
-            right: 7px;
+            right: 20px;
             text-align: right;
           }
           @media only screen and (min-width: 752px) {

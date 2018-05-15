@@ -41,7 +41,6 @@ const invertStyle = {
 
 const coverWrapperStyle = {
   ...invertStyle,
-  //height: '100vh',
   flexDirection: 'column',
   justifyContent: 'space-between'
 }
@@ -49,12 +48,11 @@ const coverWrapperStyle = {
 const coverBotStyle = {
   justifyContent: 'space-between',
   paddingTop: 10,
-  maxHeight: 52
 }
 
 const h1Style = {
   paddingRight: 50,
-  fontSize: 41,
+  fontSize: 29,
   fontWeight: 600,
   margin: 0,
   flex: 0.56,
@@ -63,13 +61,12 @@ const h1Style = {
 }
 
 const authorStyle = {
-  fontSize: 41,
-  margin: 0,
-  maxHeight: 85,
-  zIndex: 1
+  fontSize: 29,
+  marginTop: 20,
+  zIndex: 1,
 }
 
 const dateStyle = {
-  fontSize: 41,
+  fontSize: 29,
   margin: 0
 }

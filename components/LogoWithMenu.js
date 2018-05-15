@@ -31,8 +31,8 @@ class LogoWithMenu extends React.Component {
           .root {
             position: fixed;
             z-index: 15;
-            top: 10px;
-            left: 10px;
+            top: 20px;
+            left: 20px;
             max-width: 770px;
             font-size: 29px;
           }
