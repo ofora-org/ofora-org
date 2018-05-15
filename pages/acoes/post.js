@@ -24,18 +24,22 @@ export default class Index extends React.Component {
 
   render () {
     const { doc, related } = this.props
-    const { author, photos, category, videos, body } = doc.data
+    const { author, photos, category, videos, body, theme } = doc.data
     const coverPhoto = photos.length ? photos[0].photo.url : videos[0].video.thumbnail_url
+    const bgcolor = theme ? 'black' : '#dfdfdf'
+    const textColor = theme ? 'white' : 'black'
     return (
       <PageWrapper invert title={doc.data.title[0].text} cover={coverPhoto} style={{background: '#dfdfdf'}}>
-        <div className='desktop-only'><Cover {...this.props} /></div>
-        <div className='mobile-only'><CoverMobile {...this.props} /></div>
+        <div style={{background: bgcolor, color: textColor}}>
+          <div className='desktop-only'><Cover {...this.props} /></div>
+          <div className='mobile-only'><CoverMobile {...this.props} /></div>
 
-        <ContentWrapper style={{ paddingBottom: '70px', paddingTop: '50px', position: 'relative', ...invertStyle }}>
-          <Sidebars doc={doc} />
-            {renderBody(body)}
-          <AuthorTeaser author={author} style={{ marginTop: 80, paddingLeft: 0 }} />
-        </ContentWrapper>
+          <ContentWrapper style={{ paddingBottom: '70px', paddingTop: '50px', position: 'relative', ...invertStyle }}>
+            <Sidebars doc={doc} />
+              {renderBody(body)}
+            <AuthorTeaser author={author} style={{ marginTop: 80, paddingLeft: 0 }} />
+          </ContentWrapper>
+        </div>
         <RelatedContentWrapper related={related} />
         <ContentWrapper style={{background: 'rgb(207,207,207)'}}>
           <SiteMap />
@@ -54,8 +58,6 @@ export default class Index extends React.Component {
 }
 
 const invertStyle = {
-  background: '#000',
-  color: 'white',
   fontFamily: "'Source Serif Pro', serif"
 }
 
