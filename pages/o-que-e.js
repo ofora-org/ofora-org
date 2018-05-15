@@ -167,7 +167,7 @@ export default class Oquee extends React.Component {
         </div>
         <style jsx>{`
           .cover {
-            height: 100vh;
+            height: 60vh;
             background: url('/static/oqueebg.jpg');
             background-size: cover;
             background-position: center bottom;
@@ -177,8 +177,10 @@ export default class Oquee extends React.Component {
           }
           .cover span {
             position: absolute;
-            font-size: 41px;
-            bottom: 17%;
+            font-size: 21px;
+            bottom: 20px;
+            left: 20px;
+            right: 60px;
             max-width: 750px;
           }
           .title {
@@ -194,12 +196,13 @@ export default class Oquee extends React.Component {
             font-family: 'Source Serif Pro', serif;
           }
           .content span {
-            font-size: 24px;
+            font-size: 21px;
           }
           .content .heading span {
-            font-size: 29px;
+            font-size: 21px;
             padding-bottom: 0.45em;
             display: block;
+            font-weight: 600;
           }
           .info {
             font-family: 'Source Sans Pro', sans-serif;
@@ -214,12 +217,32 @@ export default class Oquee extends React.Component {
             font-size: 16px;
             margin-left: 60px;
           }
-          .info .grid {
-            display: flex;
-            justify-content: space-between;
-          }
           .info .grid > div {
-            width: 22%;
+            margin-bottom: 1em;
+          }
+          @media only screen and (min-width: 752px) {
+            .cover {
+              height: 100vh;
+            }
+            .cover span {
+              font-size: 41px;
+              bottom: 17%;
+            }
+            .content span {
+              font-size: 24px;
+            }
+            .content .heading span {
+              font-size: 29px;
+              font-weight: normal;
+            }
+            .info .grid {
+              display: flex;
+              justify-content: space-between;
+            }
+            .info .grid > div {
+              width: 22%;
+              margin-bottom: 0;
+            }
           }
         `}</style>
       </PageWrapper>
