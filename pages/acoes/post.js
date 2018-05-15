@@ -37,7 +37,7 @@ export default class Index extends React.Component {
 
           <ContentWrapper style={{ paddingBottom: '70px', paddingTop: '50px', position: 'relative', ...invertStyle }}>
             <Sidebars doc={doc} />
-              <div className='teaser'>{teaser.length && teaser[0].text}</div>
+              {teaser.length ? <div className='teaser'>{teaser[0].text}</div> : null}
               {renderBody(body)}
             <AuthorTeaser author={author} style={{ marginTop: 80, paddingLeft: 0 }} />
           </ContentWrapper>
