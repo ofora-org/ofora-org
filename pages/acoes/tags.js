@@ -18,7 +18,6 @@ export default class pageTags extends React.Component {
           <Title>
             <MenuLink href={{ pathname: '/acoes' }}>/Ações & imaginações</MenuLink> /Palavras-chave
           </Title>
-          <div style={textStyle}>Hashtags:</div>
           <div style={tagsWrapperStyle}>
             {tags.map(tag => <div style={tagsStyle}><MenuLink href={{ pathname: '/acoes/tag', query: { tag } }}>{tag};</MenuLink></div>)}
           </div>
@@ -28,12 +27,6 @@ export default class pageTags extends React.Component {
   }
 }
 
-const textStyle = {
-  fontFamily: "'Source Serif Pro', serif",
-  fontSize: 24,
-  fontWeight: 600,
-  margin: '10px 0'
-}
 const tagsWrapperStyle = {
   display: 'flex',
   justifyContent: 'space-between',

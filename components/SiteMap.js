@@ -42,7 +42,7 @@ const SiteMap = ({ style, categories }) => (
       .wrapper {
         font-family: IntervalBook, monospace;
         font-size: 16px;
-        line-height: 1.25;
+        line-height: 1.3;
         margin-bottom: 20px;
       }
       .content {

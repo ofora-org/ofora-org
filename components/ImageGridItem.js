@@ -37,8 +37,8 @@ export default class ImageGridItem extends React.Component {
           .image-grid-item:hover .underline-hover::before {
             content: "";
             position: absolute;
-            bottom: 0;
-            height: 20px;
+            bottom: -14px;
+            height: 11px;
             background: rgb(0,17,254);
             width: 100%;
           }
