@@ -33,7 +33,7 @@ export default class Footer extends React.Component {
             font-family: 'Source Sans Pro', sans-serif;
             lineHeight: 1.3em;
             display: inline-block;
-            maxWidth: 70%;
+            margin-right: 30%;
           }
           a:hover {
             color: blue;

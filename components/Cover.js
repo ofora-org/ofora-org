@@ -21,7 +21,7 @@ export default class PhotosAndVideosCover extends React.Component {
         </Title>
         <div style={coverMidStyle}>
           <h1 style={h1Style}>{ doc.data.title[0].text }</h1>
-          <ImageGalery media={{videos, photos}} style={{flex: 1, textAlign: 'right', position: 'relative'}}/>
+          <ImageGalery media={{videos, photos}} style={{flex: 1, textAlign: 'right', position: 'relative', maxWidth: '50%', minWidth: '40%' }}/>
         </div>
         <div style={coverBotStyle}>
           <p style={dateStyle} />
@@ -45,7 +45,8 @@ const coverWrapperStyle = {
 }
 const coverMidStyle = {
   display: 'flex',
-  maxHeight: 'calc(90% - 130px)'
+  maxHeight: 'calc(90% - 130px)',
+  justifyContent: 'space-between'
 }
 const coverBotStyle = {
   display: 'flex',
