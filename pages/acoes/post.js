@@ -66,7 +66,7 @@ export default class Index extends React.Component {
 
 const invertStyle = {
   fontFamily: "'Source Serif Pro', serif",
-  minHeight: 500
+  minHeight: 800
 }
 
 const bodyStyle = {
