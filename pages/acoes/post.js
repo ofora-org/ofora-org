@@ -37,7 +37,7 @@ export default class Index extends React.Component {
 
           <ContentWrapper style={{ paddingBottom: '70px', paddingTop: '50px', position: 'relative', ...invertStyle }}>
             <Sidebars doc={doc} />
-              <div className='teaser'>{teaser && teaser[0].text}</div>
+              <div className='teaser'>{teaser.length && teaser[0].text}</div>
               {renderBody(body)}
             <AuthorTeaser author={author} style={{ marginTop: 80, paddingLeft: 0 }} />
           </ContentWrapper>
@@ -65,7 +65,8 @@ export default class Index extends React.Component {
 }
 
 const invertStyle = {
-  fontFamily: "'Source Serif Pro', serif"
+  fontFamily: "'Source Serif Pro', serif",
+  minHeight: 500
 }
 
 const bodyStyle = {
