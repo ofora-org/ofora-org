@@ -33,7 +33,6 @@ export default class pageAcoes extends React.Component {
               selected={selectedCategory || initialCategory}
               onClick={this.handleCategorySelection}
             />
-            <Link href={{ pathname: '/acoes/tags' }}>Palavras-chave;</Link>
           </div>
           <ImageGrid items={documents} category={selectedCategory || initialCategory} />
         </ContentWrapper>
