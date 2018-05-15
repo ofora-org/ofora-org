@@ -14,7 +14,7 @@ const enhance = compose(
 
 const SiteMap = ({ style, categories }) => (
   <div className='wrapper'>
-    <div><span style={{margin: '0 60px 60px'}}>/Mapa do Site</span><br /><br /><br /></div>
+    <div><span style={{margin: '0 60px 60px'}}>/Mapa do site</span><br /><br /><br /></div>
     <div className='content' style={style}>
       <div>
         <div>
