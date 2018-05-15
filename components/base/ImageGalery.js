@@ -17,7 +17,7 @@ export const ImageGalery = ({
   ...props
 }) =>
   <div {...props} className='galeryCover'>
-    {photos.length > 1 ?
+    {photos.length > 0 ?
       <Gallery
         items={photos}
         itemRender={item => <Image {...item.photo} onClick={togglePhotoModal} />}

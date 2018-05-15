@@ -9,6 +9,10 @@ import Sidebars from '~/components/Sidebars'
 import P from '~/components/base/Paragraph'
 import RelatedContentWrapper from '~/components/RelatedContentWrapper'
 import SiteMap from '~/components/SiteMap'
+import Quote from '~/components/base/Quote'
+import NotedParagraph from '~/components/base/NotedParagraph'
+import ImageGalery from '~/components/base/ImageGalery'
+import Video from '~/components/base/Video'
 
 export default class Index extends React.Component {
   static async getInitialProps ({ query }) {
@@ -20,7 +24,7 @@ export default class Index extends React.Component {
 
   render () {
     const { doc, related } = this.props
-    const { author, photos, category, videos } = doc.data
+    const { author, photos, category, videos, body } = doc.data
     const coverPhoto = photos.length ? photos[0].photo.url : videos[0].video.thumbnail_url
     return (
       <PageWrapper invert title={doc.data.title[0].text} cover={coverPhoto} style={{background: '#dfdfdf'}}>
@@ -29,7 +33,7 @@ export default class Index extends React.Component {
 
         <ContentWrapper style={{ paddingBottom: '70px', paddingTop: '50px', position: 'relative', ...invertStyle }}>
           <Sidebars doc={doc} />
-          <P style={bodyStyle}>{ doc.data.corpo }</P>
+            {renderBody(body)}
           <AuthorTeaser author={author} style={{ marginTop: 80, paddingLeft: 0 }} />
         </ContentWrapper>
         <RelatedContentWrapper related={related} />
@@ -58,4 +62,26 @@ const invertStyle = {
 const bodyStyle = {
   fontFamily: "'Source Sans Pro', sans-serif",
   marginTop: '-1em'
+}
+
+
+const renderBody = (body) => {
+  return body.map((slice) => {
+    if (slice.slice_type === 'text') {
+      return <P style={bodyStyle}>{slice.primary.text}</P>
+    }
+    if (slice.slice_type === 'quote') {
+      return <Quote {...slice.primary} />
+    }
+    if (slice.slice_type === 'texto_e_nota') {
+      return <NotedParagraph {...slice.primary} />
+    }
+    if (slice.slice_type === 'galeria') {
+      console.log(slice.items)
+      return <P style={{margin: '60px auto'}}><ImageGalery media={{photos: slice.items, videos: []}} /></P>
+    }
+    if (slice.slice_type === 'video') {
+      return <P style={{margin: '60px auto 77px'}}><Video {...slice.primary.video} /></P>
+    }
+  })
 }

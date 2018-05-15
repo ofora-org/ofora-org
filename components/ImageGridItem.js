@@ -9,7 +9,7 @@ export default class ImageGridItem extends React.Component {
     const title = data.title instanceof Array ? data.title[0].text : false
     const author = data.author.data ? data.author.data.name[0].text : false
     const category = this.props.data.category.data ? this.props.data.category.data.name[0].text : false
-    const types = { article: 'artigo', story: 'materia', pictures_and_video: 'fotoevideo' }
+    const types = { article: 'artigo', story: 'materia', pictures_and_video: 'fotoevideo', post: 'post' }
 
     return (
       <div className='image-grid-item'>

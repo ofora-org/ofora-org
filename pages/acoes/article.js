@@ -4,8 +4,8 @@ import ContentWrapper from '~/components/struct/ContentWrapper'
 import PageWrapper from '~/components/struct/PageWrapper'
 import P from '~/components/base/Paragraph'
 import Quote from '~/components/base/Quote'
-import ArticleCover from '~/components/ArticleCover'
-import ArticleCoverMobile from '~/components/ArticleCoverMobile'
+import Cover from '~/components/Cover'
+import CoverMobile from '~/components/CoverMobile'
 import Sidebars from '~/components/Sidebars'
 import AuthorTeaser from '~/components/AuthorTeaser'
 import RelatedContentWrapper from '~/components/RelatedContentWrapper'
@@ -46,8 +46,8 @@ export default class Article extends React.Component {
 
     return (
       <PageWrapper title={title} cover={doc.data.cover.url} style={{ background: '#DFDFDF' }}>
-        <div className='desktop-only'><ArticleCover {...this.props} /></div>
-        <div className='mobile-only'><ArticleCoverMobile {...this.props} /></div>
+        <div className='desktop-only'><Cover {...this.props} /></div>
+        <div className='mobile-only'><CoverMobile {...this.props} /></div>
         <ContentWrapper style={{ ...bodyStyle, position: 'relative' }}>
           <div style={doc.data.teaser[0].text !== '' ? {} : { marginTop: '-26vh' }}>
             <Sidebars doc={doc} />

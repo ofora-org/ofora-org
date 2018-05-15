@@ -6,7 +6,7 @@ import ImageGalery from '~/components/base/ImageGalery'
 import moment from 'moment'
 import { Date } from 'prismic-reactjs'
 
-export default class PhotosAndVideosCover extends React.Component {
+export default class CoverMobile extends React.Component {
   render () {
     const doc = this.props.doc
     const { author, photos, category, videos, date } = doc.data

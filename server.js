@@ -22,6 +22,9 @@ app.prepare()
     server.get('/acoes/fotoevideo/:id/:slug', (req, res) => {
       return app.render(req, res, '/acoes/pictures_and_video', { id: req.params.id })
     })
+    server.get('/acoes/post/:id/:slug', (req, res) => {
+      return app.render(req, res, '/acoes/post', { id: req.params.id })
+    })
 
     server.post('/signup/:email', (req, res) => {
       console.log(req.params.email)
