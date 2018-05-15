@@ -34,7 +34,6 @@ export default class PhotosAndVideosCover extends React.Component {
 }
 
 const invertStyle = {
-  color: 'white',
   fontFamily: "'Source Serif Pro', serif"
 }
 const coverWrapperStyle = {

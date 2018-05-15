@@ -26,10 +26,11 @@ export default class Index extends React.Component {
     const { doc, related } = this.props
     const { author, photos, category, videos, body, theme } = doc.data
     const coverPhoto = photos.length ? photos[0].photo.url : videos[0].video.thumbnail_url
-    const bgcolor = theme ? 'black' : '#dfdfdf'
-    const textColor = theme ? 'white' : 'black'
+    console.log(theme)
+    const bgcolor = theme === 'Escuro' ? 'black' : '#dfdfdf'
+    const textColor = theme === 'Escuro' ? 'white' : 'black'
     return (
-      <PageWrapper invert title={doc.data.title[0].text} cover={coverPhoto} style={{background: '#dfdfdf'}}>
+      <PageWrapper invert={theme === 'Escuro'} title={doc.data.title[0].text} cover={coverPhoto} style={{background: '#dfdfdf'}}>
         <div style={{background: bgcolor, color: textColor}}>
           <div className='desktop-only'><Cover {...this.props} /></div>
           <div className='mobile-only'><CoverMobile {...this.props} /></div>
