@@ -14,7 +14,7 @@ export default class ImageGridItem extends React.Component {
     return (
       <div className='image-grid-item'>
         <Link href={{ pathname: `/acoes/${types[type]}/${id}/${this.props.slugs[0]}` }}>
-          <div style={imageStackStyle}>
+          <div style={imageStackStyle} className='underline-hover'>
             {this.renderPhotos()}
           </div>
           <h3 style={titleStyle}>
@@ -30,6 +30,17 @@ export default class ImageGridItem extends React.Component {
           }
           .image-grid-item:hover {
             color: rgb(0,17,254);
+          }
+          .underline-hover {
+            position: relative;
+          }
+          .image-grid-item:hover .underline-hover::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            height: 20px;
+            background: rgb(0,17,254);
+            width: 100%;
           }
           @media only screen and (min-width: 600px) {
             .image-grid-item {
