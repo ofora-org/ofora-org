@@ -42,7 +42,7 @@ export default class Index extends React.Component {
           </ContentWrapper>
         </div>
         <RelatedContentWrapper related={related} />
-        <ContentWrapper style={{background: 'rgb(207,207,207)'}}>
+        <ContentWrapper style={{background: '#dfdfdf'}}>
           <SiteMap />
         </ContentWrapper>
         <style jsx>{`

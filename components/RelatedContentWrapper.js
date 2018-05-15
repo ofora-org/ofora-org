@@ -9,7 +9,7 @@ const titleStyle = {
 }
 export const RelatedContentWrapper = ({ related }) => (
   related.length > 0 &&
-    <ContentWrapper style={{background: 'white'}}>
+    <ContentWrapper style={{background: '#cfcfcf'}}>
       <span style={titleStyle}>/Publicações relacionadas</span>
       <ImageGrid items={related} />
     </ContentWrapper>

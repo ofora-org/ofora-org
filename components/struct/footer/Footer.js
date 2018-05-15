@@ -8,7 +8,7 @@ export default class Footer extends React.Component {
   render () {
     return (
       <div>
-        <div style={{background: 'rgb(223,223,223)', overflow: 'hidden'}}>
+        <div style={{background: 'white', overflow: 'hidden'}}>
           <P>
             <div className='contactText'>
               <div>Antes de dar o Fora, se quiser tirar dúvidas, dar sugestões ou colaborar, escreva para:</div>
@@ -16,7 +16,7 @@ export default class Footer extends React.Component {
             </div>
           </P>
         </div>
-        <ContentWrapper  style={{background: 'rgb(223,223,223)'}}>
+        <ContentWrapper  style={{background: 'white'}}>
           <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt_BR' target='_blank'>
             <CC style={ccText} /><span className='ccText'>Todo o conteúdo produzido pelo Fora pode ser copiado, redistribuído e transformado para fins não comerciais, desde que atribuam o devido crédito e que licenciem as novas criações sob termos idênticos. (CC BY-NC-SA 4.0)</span>
           </a>
