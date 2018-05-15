@@ -47,7 +47,7 @@ const coverWrapperStyle = {
 }
 const coverMidStyle = {
   display: 'flex',
-  maxHeight: 'calc(98% - 130px)'
+  maxHeight: 'calc(85% - 130px)'
 }
 const coverBotStyle = {
   display: 'flex',
@@ -62,7 +62,6 @@ const h1Style = {
   fontWeight: 600,
   margin: 0,
   flex: 0.56,
-  alignSelf: 'flex-end',
   marginBottom: '-0.30em'
 }
 
