@@ -15,7 +15,7 @@ export default class CustomHead extends React.Component {
     return (
       <Head>
         <title>Fora {this.props.title && `- ${this.props.title}`}</title>
-        <meta name='viewport' content='width=480px, initial-scale=1.0' />
+        <meta name='viewport' content='width=device-width, user-scalable=no' />
         <link rel='stylesheet' type='text/css' href='/static/main.css' />
         <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' />
         <link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro' rel='stylesheet' />
