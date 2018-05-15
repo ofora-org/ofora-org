@@ -9,7 +9,8 @@ const NotedParagraph = ({ text, note, style }) => (
 )
 
 const baseStyle = {
-  position: 'relative'
+  position: 'relative',
+  paddingBottom: 1
 }
 
 const noteStyle = {
