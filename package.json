@@ -47,7 +47,9 @@
       "next/babel"
     ],
     "plugins": [
-      "babel-plugin-root-import"
+      [
+        "babel-plugin-root-import"
+      ]
     ]
   },
   "now": {
