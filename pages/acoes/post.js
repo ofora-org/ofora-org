@@ -24,9 +24,9 @@ export default class Index extends React.Component {
 
   render () {
     const { doc, related } = this.props
-    const { author, photos, category, videos, body, theme } = doc.data
+    const { author, photos, category, videos, body, theme, teaser } = doc.data
     const coverPhoto = photos.length ? photos[0].photo.url : videos[0].video.thumbnail_url
-    console.log(theme)
+    console.log(teaser)
     const bgcolor = theme === 'Escuro' ? 'black' : '#dfdfdf'
     const textColor = theme === 'Escuro' ? 'white' : 'black'
     return (
@@ -37,6 +37,7 @@ export default class Index extends React.Component {
 
           <ContentWrapper style={{ paddingBottom: '70px', paddingTop: '50px', position: 'relative', ...invertStyle }}>
             <Sidebars doc={doc} />
+              <div className='teaser'>{teaser && teaser[0].text}</div>
               {renderBody(body)}
             <AuthorTeaser author={author} style={{ marginTop: 80, paddingLeft: 0 }} />
           </ContentWrapper>
@@ -46,6 +47,11 @@ export default class Index extends React.Component {
           <SiteMap />
         </ContentWrapper>
         <style jsx>{`
+          .teaser {
+            font-size: 24px;
+            max-width: 700px;
+            margin: 0 auto 60px;
+          }
           @media only screen and (max-width: 752px) {
             div.desktop-only { display: none; }
           }
