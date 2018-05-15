@@ -6,10 +6,20 @@ export default class Quote extends React.Component {
     const sourceText = source.length && source[0].text
     return (
       <P style={{...style, ...wrapperStyle}}>
-        <div style={{paddingLeft: '150px'}}>
+        <div className='root'>
           <div style={quoteStyle}>{quote[0].text}</div>
-          {sourceText ? <div style={sourceStyle}>{sourceText}</div> : null}
+          {sourceText ? <div className='source' style={sourceStyle}>{sourceText}</div> : null}
         </div>
+        <style jsx>{`
+          @media only screen and (min-width: 752px) {
+            .root {
+              padding-left: 150px
+            }
+            .source {
+              padding-left: 65px;
+            }
+          }
+        `}</style>
       </P>
     )
   }
@@ -28,6 +38,5 @@ const sourceStyle = {
   fontSize: 13,
   fontFamily: 'IntervalBook, monospace',
   marginTop: 26,
-  paddingLeft: 65,
   lineHeight: '1.3em'
 }

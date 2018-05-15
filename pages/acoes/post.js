@@ -53,11 +53,13 @@ export default class Index extends React.Component {
             font-size: 24px;
             font-weight: 600;
             max-width: 700px;
-            padding: 0 200px 0 100px;
-            margin: 0 auto 60px;
           }
           @media only screen and (max-width: 752px) {
             div.desktop-only { display: none; }
+            .teaser {
+              padding: 0 200px 0 100px;
+              margin: 0 auto 60px;
+            }
           }
           @media only screen and (min-width: 752px) {
             div.mobile-only { display: none; }

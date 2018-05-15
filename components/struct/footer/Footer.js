@@ -18,7 +18,9 @@ export default class Footer extends React.Component {
         </div>
         <ContentWrapper  style={{background: 'white'}}>
           <a href='https://creativecommons.org/licenses/by-nc-sa/4.0/deed.pt_BR' target='_blank'>
-            <CC /><span className='ccText'>Todo o conteúdo produzido pelo Fora pode ser copiado, redistribuído e transformado para fins não comerciais, desde que atribuam o devido crédito e que licenciem as novas criações sob termos idênticos. (CC BY-NC-SA 4.0)</span>
+            <CC /><span className='ccText'>
+              Todo o conteúdo produzido pelo Fora pode ser copiado, redistribuído e transformado para fins não comerciais, desde que atribuam o devido crédito e que licenciem as novas criações sob termos idênticos. <span>(CC BY-NC-SA 4.0)</span>
+            </span>
           </a>
         </ContentWrapper>
         <style jsx>{`
@@ -34,6 +36,9 @@ export default class Footer extends React.Component {
             lineHeight: 1.3em;
             display: inline-block;
             margin-right: 30%;
+          }
+          .ccText > span {
+            white-space: nowrap;
           }
           a:hover {
             color: blue;
