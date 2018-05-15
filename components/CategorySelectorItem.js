@@ -44,7 +44,7 @@ const wrapperStyle = {
 
 const checkStyle = {
   position: 'absolute',
-  right: '.6em',
+  right: '.59em',
   opacity: 0
 }
 const checkHoverStyle = {

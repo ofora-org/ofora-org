@@ -41,6 +41,7 @@ class LogoWithMenu extends React.Component {
             .root {
               top: 18px;
               left: 29px;
+              right: auto;
               font-size: 41px;
             }
           }
