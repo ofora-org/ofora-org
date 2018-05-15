@@ -17,7 +17,8 @@
     "react-dom": "^16.2.0",
     "react-lazyload": "^2.3.0",
     "react-responsive": "^4.1.0",
-    "recompose": "^0.26.0"
+    "recompose": "^0.26.0",
+    "babel-plugin-root-import": "^5.1.0"
   },
   "scripts": {
     "dev": "node server.js",
@@ -29,7 +30,6 @@
   },
   "devDependencies": {
     "babel-eslint": "^8.2.2",
-    "babel-plugin-root-import": "^5.1.0",
     "eslint": "^4.19.1",
     "eslint-config-standard": "^11.0.0",
     "eslint-config-standard-react": "^6.0.0",
