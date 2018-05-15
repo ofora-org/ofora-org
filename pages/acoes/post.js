@@ -13,6 +13,7 @@ import Quote from '~/components/base/Quote'
 import NotedParagraph from '~/components/base/NotedParagraph'
 import ImageGalery from '~/components/base/ImageGalery'
 import Video from '~/components/base/Video'
+import { RichText } from 'prismic-reactjs'
 
 export default class Index extends React.Component {
   static async getInitialProps ({ query }) {
@@ -29,6 +30,7 @@ export default class Index extends React.Component {
     console.log(teaser)
     const bgcolor = theme === 'Escuro' ? 'black' : '#dfdfdf'
     const textColor = theme === 'Escuro' ? 'white' : 'black'
+    console.log(RichText.render(teaser));
     return (
       <PageWrapper invert={theme === 'Escuro'} title={doc.data.title[0].text} cover={coverPhoto} style={{background: '#dfdfdf'}}>
         <div style={{background: bgcolor, color: textColor}}>
@@ -37,7 +39,7 @@ export default class Index extends React.Component {
 
           <ContentWrapper style={{ paddingBottom: '70px', paddingTop: '50px', position: 'relative', ...invertStyle }}>
             <Sidebars doc={doc} />
-              {teaser.length ? <div className='teaser'>{teaser[0].text}</div> : null}
+              {teaser.length ? <div className='teaser'>{RichText.render(teaser)}</div> : null}
               {renderBody(body)}
             <AuthorTeaser author={author} style={{ marginTop: 80, paddingLeft: 0 }} />
           </ContentWrapper>
@@ -49,7 +51,9 @@ export default class Index extends React.Component {
         <style jsx>{`
           .teaser {
             font-size: 24px;
+            font-weight: 600;
             max-width: 700px;
+            padding: 0 200px 0 100px;
             margin: 0 auto 60px;
           }
           @media only screen and (max-width: 752px) {
