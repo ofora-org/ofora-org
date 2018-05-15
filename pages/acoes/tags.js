@@ -16,7 +16,7 @@ export default class pageTags extends React.Component {
       <PageWrapper title='Palavras-chave' style={{ background: '#DFDFDF' }}>
         <ContentWrapper>
           <Title>
-            <MenuLink href={{ pathname: '/acoes' }}>/Ações & Imaginações</MenuLink> /Palavras-chave
+            <MenuLink href={{ pathname: '/acoes' }}>/Ações & imaginações</MenuLink> /Palavras-chave
           </Title>
           <div style={textStyle}>Hashtags:</div>
           <div style={tagsWrapperStyle}>

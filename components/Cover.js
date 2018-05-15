@@ -45,7 +45,7 @@ const coverWrapperStyle = {
 }
 const coverMidStyle = {
   display: 'flex',
-  maxHeight: 'calc(85% - 130px)'
+  maxHeight: 'calc(90% - 130px)'
 }
 const coverBotStyle = {
   display: 'flex',
