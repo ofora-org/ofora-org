@@ -88,7 +88,7 @@ export default class Oquee extends React.Component {
             <P><div className='grid'>
               <div><b>Germano Dushá</b><br />Escritor, curador e produtor cultural, é co-idealizador do Fora e trabalha com a orientação da equipe do projeto e articulação geral da área de Cultura e comunicação.</div>
               <div><b>Gilberto Vieira</b><br />Comunicador e pesquisador sobre culturas e territórios, articula estratégias, tecnologia e ferramentas de comunicação.</div>
-              <div><b>Johanna Stein</b><br />Pesquisadora em artes visuais, é co-idealizadora do Fora e atua no posicionamento público e captação de recursos.</div>
+              <div><b>Johanna Stein</b><br />Pesquisadora em artes visuais, é co-idealizadora do Fora e atua no posicionamento público e assessoria na área de Cultura e comunicação do Fora.</div>
               <div><b>Manuela Rached</b><br />Jornalista, é responsável pela articulação interna e assessoria na área de Cultura e comunicação do Fora.</div>
             </div></P>
             <P><div className='grid'>
@@ -157,7 +157,7 @@ export default class Oquee extends React.Component {
 
             <P><div className='title'>/Financiamento</div></P>
             <P><div className='grid'>
-              <div>Projeto <b>autofinanciado.</b></div>
+              <div><b>Autofinanciado.</b></div>
               <div></div>
               <div></div>
               <div></div>
