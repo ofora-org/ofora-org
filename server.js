@@ -8,6 +8,14 @@ const dev = process.env.NODE_ENV !== 'production'
 const app = next({ dev })
 const handle = app.getRequestHandler()
 
+function redirectToNaked(req, res, next) {
+  if (req.hostname === 'www.ofora.org') {
+    return res.redirect(`https://ofora.org/${req.originalUrl}`);
+  }
+  return next(); // call the next middleware (or route)
+}
+
+
 app.prepare()
   .then(() => {
     const server = express()
@@ -57,4 +65,6 @@ app.prepare()
       if (err) throw err
       console.log(`> Ready on http://localhost:${port}`)
     })
+
+    server.use(redirectToNaked)
   })
