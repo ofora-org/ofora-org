@@ -81,7 +81,7 @@ const Gallery = ({
             top: 51%;
             font-size: 90px;
           }
-          .galleryNav.right { right: -2px; }
+          .galleryNav.right { right: -28px; }
           .galleryNav.left { left: -28px; }
         }
       `}</style>
