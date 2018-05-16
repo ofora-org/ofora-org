@@ -21,7 +21,6 @@ export default class Menu extends React.Component {
           <MenuLink href={{ pathname: '/acoes' }}>Ações & imaginações;</MenuLink>
         </div>
         <div className='menu secondaryMenu'>
-          <div><MenuLink onClick={toggleSignup}>Informativo;</MenuLink></div>
           <MenuLink href={{ pathname: 'https://www.facebook.com/foraofora' }} >Facebook;</MenuLink>{' '}
           <MenuLink href={{ pathname: 'https://twitter.com/foraofora' }}>Twitter;</MenuLink>{' '}
           <MenuLink href={{ pathname: 'https://www.instagram.com/foraofora/' }} >Instagram;</MenuLink>{' '}
