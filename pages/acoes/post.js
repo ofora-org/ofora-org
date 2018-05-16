@@ -37,7 +37,7 @@ export default class Index extends React.Component {
           <div className='desktop-only'><Cover {...this.props} /></div>
           <div className='mobile-only'><CoverMobile {...this.props} /></div>
 
-          <ContentWrapper style={{ paddingBottom: '70px', paddingTop: '50px', position: 'relative', ...invertStyle }}>
+          <ContentWrapper style={{ paddingBottom: '70px', position: 'relative', ...invertStyle }}>
             <Sidebars doc={doc} />
               {teaser.length ? <div className='teaser'>{RichText.render(teaser)}</div> : null}
               {renderBody(body)}
@@ -53,16 +53,17 @@ export default class Index extends React.Component {
             font-size: 24px;
             font-weight: 600;
             max-width: 700px;
+            margin-bottom: 60px
           }
           @media only screen and (max-width: 752px) {
             div.desktop-only { display: none; }
-            .teaser {
-              padding: 0 200px 0 100px;
-              margin: 0 auto 60px;
-            }
           }
           @media only screen and (min-width: 752px) {
             div.mobile-only { display: none; }
+            .teaser {
+              padding: 0 200px 0 100px;
+              margin: -1em auto 60px;
+            }
           }
         `}</style>
       </PageWrapper>

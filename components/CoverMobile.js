@@ -34,8 +34,6 @@ export default class CoverMobile extends React.Component {
 }
 
 const invertStyle = {
-  background: '#000',
-  color: 'white',
   fontFamily: "'Source Serif Pro', serif"
 }
 
