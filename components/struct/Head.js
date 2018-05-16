@@ -33,6 +33,16 @@ export default class CustomHead extends React.Component {
         <link rel='icon' type='image/png' sizes='96x96' href='/static/favicon-96x96.png' />
         <link rel='icon' type='image/png' sizes='16x16' href='/static/favicon-16x16.png' />
         <link rel='manifest' href='/static/manifest.json' />
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-119351761-1"></script>
+        <script dangerouslySetInnerHTML={{__html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+
+          gtag('config', 'UA-119351761-1');`}}
+        />
+
+
         <meta name='theme-color' content='#ffffff' />
         <meta property='og:type' content='article' />
         <meta property='og:title' content={this.props.title} />
