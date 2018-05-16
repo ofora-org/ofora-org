@@ -94,7 +94,6 @@ const renderBody = (body) => {
       return <NotedParagraph {...slice.primary} />
     }
     if (slice.slice_type === 'galeria') {
-      console.log(slice.items)
       return <P style={{margin: '60px auto'}}><ImageGalery media={{photos: slice.items, videos: []}} /></P>
     }
     if (slice.slice_type === 'video') {

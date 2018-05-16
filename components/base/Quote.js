@@ -1,37 +1,48 @@
 import React from 'react'
 import P from '~/components/base/Paragraph'
+
+const CleanP = ({children}) => <P style={{margin: 0, fontSize: 'inherit', padding: 0, maxWidth: 'auto'}}>{children}</P>
+
 export default class Quote extends React.Component {
   render () {
     const { style, quote, source } = this.props
-    const sourceText = source.length && source[0].text
+    const sourceText = source.length && source
     return (
-      <P style={{...style, ...wrapperStyle}}>
         <div className='root'>
-          <div style={quoteStyle}>{quote[0].text}</div>
-          {sourceText ? <div className='source' style={sourceStyle}>{sourceText}</div> : null}
-        </div>
-        <style jsx>{`
-          @media only screen and (min-width: 752px) {
+          <div className='quote'><CleanP>{quote}</CleanP></div>
+          {sourceText ? <div className='source'><CleanP>{sourceText}</CleanP></div> : null}
+          <style jsx>{`
             .root {
-              padding-left: 150px
+              margin-bottom: 2em;
+            }
+            .quote {
+              font-size: 24px;
+              font-family: 'Source Serif Pro', serif;
+              font-weight: 600;
             }
             .source {
-              padding-left: 65px;
+              font-size: 13px;
+              font-family: IntervalBook, monospace;
+              line-height: 1.3em;
+              margin-top: 16px;
             }
-          }
-        `}</style>
-      </P>
+            @media only screen and (min-width: 752px) {
+              .root {
+                max-width: 600px;
+                margin: 0 auto 2em;
+                padding: 0 200px;
+              }
+              .quote {
+                margin-left: 150px;
+              }
+              .source {
+                padding-left: 215px;
+              }
+            }
+          `}</style>
+        </div>
     )
   }
-}
-
-const wrapperStyle = {
-  margin: '60px auto'
-}
-const quoteStyle = {
-  fontSize: 24,
-  fontFamily: "'Source Serif Pro', serif",
-  fontWeight: 600
 }
 
 const sourceStyle = {
