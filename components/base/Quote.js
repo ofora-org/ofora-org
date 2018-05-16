@@ -13,7 +13,7 @@ export default class Quote extends React.Component {
           {sourceText ? <div className='source'><CleanP>{sourceText}</CleanP></div> : null}
           <style jsx>{`
             .root {
-              margin-bottom: 2em;
+              margin-bottom: 2.5em;
             }
             .quote {
               font-size: 24px;
@@ -29,7 +29,7 @@ export default class Quote extends React.Component {
             @media only screen and (min-width: 752px) {
               .root {
                 max-width: 600px;
-                margin: 0 auto 2em;
+                margin: 0 auto 2.5em;
                 padding: 0 200px;
               }
               .quote {
