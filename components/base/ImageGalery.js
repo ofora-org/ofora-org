@@ -50,10 +50,13 @@ export const ImageGalery = ({
     <style jsx global>{`
       .galeryCover {
         padding-top: 1.3em;
-        font-size: 24px;
+        font-size: 19px;
         position: relative;
       }
       @media only screen and (min-width: 752px) {
+        .galeryCover {
+          font-size: 24px;
+        }
         .galeryCover .galleryNav {
           opacity: 0;
         }
