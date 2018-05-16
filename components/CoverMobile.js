@@ -26,7 +26,7 @@ export default class CoverMobile extends React.Component {
         <div style={coverBotStyle}>
           <p style={dateStyle} />
           <p style={authorStyle}>{ authorName && <span><span style={{fontSize: 24, fontWeight: 600}}>Por</span> {authorName}</span> }</p>
-          <p style={dateStyle}>{moment(Date(date)).format('DD.MM.YY')}</p>
+          <p style={dateStyle}>{moment(date).format('DD.MM.YY')}</p>
         </div>
       </ContentWrapper>
     )
@@ -49,7 +49,6 @@ const coverBotStyle = {
 }
 
 const h1Style = {
-  paddingRight: 50,
   fontSize: 29,
   fontWeight: 600,
   margin: 0,

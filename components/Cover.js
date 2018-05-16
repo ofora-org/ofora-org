@@ -26,7 +26,7 @@ export default class PhotosAndVideosCover extends React.Component {
         <div style={coverBotStyle}>
           <p style={dateStyle} />
           <p style={authorStyle}>{ authorName && <span>por {authorName}</span> }</p>
-          <p style={dateStyle}>{moment(Date(date)).format('DD.MM.YY')}</p>
+          <p style={dateStyle}>{moment(date).format('DD.MM.YY')}</p>
         </div>
       </ContentWrapper>
     )
