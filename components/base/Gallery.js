@@ -68,16 +68,20 @@ const Gallery = ({
       <style jsx>{`
         .galleryNav {
           position: absolute;
-          top: 38%;
-          font-size: 90px;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 45px;
           font-family: Arial;
           cursor: pointer;
         }
-        .galleryNav.right { right: 0; }
-        .galleryNav { left: 0; }
+        .galleryNav.right { right: -15px; }
+        .galleryNav { left: -15px; }
         @media only screen and (min-width: 752px) {
-          .galleryNav { top: 45%; }
-          .galleryNav.right { right: -28px; }
+          .galleryNav {
+            top: 51%;
+            font-size: 90px;
+          }
+          .galleryNav.right { right: -2px; }
           .galleryNav.left { left: -28px; }
         }
       `}</style>

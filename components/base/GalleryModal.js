@@ -7,7 +7,7 @@ import Gallery from '~/components/base/Gallery'
 const GalleryModal = ({ items, onBgClick, visible, wrapperProps, ...props }) =>
   <Modal
     visible={visible}
-    style={{zIndex: 100, background: 'rgba(0,0,0,1)', padding: 30}}
+    style={{zIndex: 100, background: 'rgba(0,0,0,1)', padding: 20}}
     onBgClick={onBgClick}
   >
     <Gallery
@@ -20,17 +20,17 @@ const GalleryModal = ({ items, onBgClick, visible, wrapperProps, ...props }) =>
 
 const ItemRender = ({subtitle, photo, video, index, length}) =>
   <div style={wrapperStyle} className='modal'>
-    <div style={sidebarStyle}>
+    <div className='sidebar' style={sidebarStyle}>
       <div style={{fontFamily: 'IntervalBold, monospace', marginBottom: 20}}>
         {index}/{length}
       </div>
       {subtitle && <div>subtitle</div>}
     </div>
-    <div style={{...photoStyle, display: video ? 'block' : 'flex'}}>
+    <div className='mediaWrapper' style={{display: video ? 'block' : 'flex'}}>
       {photo && <Image {...photo} />}
       {video && <Video {...video} />}
     </div>
-    <div style={{ ...sidebarStyle, textAlign: 'right' }}>
+    <div className='sidebar' style={{ ...sidebarStyle, textAlign: 'right' }}>
       <svg width={25} height={25} style={{cursor: 'pointer', pointerEvents: 'all'}} className='modal'>
         <g>
           <line
@@ -58,6 +58,21 @@ const ItemRender = ({subtitle, photo, video, index, length}) =>
         </g>
       </svg>
     </div>
+    <style jsx>{`
+      @media only screen and (min-width: 752px) {
+        .sidebar {
+          max-width: 200px;
+          min-width: 200px;
+        }
+        .mediaWrapper {
+          margin: 20px
+          text-align: center;
+          max-height: 80%;
+          align-self: center;
+          flex: 1
+        }
+      }
+    `}</style>
   </div>
 
 const galleryStyle = {
@@ -70,16 +85,7 @@ const wrapperStyle = {
   display: 'flex',
   width: '100%'
 }
-const photoStyle = {
-  margin: 20,
-  textAlign: 'center',
-  maxHeight: '90%',
-  alignSelf: 'center',
-  flex: 1
-}
 const sidebarStyle = {
-  maxWidth: 200,
-  minWidth: 200,
   fontSize: 13,
   fontFamily: 'IntervalBook, monospace',
   pointerEvents: 'none',
