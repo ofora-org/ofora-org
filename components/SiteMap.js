@@ -14,7 +14,7 @@ const enhance = compose(
 
 const SiteMap = ({ style, categories }) => (
   <div className='wrapper'>
-    <div><span style={{margin: '0 60px 60px'}}>/Mapa do site</span><br /><br /><br /></div>
+    <div><span className='title'>/Mapa do site</span><br /><br /><br /></div>
     <div className='content' style={style}>
       <div>
         <div>
@@ -44,6 +44,9 @@ const SiteMap = ({ style, categories }) => (
         line-height: 1.3;
         margin-bottom: 20px;
       }
+      .title {
+        margin-bottom: 60px;
+      }
       .content {
         display: flex;
       }
@@ -52,6 +55,7 @@ const SiteMap = ({ style, categories }) => (
       }
       @media only screen and (min-width: 752px) {
         .content { width: 600px; margin: 0 auto; }
+        .title { margin-left: 60px; }
       }
     `}</style>
   </div>

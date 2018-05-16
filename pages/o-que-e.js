@@ -215,7 +215,6 @@ export default class Oquee extends React.Component {
             display: block;
             font-family: IntervalBook, monospace;
             font-size: 16px;
-            margin-left: 60px;
           }
           .info .grid > div {
             margin-bottom: 1em;
@@ -234,6 +233,9 @@ export default class Oquee extends React.Component {
             .content .heading span {
               font-size: 29px;
               font-weight: normal;
+            }
+            .info .float-title {
+              margin-left: 60px;
             }
             .info .grid {
               display: flex;
