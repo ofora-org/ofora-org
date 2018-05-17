@@ -10,12 +10,25 @@ const GalleryModal = ({ items, onBgClick, visible, wrapperProps, ...props }) =>
     style={{zIndex: 100, background: 'rgba(0,0,0,1)', padding: 20}}
     onBgClick={onBgClick}
   >
-    <Gallery
-      {...props}
-      items={items}
-      itemRender={ItemRender}
-      wrapperProps={{ ...wrapperProps, style: galleryStyle }}
-    />
+    <div className='modalWrapper'>
+      <Gallery
+        {...props}
+        items={items}
+        itemRender={ItemRender}
+        wrapperProps={{ ...wrapperProps, style: galleryStyle }}
+      />
+    </div>
+    <style jsx>{`
+      .modalWrapper {
+        height: 100%;
+        box-sizing: border-box;
+      }
+      @media only screen and (min-width: 752px) {
+        .modalWrapper {
+          padding: 20px;
+        }
+      }
+    `}</style>
   </Modal>
 
 const ItemRender = ({subtitle, photo, video, index, length}) =>
@@ -65,7 +78,7 @@ const ItemRender = ({subtitle, photo, video, index, length}) =>
           min-width: 200px;
         }
         .mediaWrapper {
-          margin: 40px
+          margin: 20px
           text-align: center;
           max-height: 80%;
           align-self: center;
