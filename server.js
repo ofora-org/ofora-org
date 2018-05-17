@@ -20,6 +20,8 @@ app.prepare()
   .then(() => {
     const server = express()
 
+    server.use(redirectToNaked)
+
     server.get('/acoes/artigo/:id/:slug', (req, res) => {
       return app.render(req, res, '/acoes/article', { id: req.params.id })
     })
@@ -65,6 +67,4 @@ app.prepare()
       if (err) throw err
       console.log(`> Ready on http://localhost:${port}`)
     })
-
-    server.use(redirectToNaked)
   })
