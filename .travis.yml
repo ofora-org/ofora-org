@@ -1,6 +1,23 @@
 language: node_js
+sudo: false
+
 node_js:
 - "node"
 cache: npm
 script: npm run deploy
 after_script: npm run alias
+
+
+
+jobs:
+  include:
+    - stage: deploy branch
+      script: npm run deploy
+    - stage: alias to branch
+      script: npm run alias
+    - stage: deploy prod
+      script: npm run deploy:prod
+      if: branch = master
+    - stage: alias to prod
+      script: npm run alias:prod
+      if: branch = master
