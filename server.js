@@ -10,7 +10,7 @@ const handle = app.getRequestHandler()
 
 function redirectToNaked(req, res, next) {
   if (req.hostname === 'www.ofora.org') {
-    return res.redirect(`https://ofora.org/${req.originalUrl}`);
+    return res.redirect(`https://ofora.org${req.originalUrl}`);
   }
   return next(); // call the next middleware (or route)
 }

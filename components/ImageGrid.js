@@ -8,9 +8,9 @@ export default class ImageGrid extends React.Component {
     return (
       <div className='root'>
         {this.renderItems()}
-        <div className='image-grid-item' />
-        <div className='image-grid-item' />
-        <div className='image-grid-item' />
+        <div className='image-grid-item' style={{marginBottom: 0}} />
+        <div className='image-grid-item' style={{marginBottom: 0}} />
+        <div className='image-grid-item' style={{marginBottom: 0}} />
         <style jsx>{`
           .root {
             display: flex;
