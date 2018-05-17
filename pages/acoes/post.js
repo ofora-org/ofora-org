@@ -27,10 +27,9 @@ export default class Index extends React.Component {
     const { doc, related } = this.props
     const { author, photos, category, videos, body, theme, teaser } = doc.data
     const coverPhoto = photos.length ? photos[0].photo.url : videos[0].video.thumbnail_url
-    console.log(teaser)
     const bgcolor = theme === 'Escuro' ? 'black' : '#dfdfdf'
     const textColor = theme === 'Escuro' ? 'white' : 'black'
-    console.log(RichText.render(teaser));
+
     return (
       <PageWrapper
         invert={theme === 'Escuro'}

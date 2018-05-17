@@ -65,7 +65,7 @@ const ItemRender = ({subtitle, photo, video, index, length}) =>
           min-width: 200px;
         }
         .mediaWrapper {
-          margin: 20px
+          margin: 40px
           text-align: center;
           max-height: 80%;
           align-self: center;

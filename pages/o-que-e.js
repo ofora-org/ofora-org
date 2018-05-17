@@ -19,7 +19,7 @@ export default class Oquee extends React.Component {
 
   render () {
     return (
-      <PageWrapper invert>
+      <PageWrapper invert title="Fora" description="O Fora é sobre possibilidades de viver a cidade e acontece por meio de pesquisas sociais, manifestações culturais e ações na paisagem urbana." image='https://fora.cdn.prismic.io/fora/21c85cdcacb048a984d1150c855296cbda4b1095_fora-dobra-do-corpo-1-.jpg'>
         <div className='cover'>
           <ContentWrapper style={pageStyle}>
             <Title>/O que é</Title>
