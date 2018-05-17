@@ -42,7 +42,7 @@
     "deploy": "now -e NODE_ENV=production -e MAILCHIMP_K=$MAILCHIMP_K --token $NOW_TOKEN --npm --public -T ofora",
     "deploy:prod": "now -e NODE_ENV=production -e MAILCHIMP_K=$MAILCHIMP_K --token $NOW_TOKEN --npm",
     "alias": "now alias fora-$TRAVIS_PULL_REQUEST_BRANCH$TRAVIS_BRANCH --token=$NOW_TOKEN -T ofora",
-    "alias:prod": "now alias ofora.org --token=$NOW_TOKEN && now alias ofora.org --token=$NOW_TOKEN"
+    "alias:prod": "now alias ofora.org --token=$NOW_TOKEN && now alias www.ofora.org --token=$NOW_TOKEN"
   },
   "babel": {
     "presets": [
