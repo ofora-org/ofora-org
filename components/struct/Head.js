@@ -41,12 +41,11 @@ export default class CustomHead extends React.Component {
 
           gtag('config', 'UA-119351761-1');`}}
         />
-
-
         <meta name='theme-color' content='#ffffff' />
         <meta property='og:type' content='article' />
         <meta property='og:title' content={this.props.title} />
         <meta property='og:image' content={this.props.cover} />
+        <meta property='og:description' content={this.props.description} />
         <style jsx global>{
           `html {
             min-height: 100%;

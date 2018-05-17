@@ -32,7 +32,13 @@ export default class Index extends React.Component {
     const textColor = theme === 'Escuro' ? 'white' : 'black'
     console.log(RichText.render(teaser));
     return (
-      <PageWrapper invert={theme === 'Escuro'} title={doc.data.title[0].text} cover={coverPhoto} style={{background: '#dfdfdf'}}>
+      <PageWrapper
+        invert={theme === 'Escuro'}
+        title={doc.data.title[0].text}
+        cover={coverPhoto}
+        description={teaser.length ? RichText.asText(teaser) : RichText.asText(body[0].primary.text)}
+        style={{background: '#dfdfdf'}}
+      >
         <div style={{background: bgcolor, color: textColor}}>
           <div className='desktop-only'><Cover {...this.props} /></div>
           <div className='mobile-only'><CoverMobile {...this.props} /></div>
