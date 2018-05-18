@@ -83,7 +83,7 @@ export default class ImageGridItem extends React.Component {
           <Image {...photosOrVideo[1].photo.thumb} style={imageStyle} loadDelay={200} />
         </div>}
         <div style={{ ...imageWrapperStyle, transform: photos[1] && 'translate3d(-7px, 7px, 0)' }}>
-          <Image {...photosOrVideo[0].photo.thumb} style={imageStyle} loadDelay={400} />
+          <Image {...photosOrVideo[0].photo.cover} style={imageStyle} loadDelay={400} />
         </div>
       </div>
     )
