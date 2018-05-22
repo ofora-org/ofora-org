@@ -77,26 +77,25 @@ export default class Index extends React.Component {
 }
 
 const invertStyle = {
-  fontFamily: "'Source Serif Pro', serif",
+  fontFamily: "'Source Sans Pro', sans-serif",
   minHeight: 800
 }
 
 const bodyStyle = {
-  fontFamily: "'Source Sans Pro', sans-serif",
-  marginTop: '-1em'
+
 }
 
 
 const renderBody = (body) => {
   return body.map((slice) => {
     if (slice.slice_type === 'text') {
-      return <P style={bodyStyle}>{slice.primary.text}</P>
+      return <P style={{bodyStyle, marginTop: '-1em'}}>{slice.primary.text}</P>
     }
     if (slice.slice_type === 'quote') {
       return <Quote {...slice.primary} />
     }
     if (slice.slice_type === 'texto_e_nota') {
-      return <NotedParagraph {...slice.primary} />
+      return <NotedParagraph style={bodyStyle} {...slice.primary} />
     }
     if (slice.slice_type === 'galeria') {
       return <P style={{margin: '60px auto'}}><ImageGalery media={{photos: slice.items, videos: []}} /></P>
