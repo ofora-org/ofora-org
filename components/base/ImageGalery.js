@@ -20,8 +20,8 @@ export const ImageGalery = ({
     {photos.length > 0 ?
       <Gallery
         items={photos}
-        itemRender={item => <Image {...item.photo} onClick={togglePhotoModal} />}
-        wrapperProps={{style: { height: '100%', cursor: 'pointer' }}}
+        itemRender={item => <Image {...item.photo} onClick={photos.length > 1 && togglePhotoModal} />}
+        wrapperProps={{style: { height: '100%', cursor: photos.length > 1 && 'pointer' }}}
         onChange={i => setCurrentCoverItem(i)}
       /> :
       <Gallery
