@@ -28,6 +28,7 @@ const noteStyle = {
   fontSize: 12,
   padding: 0,
   marginTop: '-1em',
+  fontFamily: "'Source Serif Pro', serif"
 }
 
 export default NotedParagraph

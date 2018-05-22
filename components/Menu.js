@@ -23,8 +23,8 @@ export default class Menu extends React.Component {
         <div className='menu secondaryMenu'>
           <MenuLink href={{ pathname: 'https://www.facebook.com/foraofora' }} >Facebook;</MenuLink>{' '}
           <MenuLink href={{ pathname: 'https://www.instagram.com/foraofora/' }} >Instagram;</MenuLink>{' '}
-          <MenuLink href={{ pathname: 'https://www.youtube.com/channel/UCWbR2Koag3uPfuaWUktngEg' }}>YouTube;</MenuLink>
-          <MenuLink href={{ pathname: 'https://twitter.com/foraofora' }}>Twitter;</MenuLink>{' '}
+          <MenuLink href={{ pathname: 'https://www.youtube.com/channel/UCWbR2Koag3uPfuaWUktngEg' }}>YouTube;</MenuLink>{' '}
+          <MenuLink href={{ pathname: 'https://twitter.com/foraofora' }}>Twitter;</MenuLink>
         </div>
         <Modal visible={showSignup} onBgClick={this.toggleSignup}>
           <SignupForm />

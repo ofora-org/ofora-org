@@ -77,12 +77,12 @@ export default class Index extends React.Component {
 }
 
 const invertStyle = {
-  fontFamily: "'Source Serif Pro', serif",
+  fontFamily: "'Source Sans Pro', sans-serif",
   minHeight: 800
 }
 
 const bodyStyle = {
-  fontFamily: "'Source Sans Pro', sans-serif"
+
 }
 
 
