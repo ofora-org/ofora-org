@@ -58,7 +58,8 @@ export default class Index extends React.Component {
             font-size: 24px;
             font-weight: 600;
             max-width: 700px;
-            margin-bottom: 60px
+            margin-bottom: 60px;
+            font-family: 'Source Serif Pro', serif,
           }
           @media only screen and (max-width: 752px) {
             div.desktop-only { display: none; }
