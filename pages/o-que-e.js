@@ -19,11 +19,11 @@ export default class Oquee extends React.Component {
 
   render () {
     return (
-      <PageWrapper invert title="O que é" description="O Fora é sobre possibilidades de viver a cidade e acontece por meio de pesquisas sociais, manifestações culturais e ações na paisagem urbana." cover='https://fora.cdn.prismic.io/fora/21c85cdcacb048a984d1150c855296cbda4b1095_fora-dobra-do-corpo-1-.jpg'>
+      <PageWrapper invert title="O que é" description="O Fora é sobre possibilidades de viver a cidade e acontece por meio de pesquisas sociais, manifestações culturais e ações no espaço público." cover='https://fora.cdn.prismic.io/fora/21c85cdcacb048a984d1150c855296cbda4b1095_fora-dobra-do-corpo-1-.jpg'>
         <div className='cover'>
           <ContentWrapper style={pageStyle}>
             <Title>/O que é</Title>
-            <span>O Fora é sobre possibilidades de viver a cidade e acontece por meio de pesquisas sociais, manifestações culturais e ações na paisagem urbana.</span>
+            <span>O Fora é sobre possibilidades de viver a cidade e acontece por meio de pesquisas sociais, manifestações culturais e ações no espaço público.</span>
           </ContentWrapper>
         </div>
         <div className='content' style={{background: '#dfdfdf'}}>
@@ -33,36 +33,23 @@ export default class Oquee extends React.Component {
             </div></P>
             <div className='heading'>
               <P><span>
-                Para levantar histórias, urgências e possíveis futuros dos centros urbanos, o Fora parte da escuta da população e da análise de dados para trazer à tona pontos de vista, impressões e demandas ligadas ao espaço público de São Paulo.
+                Com o objetivo de levantar histórias, urgências e possíveis futuros dos centros urbanos, o Fora articula iniciativas que trazem à tona visões, imaginações e desejos sobre nossos corpos, a cidade e a vida comum. Como canal de comunicação e ação na rua e na internet, reúne narrativas e práticas que nos provocam a pensar criticamente o contexto urbano, abordando temas de interesse global a partir de perspectivas locais. 
               </span></P>
               <P><span>
-                Em diálogo com essas pesquisas, o Fora impulsiona práticas artísticas, atividades educativas e intervenções nas paisagens de diferentes áreas da cidade.
+                Diante dos esgotamentos atuais, é no Fora que nos encontramos para conhecer e exercer diferentes formas de vida, experimentando maneiras de sentir, pensar, fazer e se relacionar.
               </span></P>
               <P><span>
-                Atuando como canal de cultura e comunicação nas ruas e na internet, o Fora estimula uma diversidade de narrativas para imaginar e refletir sobre o que nos é comum.
-              </span></P>
-              <P><span>
-                Diante dos esgotamentos atuais, é no Fora que nos encontramos para conhecer e exercer diferentes formas de vida.
-              </span></P>
             </div>
             <div style={{textAlign: 'center', marginTop: 25}}>
               <Img src='/static/oquee.gif' />
-            </div>
-            <P><div className='title' id='research'>
-              /Pesquisas
-            </div></P>
             <P><span>
-              Para propor reflexões públicas e nortear as ações do Fora a área de pesquisa social atua por meios digitais e trabalhos de campo, colhendo dados e realizando escutas de diferentes vivências, visões e vozes na cidade de São Paulo. Investiga possibilidades de vida no espaço público e o que se perde na ausência desses locais, refletindo sobre formas viáveis de criar, manter e viver a rua.
+              O Fora comissiona e produz conteúdos inéditos de arte, ensaio e jornalismo para fazer circular expressões culturais que afirmam a diversidade e geram reflexões a respeito do que nos é comum.
             </span></P>
-            <P><div className='title' id='cultures'>
-              /Culturas
-            </div></P>
             <P><span>
-              Como canal de comunicação e cultura o Fora reúne um grupo diverso e multidisciplinar para promover encontros e provocar imaginações sobre nossos corpos, a cidade e a vida comum. Por meio da produção e difusão de conteúdo na esfera digital e com programas de arte e educação nas ruas, aborda assuntos de interesse global e perspectivas locais, fazendo circular afetos e maneiras de viver espaços públicos.
+              O Fora realiza e dissemina pesquisas com base em análise de dados, observações e escutas para investigar dinâmicas, demandas e desafios relacionados ao convívio e às possibilidades de atuação coletiva nas cidades.
             </span></P>
-            <P><div className='title' id='landscapes'>/Paisagens</div></P>
             <P><span>
-              Para atuar na paisagem urbana o Fora investiga o que se pode ver, ouvir, cheirar, provar e tocar na cidade, promovendo práticas paisagísticas com pequenas infraestruturas, mobiliários, vestuários e composições botânicas. Partindo da pesquisa social e das experiências artísticas e educativas, também desenvolve projetos para conceber e manter espaços comuns ao ar livre.
+              O Fora desenvolve encontros, atividades artísticas e educativas, dispositivos e outras intervenções na paisagem urbana para impulsionar experiências de ocupação e democratização do espaço público.
             </span></P>
           </ContentWrapper>
         </div>
@@ -71,87 +58,23 @@ export default class Oquee extends React.Component {
             <span className='float-title'>/Informações gerais</span>
 
             <P><div className='title'>/Equipe</div></P>
-            <P><div className='subtitle'>_Pesquisa social e análise de dados</div></P>
             <P><div className='grid'>
-              <div><b>Fabricia Ramos</b><br />Pesquisadora social e advogada, é coordenadora da área de pesquisa social e qualitativa do Fora.</div>
-              <div><b>Fernanda Moraes</b><br />Jornalista livre e graduanda em Gestão de Políticas Públicas, é pesquisadora do Fora.</div>
-              <div><b>Glória Maria</b><br />Jornalista livre e produtora cultural, é pesquisadora do Fora.</div>
-              <div><b>João Meirelles</b><br />Engenheiro e cientista de dados, é coordenador da área de coleta de dados quantitativos no Fora.</div>
+              <div><b>Germano Dushá</b><br />Escritor, curador e produtor cultural, é co-idealizador e coordenador geral do Fora, responsável pelo conteúdo de produção cultural e pela comunicação institucional.</div>
+              <div><b>Fabricia Ramos</b><br />Pesquisadora e advogada, é responsável pelo conteúdo de pesquisa e pela gestão, captação e desenvolvimento institucional do Fora.</div>
+              <div><b>Ramon Brandão</b><br />Cientista social, professor e pesquisador na área de ética e filosofia política, é responsável pela fundamentação conceitual do Fora e pelo conteúdo de produção cultural.</div>
+              <div><b>Leticia Rheingantz</b><br />Cineasta e produtora, é responsável pela produção audiovisual e pela gestão, captação e desenvolvimento institucional do Fora.</div>
             </div></P>
             <P><div className='grid'>
-              <div><b>Karol Oliveira</b><br />Produtora cultural e educadora popular, é pesquisadora do Fora.</div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div></P>
-            <P><div className='subtitle'>_Cultura e comunicação</div></P>
-            <P><div className='grid'>
-              <div><b>Germano Dushá</b><br />Escritor, curador e produtor cultural, é co-idealizador do Fora e trabalha com a orientação da equipe do projeto e articulação geral da área de Cultura e comunicação.</div>
-              <div><b>Gilberto Vieira</b><br />Comunicador e pesquisador sobre culturas e territórios, articula estratégias, tecnologia e ferramentas de comunicação.</div>
-              <div><b>Johanna Stein</b><br />Pesquisadora em artes visuais, é co-idealizadora do Fora e atua no posicionamento público e assessoria na área de Cultura e comunicação do Fora.</div>
-              <div><b>Manuela Rached</b><br />Jornalista, é responsável pela articulação interna e assessoria na área de Cultura e comunicação do Fora.</div>
-            </div></P>
-            <P><div className='grid'>
-              <div><b>Ramon Brandão</b><br />Cientista Social, professor e pesquisador na área de ética e filosofia política, é responsável pela fundamentação conceitual e coordena a área de Ensaios do Fora.</div>
-              <div><b>Raphael Escobar</b><br />Artista visual e educador social, no Fora trabalha com inserções em territórios e atividades locais.</div>
-              <div><b>Veronica Deviá</b><br />Jornalista, cientista política e pesquisadora na área de gênero, no Fora coordena a área de Jornalismo.</div>
+              <div><b>João Meirelles</b><br />Engenheiro e cientista de dados, é responsável por coordenar a coleta de dados quantitativos e apoiar o conteúdo de pesquisa do Fora.</div>
+              <div><b>Manuela Rached</b><br />Jornalista, trabalha com a assessoria no conteúdo de produção cultural e na comunicação institucional.</div>
+              <div><b>Fernanda Moraes</b><br />Jornalista livre e graduanda em Gestão de Políticas Públicas, é pesquisadora e assistente geral do Fora.</div>
               <div></div>
             </div></P>
-            <P><div className='subtitle'>_Paisagem</div></P>
-            <P><div className='grid'>
-              <div><b>Guil Blanche</b><br />Paisagista com foco na reabilitação de paisagens urbanas, é co-idealizador do Fora e trabalha com a condução executiva do projeto e articulação geral da área de paisagem.</div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div></P>
-            <P><div className='subtitle'>_Gestão</div></P>
-            <P><div className='grid'>
-              <div><b>Leticia Rheingantz</b><br />Cineasta e produtora, é co-responsável pela gestão e desenvolvimento da linha do tempo do Fora.</div>
-              <div><b>Inez Lisboa</b><br />Economista e especialista em finanças, é responsável pelos processos administrativos e financeiros do Fora.</div>
-              <div></div>
-              <div></div>
-            </div></P>
-            <P><div className='subtitle'>_Design gráfico</div></P>
+            <P><div className='subtitle'>_Design Gráfico e Programação</div></P>
             <P><div className='grid'>
               <div><b>Frederico Dietzsch</b><br />Designer gráfico, criador da identidade visual e responsável pelos projetos gráficos do Fora.</div>
               <div><b>Raul Luna</b><br />Diretor de arte, é responsável pelo desenho do site e pelos projetos gráficos do Fora.</div>
-              <div></div>
-              <div></div>
-            </div></P>
-            <P><div className='subtitle'>_Programação</div></P>
-            <P><div className='grid'>
               <div><b>Diogo Vianna</b><br />Programador, é responsável pelo desenvolvimento do site do Fora.</div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div></P>
-
-            <P><div className='title'>/Colaboradores</div></P>
-            <P><div className='subtitle'>_Pesquisa social e análise de dados</div></P>
-            <P><div className='grid'>
-              <div><b>Marcela Amorozo</b><br />Geógrafa e educadora, é pesquisadora na área de levantamento e processamento de dados quantitativos do Fora.</div>
-              <div></div>
-              <div></div>
-            </div></P>
-            <P><div className='subtitle'>_Assessoria de projeto</div></P>
-            <P><div className='grid'>
-              <div><b>AeF Soluções em Gestão</b><br /></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div></P>
-            <P><div className='subtitle'>_Assessoria jurídica</div></P>
-            <P><div className='grid'>
-              <div><b>Tilkian Marinelli Marrey Advogados</b><br /></div>
-              <div></div>
-              <div></div>
-              <div></div>
-            </div></P>
-            <P><div className='subtitle'>_Assessoria de imprensa</div></P>
-            <P><div className='grid'>
-              <div><b>Index</b><br /></div>
-              <div></div>
-              <div></div>
               <div></div>
             </div></P>
 
