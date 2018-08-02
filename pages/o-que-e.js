@@ -38,10 +38,10 @@ export default class Oquee extends React.Component {
               <P><span>
                 Diante dos esgotamentos atuais, é no Fora que nos encontramos para conhecer e exercer diferentes formas de vida, experimentando maneiras de sentir, pensar, fazer e se relacionar.
               </span></P>
-              <P><span>
             </div>
             <div style={{textAlign: 'center', marginTop: 25}}>
               <Img src='/static/oquee.gif' />
+            </div>
             <P><span>
               O Fora comissiona e produz conteúdos inéditos de arte, ensaio e jornalismo para fazer circular expressões culturais que afirmam a diversidade e geram reflexões a respeito do que nos é comum.
             </span></P>
