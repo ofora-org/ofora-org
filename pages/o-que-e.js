@@ -23,7 +23,7 @@ export default class Oquee extends React.Component {
         <div className='cover'>
           <ContentWrapper style={pageStyle}>
             <Title>/O que é</Title>
-            <span>O Fora é sobre possibilidades de viver a cidade e acontece por meio de pesquisas sociais, manifestações culturais e ações no espaço público.</span>
+            <span>O Fora é sobre possibilidades de viver a cidade e acontece por meio de manifestações culturais, pesquisas sociais e ações no espaço público.</span>
           </ContentWrapper>
         </div>
         <div className='content' style={{background: '#dfdfdf'}}>
@@ -33,7 +33,7 @@ export default class Oquee extends React.Component {
             </div></P>
             <div className='heading'>
               <P><span>
-                Com o objetivo de levantar histórias, urgências e possíveis futuros dos centros urbanos, o Fora articula iniciativas que trazem à tona visões, imaginações e desejos sobre nossos corpos, a cidade e a vida comum. Como canal de comunicação e ação na rua e na internet, reúne narrativas e práticas que nos provocam a pensar criticamente o contexto urbano, abordando temas de interesse global a partir de perspectivas locais. 
+                Com o objetivo de levantar histórias, urgências e possíveis futuros das cidades, o Fora articula iniciativas que trazem à tona visões, imaginações e desejos sobre nossos corpos e a vida comum. Como canal de comunicação e ação na rua e na internet, reúne narrativas e práticas que nos provocam a pensar criticamente o contexto urbano, abordando temas de interesse global a partir de perspectivas locais. 
               </span></P>
               <P><span>
                 Diante dos esgotamentos atuais, é no Fora que nos encontramos para conhecer e exercer diferentes formas de vida, experimentando maneiras de sentir, pensar, fazer e se relacionar.
@@ -66,7 +66,7 @@ export default class Oquee extends React.Component {
             </div></P>
             <P><div className='grid'>
               <div><b>João Meirelles</b><br />Engenheiro e cientista de dados, é responsável por coordenar a coleta de dados quantitativos e apoiar o conteúdo de pesquisa do Fora.</div>
-              <div><b>Manuela Rached</b><br />Jornalista, trabalha com a assessoria no conteúdo de produção cultural e na comunicação institucional.</div>
+              <div><b>Manuela Rached</b><br />Jornalista, trabalha com a assessoria no conteúdo de produção cultural e na comunicação institucional do Fora.</div>
               <div><b>Fernanda Moraes</b><br />Jornalista livre e graduanda em Gestão de Políticas Públicas, é pesquisadora e assistente geral do Fora.</div>
               <div></div>
             </div></P>
