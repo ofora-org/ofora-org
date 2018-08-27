@@ -21,9 +21,6 @@ const SiteMap = ({ style, categories }) => (
           <MenuLink href='/o-que-e' >O que é</MenuLink>
         </div><br /><br />
         <div><MenuLink href='/o-que-e#about'>Sobre;</MenuLink></div>
-        <div><MenuLink href='/o-que-e#research'>Pesquisas;</MenuLink></div>
-        <div><MenuLink href='/o-que-e#cultures'>Culturas;</MenuLink></div>
-        <div><MenuLink href='/o-que-e#landscapes'>Paisagens;</MenuLink></div>
         <div><MenuLink href='/o-que-e#info'>Informações gerais;</MenuLink></div>
       </div>
       <div>
