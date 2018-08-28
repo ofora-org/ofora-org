@@ -9,8 +9,10 @@ jobs:
   include:
     - stage: deploy branch
       script: npm run deploy
+      if: branch != master
     - stage: alias to branch
       script: npm run alias
+      if: branch != master
     - stage: deploy prod
       script: npm run deploy:prod
       if: branch = master AND type = push
