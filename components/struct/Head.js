@@ -17,7 +17,7 @@ export default class CustomHead extends React.Component {
         <title>Fora {this.props.title && `- ${this.props.title}`}</title>
         <meta name='viewport' content='width=device-width, initial-scale=1' />
         <link rel='stylesheet' type='text/css' href='/static/main.css' />
-        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro' rel='stylesheet' />
+        <link href='https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,900' rel='stylesheet' />
         <link href='https://fonts.googleapis.com/css?family=Source+Serif+Pro:400,600' rel='stylesheet' />
         <link rel='apple-touch-icon' sizes='57x57' href='/static/apple-icon-57x57.png' />
         <link rel='apple-touch-icon' sizes='60x60' href='/static/apple-icon-60x60.png' />
