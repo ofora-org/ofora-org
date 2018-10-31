@@ -27,8 +27,8 @@ export default class Index extends React.Component {
         <SliderTunnel documents={documents} />
         <div className="banner-pesquisa">
           <h2>Como você vive o lado de Fora?</h2>
-          <h3>Clique aqui para<br />participar.</h3>
-          <h4>Pesquisa até dia 15/06</h4>
+          <h3>Clique aqui para<br /><a href="escuta.ofora.org">participar.</a></h3>
+          <h4>Pesquisa até dia 16/11</h4>
           <a href="cu" className='close'>X</a>
         </div>
         <style jsx>{`
@@ -41,22 +41,22 @@ export default class Index extends React.Component {
             right: 50px;
             color: blue;
             font-family: 'Source Sans Pro', sans-serif;
-            width: 280px;
+            width: 260px;
           }
           .banner-pesquisa h2 {
-            font-size: 38px;
+            font-size: 36px;
             font-weight: 900;
             margin-top: 0;
           }
           .banner-pesquisa h3 {
-            font-size: 28px;
+            font-size: 26px;
             font-weight: 600;
             font-style: italic;
           }
           .banner-pesquisa h4 {
             margin-bottom: 0;
             font-weight: 300;
-            font-size: 22px;
+            font-size: 20px;
           }
           .banner-pesquisa .close {
             position: absolute;
@@ -66,6 +66,7 @@ export default class Index extends React.Component {
             text-decoration: none;
             background: blue;
             color: white;
+            transform: translateX(100%) translateY(-100%); 
           }
         `}</style>
       </div>
