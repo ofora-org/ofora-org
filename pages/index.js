@@ -25,50 +25,6 @@ export default class Index extends React.Component {
         <LogoWithMenu animation='pulse' slogan={title} />
         <Head title="Fora" description="O Fora é sobre possibilidades de viver a cidade e acontece por meio de pesquisas sociais, manifestações culturais e ações na paisagem urbana." cover='https://fora.cdn.prismic.io/fora/21c85cdcacb048a984d1150c855296cbda4b1095_fora-dobra-do-corpo-1-.jpg'/>
         <SliderTunnel documents={documents} />
-        <div className="banner-pesquisa">
-          <h2>Como você vive o lado de Fora?</h2>
-          <h3>Clique aqui para<br /><a href="escuta.ofora.org">participar.</a></h3>
-          <h4>Pesquisa até dia 16/11</h4>
-          <a href="cu" className='close'>X</a>
-        </div>
-        <style jsx>{`
-          .banner-pesquisa {
-            padding: 40px;
-            background: white;
-            box-shadow: -10px 10px 17px 0px rgba(0,0,255, 0.75);
-            position: fixed;
-            top: 50px;
-            right: 50px;
-            color: blue;
-            font-family: 'Source Sans Pro', sans-serif;
-            width: 260px;
-          }
-          .banner-pesquisa h2 {
-            font-size: 36px;
-            font-weight: 900;
-            margin-top: 0;
-          }
-          .banner-pesquisa h3 {
-            font-size: 26px;
-            font-weight: 600;
-            font-style: italic;
-          }
-          .banner-pesquisa h4 {
-            margin-bottom: 0;
-            font-weight: 300;
-            font-size: 20px;
-          }
-          .banner-pesquisa .close {
-            position: absolute;
-            top: 0;
-            right: 0;
-            padding: 10px;
-            text-decoration: none;
-            background: blue;
-            color: white;
-            transform: translateX(100%) translateY(-100%); 
-          }
-        `}</style>
       </div>
     )
   }
