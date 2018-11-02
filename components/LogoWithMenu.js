@@ -3,7 +3,7 @@ import Router from 'next/router'
 import Menu from '~/components/Menu'
 import Logo from '~/components/Logo'
 import { withRouter } from 'next/router'
-
+import ResearchBanner from './ResearchBanner'
 class LogoWithMenu extends React.Component {
   state = {
     menuVisible: false
@@ -27,6 +27,7 @@ class LogoWithMenu extends React.Component {
           {!menuVisible && <span style={textStyle}>{slogan}</span>}
         </div>
         <Menu visible={menuVisible} onBgClick={this.toggleMenu} />
+        <ResearchBanner />
         <style jsx>{`
           .root {
             position: fixed;
