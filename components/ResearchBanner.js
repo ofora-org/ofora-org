@@ -9,6 +9,9 @@ const ResearchBanner = ({isOpen, setOpen}) =>
             </a>
             <a onClick={() => setOpen(false)} className='close'>X</a>
             <style jsx>{`
+                @media (mas-width: 600px) {
+                    display: none; !important
+                }
                 a {
                     text-decoration: none;
                 }
