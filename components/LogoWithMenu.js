@@ -22,12 +22,12 @@ class LogoWithMenu extends React.Component {
     }
     return (
       <div>
-        <ResearchBanner />
         <div className='root'>
           <Logo {...logoProps} onClick={this.handleLogoClick} />
           {!menuVisible && <span style={textStyle}>{slogan}</span>}
         </div>
         <Menu visible={menuVisible} onBgClick={this.toggleMenu} />
+        <ResearchBanner />
         <style jsx>{`
           .root {
             position: fixed;
