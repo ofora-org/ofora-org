@@ -17,7 +17,7 @@ const ResearchBanner = ({isOpen, setOpen}) =>
                     background: white;
                     box-shadow: -10px 10px 17px 0px rgba(0,0,255, 0.75);
                     position: fixed;
-                    top: 50px;
+                    top: 70px;
                     right: 50px;
                     color: blue;
                     font-family: 'Source Sans Pro', sans-serif;
