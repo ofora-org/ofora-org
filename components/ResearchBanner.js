@@ -4,7 +4,7 @@ const ResearchBanner = ({isOpen, setOpen}) =>
         <div className="banner-pesquisa">
             <a href="https://escuta.ofora.org" target="_blank">
                 <h2>Como você vive o lado de Fora?</h2>
-                <h3>Clique aqui para<br /><a href="escuta.ofora.org">participar.</a></h3>
+                <h3>Clique aqui para<br /><a href="https://escuta.ofora.org">participar.</a></h3>
                 <h4>Pesquisa até dia 16/12</h4>
             </a>
             <a onClick={() => setOpen(false)} className='close'>X</a>
