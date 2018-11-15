@@ -11,7 +11,7 @@ const ResearchBanner = ({isOpen, setOpen}) =>
             <style jsx>{`
                 @media screen and (max-width: 600px) {
                     .banner-pesquisa {
-                      display: none;
+                      display: none; !important
                       opacity: 0;
                     }
                 }
