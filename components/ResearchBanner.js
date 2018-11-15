@@ -9,7 +9,7 @@ const ResearchBanner = ({isOpen, setOpen}) =>
             </a>
             <a onClick={() => setOpen(false)} className='close'>X</a>
             <style jsx>{`
-                @media only screen and (max-width: 600px) {
+                @media screen and (max-width: 600px) {
                     .banner-pesquisa {
                       display: none;
                       opacity: 0;
