@@ -74,7 +74,7 @@ const Gallery = ({
           font-family: Arial;
           cursor: pointer;
         }
-        .galleryNav.right { right: -15px; }
+        .galleryNav.right { right: -15px; left: auto }
         .galleryNav { left: -15px; }
         @media only screen and (min-width: 752px) {
           .galleryNav {
