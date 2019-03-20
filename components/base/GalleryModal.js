@@ -4,7 +4,7 @@ import Image from '~/components/base/Image'
 import Modal from '~/components/struct/Modal'
 import Gallery from '~/components/base/Gallery'
 
-const GalleryModal = ({ items, onBgClick, visible, wrapperProps, ...props }) =>
+const GalleryModal = ({ items, onBgClick, visible, wrapperProps, onChangeItem, ...props }) =>
   <Modal
     visible={visible}
     style={{zIndex: 100, background: 'rgba(0,0,0,1)', padding: 20}}
@@ -16,6 +16,7 @@ const GalleryModal = ({ items, onBgClick, visible, wrapperProps, ...props }) =>
         items={items}
         itemRender={ItemRender}
         wrapperProps={{ ...wrapperProps, style: galleryStyle }}
+        onChangeItem={onChangeItem}
       />
     </div>
     <style jsx>{`
@@ -37,7 +38,7 @@ const ItemRender = ({subtitle, photo, video, index, length}) =>
       <div style={{fontFamily: 'IntervalBold, monospace', marginBottom: 20}}>
         {index}/{length}
       </div>
-      {subtitle && <div>subtitle</div>}
+      {subtitle && <div>{subtitle}</div>}
     </div>
     <div className='mediaWrapper' style={{display: video ? 'block' : 'flex'}}>
       {photo && <Image {...photo} />}
