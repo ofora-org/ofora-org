@@ -16,9 +16,10 @@ export const ImageGalery = ({
   setCurrentPhoto,
   currentPhoto,
   media: { photos, videos },
+  single,
   ...props
 }) =>
-  <div {...props} className='galeryCover'>
+  <div {...props} className={`galeryCover ${single && 'galeryCoverSingle'}`}>
     {photos.length > 0 ?
       <Gallery
         items={photos}
@@ -33,10 +34,10 @@ export const ImageGalery = ({
         onChange={i => setCurrentVideo(i)}
       />
     }
-    <div style={{position: 'absolute', top: 0, right: 0}}>
+    {!single && <div style={{position: 'absolute', top: 0, right: 0}}>
       {photos.length > 1 && <MenuLink onClick={togglePhotoModal}>Ver imagens</MenuLink>}
       {videos.length > 1 || (videos.length === 1 && photos.length > 0) ? <MenuLink onClick={toggleVideoModal} style={{marginLeft: 20}}>Ver vídeos</MenuLink> : null}
-    </div>
+    </div>}
     <GalleryModal
       items={photos}
       visible={photoGaleryVisible}
@@ -65,6 +66,9 @@ export const ImageGalery = ({
         .galeryCover > div:hover .galleryNav {
           opacity: 1;
         }
+      }
+      .galeryCoverSingle {
+        padding-top: 0;
       }
     `}</style>
   </div>

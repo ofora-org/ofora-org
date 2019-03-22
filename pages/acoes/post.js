@@ -42,7 +42,7 @@ export default class Index extends React.Component {
           <div className='desktop-only'><Cover {...this.props} /></div>
           <div className='mobile-only'><CoverMobile {...this.props} /></div>
 
-          <ContentWrapper style={{ paddingBottom: '70px', position: 'relative', ...invertStyle }}>
+          <ContentWrapper style={{ paddingBottom: '1px', position: 'relative', ...invertStyle }}>
             <Sidebars doc={doc} />
               {teaser.length ? <div className='teaser'>{RichText.render(teaser)}</div> : null}
               {renderBody(body)}
@@ -53,12 +53,13 @@ export default class Index extends React.Component {
         <ContentWrapper style={{background: '#dfdfdf'}}>
           <SiteMap />
         </ContentWrapper>
+        <iframe id="download" style={{ display: 'none' }}></iframe>
         <style jsx>{`
           .teaser {
             font-size: 24px;
             font-weight: 600;
             max-width: 700px;
-            margin-bottom: 60px;
+            margin-bottom: 0.5em;
             font-family: 'Source Serif Pro', serif;
           }
           @media only screen and (max-width: 752px) {
@@ -68,7 +69,7 @@ export default class Index extends React.Component {
             div.mobile-only { display: none; }
             .teaser {
               padding: 0 200px 0 100px;
-              margin: -1em auto 60px;
+              margin: -1em auto 1.5em;
             }
           }
         `}</style>
@@ -99,10 +100,13 @@ const renderBody = (body) => {
       return <NotedParagraph style={bodyStyle} {...slice.primary} />
     }
     if (slice.slice_type === 'galeria') {
-      return <P style={{margin: '60px auto'}}><ImageGalery media={{photos: slice.items, videos: []}} /></P>
+      return <P style={{margin: '0 auto'}}><ImageGalery media={{photos: slice.items, videos: []}} /></P>
+    }
+    if (slice.slice_type === 'foto') {
+      return <P style={{margin: '0 auto'}}><ImageGalery single media={{photos: [slice.primary], videos: []}} /></P>
     }
     if (slice.slice_type === 'video') {
-      return <P style={{margin: '60px auto 77px'}}><Video {...slice.primary.video} /></P>
+      return <P style={{margin: '0 auto 2em'}}><Video {...slice.primary.video} /></P>
     }
   })
 }
