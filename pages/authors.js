@@ -20,7 +20,7 @@ export default class pageAuthors extends React.Component {
           </Title>
           <div style={textStyle}>Uma lista crescente de gente de Fora:</div>
           <div style={authorsWrapperStyle}>
-            {authors.map(author => <div style={authorsStyle}><MenuLink href={{ pathname: '/acoes/author', query: { authorID: author.id } }}>{author.data.name[0].text};</MenuLink></div>)}
+            {authors.map(author => <div style={authorsStyle}><MenuLink href={{ pathname: '/author', query: { authorID: author.id } }}>{author.data.name[0].text};</MenuLink></div>)}
           </div>
         </ContentWrapper>
       </PageWrapper>

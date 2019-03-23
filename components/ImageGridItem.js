@@ -5,7 +5,7 @@ import moment from 'moment'
 
 export default class ImageGridItem extends React.Component {
   render () {
-    const { data, type, id, data: { date } } = this.props
+    const { data, uid, data: { date } } = this.props
     const title = data.title instanceof Array ? data.title[0].text : false
     const author = data.author.data ? data.author.data.name[0].text : false
     const category = this.props.data.category.data ? this.props.data.category.data.name[0].text : false
@@ -13,7 +13,7 @@ export default class ImageGridItem extends React.Component {
 
     return (
       <div className='image-grid-item'>
-        <Link href={{ pathname: `/acoes/${types[type]}/${id}/${this.props.slugs[0]}` }}>
+        <Link href={{ pathname: `/acoes/${uid}` }}>
           <div style={imageStackStyle} className='underline-hover'>
             {this.renderPhotos()}
           </div>

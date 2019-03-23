@@ -18,7 +18,7 @@ import { RichText } from 'prismic-reactjs'
 export default class Index extends React.Component {
   static async getInitialProps ({ query }) {
     const api = await Prismic.api('https://fora.prismic.io/api/v2')
-    const doc = await api.getByID(query.id, { fetchLinks: ['author.name', 'author.bio', 'author.photo', 'category.name', 'category.description'] })
+    const doc = await api.getByUID('post', query.id, { fetchLinks: ['author.name', 'author.bio', 'author.photo', 'category.name', 'category.description'] })
     const related = await api.getByIDs(doc.data.related.map(item => item.related_item.id), { fetchLinks: ['author.name', 'category.name'] })
     return { doc, related: related.results }
   }
@@ -91,22 +91,22 @@ const bodyStyle = {
 const renderBody = (body) => {
   return body.map((slice) => {
     if (slice.slice_type === 'text') {
-      return <P style={{bodyStyle, marginTop: '-1em'}}>{slice.primary.text}</P>
+      return <P style={{bodyStyle, marginTop: '-1em'}} key={slice.slice_type + Date.now()} >{slice.primary.text}</P>
     }
     if (slice.slice_type === 'quote') {
-      return <Quote {...slice.primary} />
+      return <Quote {...slice.primary} key={slice.slice_type + Date.now()} />
     }
     if (slice.slice_type === 'texto_e_nota') {
-      return <NotedParagraph style={bodyStyle} {...slice.primary} />
+      return <NotedParagraph style={bodyStyle} {...slice.primary} key={slice.slice_type + Date.now()} />
     }
     if (slice.slice_type === 'galeria') {
-      return <P style={{margin: '0 auto'}}><ImageGalery media={{photos: slice.items, videos: []}} /></P>
+      return <P style={{margin: '0 auto'}} key={slice.slice_type + Date.now()} ><ImageGalery media={{photos: slice.items, videos: []}} /></P>
     }
     if (slice.slice_type === 'foto') {
-      return <P style={{margin: '0 auto'}}><ImageGalery single media={{photos: [slice.primary], videos: []}} /></P>
+      return <P style={{margin: '0 auto'}} key={slice.slice_type + Date.now()} ><ImageGalery single media={{photos: [slice.primary], videos: []}} /></P>
     }
     if (slice.slice_type === 'video') {
-      return <P style={{margin: '0 auto 2em'}}><Video {...slice.primary.video} /></P>
+      return <P style={{margin: '0 auto 2em'}} key={slice.slice_type + Date.now()}><Video {...slice.primary.video} /></P>
     }
   })
 }

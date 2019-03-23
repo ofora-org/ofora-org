@@ -28,7 +28,7 @@ const SiteMap = ({ style, categories }) => (
           <MenuLink href={{ pathname: '/acoes' }} >Ações & imaginações</MenuLink>
         </div><br /><br />
         {categories && categories.map(p =>
-          <div><MenuLink href={{ pathname: '/acoes', query: { initialCategory: p.data.name[0].text } }}>
+          <div key={p.id}><MenuLink href={{ pathname: '/acoes', query: { initialCategory: p.data.name[0].text } }}>
             {p.data.name[0].text};
           </MenuLink></div>
         )}
