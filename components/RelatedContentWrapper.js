@@ -14,7 +14,7 @@ export const RelatedContentWrapper = ({ related }) => (
         }
         @media only screen and (min-width: 752px) {
           .title {
-            margin-bottom: 60px;
+            margin-left: 60px;
           }
         }
       `}</style>

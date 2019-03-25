@@ -31,11 +31,10 @@ export default class SliderTunnelImage extends React.Component {
   render () {
     const { doc } = this.props
     if (!doc) return null
-    const { type, id } = doc
 
     return (
       <div style={this.getCurrentStyle()} onMouseEnter={() => this.setState({ hover: true })} onMouseLeave={() => this.setState({ hover: false })}>
-        <Link href={{ pathname: `/acoes/${type}`, query: { id } }}>
+        <Link href={{ pathname: `/acoes/${doc.uid}` }}>
           <Image src={this.state.photo} />
         </Link>
       </div>

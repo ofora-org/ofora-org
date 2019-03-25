@@ -10,42 +10,45 @@ export const ImageGalery = ({
   toggleVideoModal,
   togglePhotoModal,
   videoGaleryVisible,
+  setCurrentVideo,
+  currentVideo,
   photoGaleryVisible,
+  setCurrentPhoto,
+  currentPhoto,
   media: { photos, videos },
-  currentCoverItem,
-  setCurrentCoverItem,
+  single,
   ...props
 }) =>
-  <div {...props} className='galeryCover'>
+  <div {...props} className={`galeryCover ${single && 'galeryCoverSingle'}`}>
     {photos.length > 0 ?
       <Gallery
         items={photos}
         itemRender={item => <Image {...item.photo} onClick={photos.length > 1 && togglePhotoModal} />}
         wrapperProps={{style: { height: '100%', cursor: photos.length > 1 && 'pointer' }}}
-        onChange={i => setCurrentCoverItem(i)}
+        onChange={i => setCurrentPhoto(i)}
       /> :
       <Gallery
         items={videos}
         itemRender={item => <Video {...item.video} />}
         wrapperProps={{style: { height: '100%', cursor: 'pointer' }}}
-        onChange={i => setCurrentCoverItem(i)}
+        onChange={i => setCurrentVideo(i)}
       />
     }
-    <div style={{position: 'absolute', top: 0, right: 0}}>
+    {!single && <div style={{position: 'absolute', top: 0, right: 0}}>
       {photos.length > 1 && <MenuLink onClick={togglePhotoModal}>Ver imagens</MenuLink>}
       {videos.length > 1 || (videos.length === 1 && photos.length > 0) ? <MenuLink onClick={toggleVideoModal} style={{marginLeft: 20}}>Ver vídeos</MenuLink> : null}
-    </div>
+    </div>}
     <GalleryModal
       items={photos}
       visible={photoGaleryVisible}
       onBgClick={togglePhotoModal}
-      initialItem={currentCoverItem}
+      initialItem={currentPhoto}
     />
     <GalleryModal
       items={videos}
       visible={videoGaleryVisible}
       onBgClick={toggleVideoModal}
-      initialItem={currentCoverItem}
+      initialItem={currentVideo}
     />
     <style jsx global>{`
       .galeryCover {
@@ -64,13 +67,17 @@ export const ImageGalery = ({
           opacity: 1;
         }
       }
+      .galeryCoverSingle {
+        padding-top: 0;
+      }
     `}</style>
   </div>
 
 const enhance = compose(
   withState('photoGaleryVisible', 'setPhotoGaleryVisible', false),
+  withState('currentPhoto', 'setCurrentPhoto', 0),
   withState('videoGaleryVisible', 'setVideoGaleryVisible', false),
-  withState('currentCoverItem', 'setCurrentCoverItem', 0),
+  withState('currentVideo', 'setCurrentVideo', 0),
   withHandlers({
     toggleVideoModal: ({ setVideoGaleryVisible, videoGaleryVisible }) => e => setVideoGaleryVisible(!videoGaleryVisible),
     togglePhotoModal: ({ setPhotoGaleryVisible, photoGaleryVisible }) => e => setPhotoGaleryVisible(!photoGaleryVisible)

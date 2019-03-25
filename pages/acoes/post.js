@@ -18,7 +18,7 @@ import { RichText } from 'prismic-reactjs'
 export default class Index extends React.Component {
   static async getInitialProps ({ query }) {
     const api = await Prismic.api('https://fora.prismic.io/api/v2')
-    const doc = await api.getByID(query.id, { fetchLinks: ['author.name', 'author.bio', 'author.photo', 'category.name', 'category.description'] })
+    const doc = await api.getByUID('post', query.id, { fetchLinks: ['author.name', 'author.bio', 'author.photo', 'category.name', 'category.description'] })
     const related = await api.getByIDs(doc.data.related.map(item => item.related_item.id), { fetchLinks: ['author.name', 'category.name'] })
     return { doc, related: related.results }
   }
@@ -42,7 +42,7 @@ export default class Index extends React.Component {
           <div className='desktop-only'><Cover {...this.props} /></div>
           <div className='mobile-only'><CoverMobile {...this.props} /></div>
 
-          <ContentWrapper style={{ paddingBottom: '70px', position: 'relative', ...invertStyle }}>
+          <ContentWrapper style={{ paddingBottom: '1px', position: 'relative', ...invertStyle }}>
             <Sidebars doc={doc} />
               {teaser.length ? <div className='teaser'>{RichText.render(teaser)}</div> : null}
               {renderBody(body)}
@@ -53,12 +53,13 @@ export default class Index extends React.Component {
         <ContentWrapper style={{background: '#dfdfdf'}}>
           <SiteMap />
         </ContentWrapper>
+        <iframe id="download" style={{ display: 'none' }}></iframe>
         <style jsx>{`
           .teaser {
             font-size: 24px;
             font-weight: 600;
             max-width: 700px;
-            margin-bottom: 60px;
+            margin-bottom: 0.5em;
             font-family: 'Source Serif Pro', serif;
           }
           @media only screen and (max-width: 752px) {
@@ -68,7 +69,7 @@ export default class Index extends React.Component {
             div.mobile-only { display: none; }
             .teaser {
               padding: 0 200px 0 100px;
-              margin: -1em auto 60px;
+              margin: -1em auto 1.5em;
             }
           }
         `}</style>
@@ -90,19 +91,22 @@ const bodyStyle = {
 const renderBody = (body) => {
   return body.map((slice) => {
     if (slice.slice_type === 'text') {
-      return <P style={{bodyStyle, marginTop: '-1em'}}>{slice.primary.text}</P>
+      return <P style={{bodyStyle, marginTop: '-1em'}} key={slice.slice_type + Date.now()} >{slice.primary.text}</P>
     }
     if (slice.slice_type === 'quote') {
-      return <Quote {...slice.primary} />
+      return <Quote {...slice.primary} key={slice.slice_type + Date.now()} />
     }
     if (slice.slice_type === 'texto_e_nota') {
-      return <NotedParagraph style={bodyStyle} {...slice.primary} />
+      return <NotedParagraph style={bodyStyle} {...slice.primary} key={slice.slice_type + Date.now()} />
     }
     if (slice.slice_type === 'galeria') {
-      return <P style={{margin: '60px auto'}}><ImageGalery media={{photos: slice.items, videos: []}} /></P>
+      return <P style={{margin: '0 auto'}} key={slice.slice_type + Date.now()} ><ImageGalery media={{photos: slice.items, videos: []}} /></P>
+    }
+    if (slice.slice_type === 'foto') {
+      return <P style={{margin: '0 auto'}} key={slice.slice_type + Date.now()} ><ImageGalery single media={{photos: [slice.primary], videos: []}} /></P>
     }
     if (slice.slice_type === 'video') {
-      return <P style={{margin: '60px auto 77px'}}><Video {...slice.primary.video} /></P>
+      return <P style={{margin: '0 auto 2em'}} key={slice.slice_type + Date.now()}><Video {...slice.primary.video} /></P>
     }
   })
 }
