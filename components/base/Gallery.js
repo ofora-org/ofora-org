@@ -42,7 +42,7 @@ const Gallery = ({
 }) => {
   if (!items.length) return null
   return (
-    <div {...wrapperProps} /*style={{ height: items[selected].photo.dimensions.height }}*/>
+    <div {...wrapperProps} style={{ marginBottom: '1.2em' }}>
       {items[selected] &&
         itemRender({
           ...items[selected],

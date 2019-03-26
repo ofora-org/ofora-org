@@ -32,6 +32,9 @@ app.prepare()
     server.get('/acoes/fotoevideo/:id/:slug', (req, res) => {
       return app.render(req, res, '/acoes/pictures_and_video', { id: req.params.id })
     })
+    server.get('/acoes/post/:id/:slug', (req, res) => {
+      return res.redirect(301, `../../${req.params.slug}`)
+    })
     server.get('/acoes/:uid', (req, res) => {
       return app.render(req, res, '/acoes/post', { id: req.params.uid })
     })
