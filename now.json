@@ -1,22 +1,12 @@
 {
   "version": 2,
-  "name": "vela-store",
-  "alias": ["velabikes.com.br"],
+  "name": "ofora-org",
+  "alias": ["ofora.org"],
   "builds": [
     { "src": "next.config.js", "use": "@now/next" },
     { "src": "api/**/*.js", "use": "@now/node" }
   ],
-  "env": {
-    "GOOGLE_MAPS_SERVER_KEY": "@google-maps-server-key",
-    "AIRTABLE_KEY": "@airtable-key"
-  },
   "routes": [
     { "src": "/favicon.ico", "dest": "/static/fav/favicon.ico" },
-    { "src": "/sobre", "dest": "/about" },
-    { "src": "/loja", "dest": "/store" },
-    { "src": "/lugares", "dest": "/locations" },
-    { "src": "/recarga", "dest": "/charge" },
-    { "src": "/loja/(?<handle>[^/]+)$", "dest": "/store?handle=$handle" },
-    { "src": "/loja/produto/(?<handle>[^/]+)$", "dest": "/store/product?handle=$handle" }
   ]
 }
