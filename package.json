@@ -53,17 +53,5 @@
         "babel-plugin-root-import"
       ]
     ]
-  },
-  "now": {
-    "name": "fora",
-    "alias": [
-      "fora"
-    ],
-    "env": {
-      "NODE_ENV": "production"
-    },
-    "engines": {
-      "node": "^8.6.0"
-    }
   }
 }
