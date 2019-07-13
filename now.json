@@ -7,6 +7,6 @@
   ],
   "routes": [
     { "src": "/favicon.ico", "dest": "/static/fav/favicon.ico" },
-    { "src": "/acoes/(?<uid>[^/]+)$"', "dest": "/acoes/post?id=$uid" }
+    { "src": "/acoes/(?<uid>[^/]+)$", "dest": "/acoes/post?id=$uid" }
   ]
 }
