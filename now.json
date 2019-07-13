@@ -6,6 +6,7 @@
     { "src": "next.config.js", "use": "@now/next" }
   ],
   "routes": [
-    { "src": "/favicon.ico", "dest": "/static/fav/favicon.ico" }
+    { "src": "/favicon.ico", "dest": "/static/fav/favicon.ico" },
+    { "src": "/acoes/(?<uid>[^/]+)$"', "dest": "/acoes/post?id=$uid" }
   ]
 }
