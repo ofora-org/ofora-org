@@ -7,6 +7,6 @@
     { "src": "api/**/*.js", "use": "@now/node" }
   ],
   "routes": [
-    { "src": "/favicon.ico", "dest": "/static/fav/favicon.ico" },
+    { "src": "/favicon.ico", "dest": "/static/fav/favicon.ico" }
   ]
 }
