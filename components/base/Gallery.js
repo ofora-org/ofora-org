@@ -42,7 +42,7 @@ const Gallery = ({
 }) => {
   if (!items.length) return null
   return (
-    <div {...wrapperProps} style={{ marginBottom: '1.2em' }}>
+    <div {...wrapperProps}>
       {items[selected] &&
         itemRender({
           ...items[selected],
