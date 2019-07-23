@@ -1,7 +1,7 @@
 import React from 'react'
-import MenuLink from '~/components/MenuLink'
+import MenuLink from './MenuLink'
 import { withState, withHandlers, lifecycle, compose } from 'recompose'
-import { getCategories } from '~/lib/backend'
+import { getCategories } from '../lib/backend'
 
 const enhance = compose(
   lifecycle({

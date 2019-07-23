@@ -1,6 +1,6 @@
 import React from 'react'
 import Router from 'next/router'
-import Link from '~/components/base/Link'
+import Link from './base/Link'
 
 export default class MenuLink extends React.Component {
   state = {

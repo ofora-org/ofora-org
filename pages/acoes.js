@@ -1,11 +1,11 @@
 import React from 'react'
-import { getAcoes } from '~/lib/backend'
-import PageWrapper from '~/components/struct/PageWrapper'
-import ContentWrapper from '~/components/struct/ContentWrapper'
-import Title from '~/components/Title'
-import CategorySelector from '~/components/CategorySelector'
-import ImageGrid from '~/components/ImageGrid'
-import Link from '~/components/MenuLink'
+import { getAcoes } from '../lib/backend'
+import PageWrapper from '../components/struct/PageWrapper'
+import ContentWrapper from '../components/struct/ContentWrapper'
+import Title from '../components/Title'
+import CategorySelector from '../components/CategorySelector'
+import ImageGrid from '../components/ImageGrid'
+import Link from '../components/MenuLink'
 
 export default class pageAcoes extends React.Component {
   static async getInitialProps ({ req, query }) {

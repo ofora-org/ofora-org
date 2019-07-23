@@ -1,5 +1,5 @@
 import React from 'react'
-import P from '~/components/base/Paragraph'
+import P from './Paragraph'
 
 const CleanP = ({children}) => <P style={{margin: 0, fontSize: 'inherit', padding: 0, maxWidth: 'auto'}}>{children}</P>
 

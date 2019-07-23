@@ -1,6 +1,6 @@
 import React from 'react'
-import Link from '~/components/base/Link'
-import Image from '~/components/base/Image'
+import Link from './base/Link'
+import Image from './base/Image'
 import moment from 'moment'
 
 export default class ImageGridItem extends React.Component {

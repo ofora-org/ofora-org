@@ -1,12 +1,17 @@
 import React from 'react'
 import Router from 'next/router'
-import Menu from '~/components/Menu'
-import Logo from '~/components/Logo'
+import Menu from './Menu'
+import Logo from './Logo'
 import { withRouter } from 'next/router'
 import ResearchBanner from './ResearchBanner'
+
 class LogoWithMenu extends React.Component {
-  state = {
-    menuVisible: false
+  constructor (props) {
+    super(props)
+
+    this.state = {
+      menuVisible: props.startVisible || false
+    }
   }
 
   componentWillReceiveProps (nextProps) {

@@ -1,5 +1,5 @@
 import React from 'react'
-import Head from '~/components/struct/Head'
+import Head from './Head'
 import LogoWithMenu from '../LogoWithMenu'
 import Footer from './footer/Footer'
 import ContentWrapper from './ContentWrapper'

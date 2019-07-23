@@ -1,8 +1,8 @@
 import React from 'react'
-import ContentWrapper from '~/components/struct/ContentWrapper'
-import Title from '~/components/Title'
-import MenuLink from '~/components/MenuLink'
-import ImageGalery from '~/components/base/ImageGalery'
+import ContentWrapper from './struct/ContentWrapper'
+import Title from './Title'
+import MenuLink from './MenuLink'
+import ImageGalery from './base/ImageGalery'
 import moment from 'moment'
 import { Date } from 'prismic-reactjs'
 

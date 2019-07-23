@@ -1,10 +1,10 @@
 import React from 'react'
-import { getByAuthor } from '~/lib/backend'
-import PageWrapper from '~/components/struct/PageWrapper'
-import ContentWrapper from '~/components/struct/ContentWrapper'
-import Title from '~/components/Title'
-import ImageGrid from '~/components/ImageGrid'
-import MenuLink from '~/components/MenuLink'
+import { getByAuthor } from '../lib/backend'
+import PageWrapper from '../components/struct/PageWrapper'
+import ContentWrapper from '../components/struct/ContentWrapper'
+import Title from '../components/Title'
+import ImageGrid from '../components/ImageGrid'
+import MenuLink from '../components/MenuLink'
 
 export default class pageAuthor extends React.Component {
   static async getInitialProps ({ req, query }) {

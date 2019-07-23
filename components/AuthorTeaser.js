@@ -1,6 +1,6 @@
 import React from 'react'
-import P from '~/components/base/Paragraph'
-import Image from '~/components/base/Image'
+import P from './base/Paragraph'
+import Image from './base/Image'
 import {RichText} from 'prismic-reactjs'
 
 export default class AuthorTeaser extends React.Component {

@@ -1,8 +1,8 @@
 import React from 'react'
-import CategoryTeaser from '~/components/CategoryTeaser'
-import FloatingTitle from '~/components/FloatingTitle'
-import TagsTeaser from '~/components/TagsTeaser'
-import TecnicalData from '~/components/TecnicalData'
+import CategoryTeaser from './CategoryTeaser'
+import FloatingTitle from './FloatingTitle'
+import TagsTeaser from './TagsTeaser'
+import TecnicalData from './TecnicalData'
 
 export const Sidebars = (props) => {
   const { tags, data } = props.doc
