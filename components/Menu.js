@@ -3,6 +3,7 @@ import { Consumer } from './base/Context'
 import Modal from './struct/Modal'
 import MenuLink from './MenuLink'
 import SignupForm from './SignupForm'
+import MenuLang from './MenuLang'
 
 const locale = {
   br: {
@@ -39,20 +40,7 @@ export default class Menu extends React.Component {
             <MenuLink href={{ pathname: '/acoes' }}>{actions}</MenuLink>
           </div>
           <div className='menu lang'>
-            <MenuLink
-              onClick={context && context.setLangBr}
-              href={{ pathname: '' }}
-              style={{ ...lang === 'br' && langActive }}
-            >
-              br
-            </MenuLink>{' / '}
-            <MenuLink
-              onClick={context && context.setLangEn}
-              href={{ pathname: '' }}
-              style={{ ...lang === 'en' && langActive }}
-            >
-              en
-            </MenuLink>
+            <MenuLang />
           </div>
           <div className='menu secondaryMenu'>
             <MenuLink href={{ pathname: 'https://www.facebook.com/foraofora' }} >Facebook;</MenuLink>{' '}
@@ -93,9 +81,6 @@ export default class Menu extends React.Component {
   toggleSignup = (event) => this.setState({ showSignup: !this.state.showSignup })
 }
 
-const langActive = {
-  color: 'rgb(0,17,254)'
-}
 const menuModalStyle = {
   background: 'rgba(255,255,255,0.85)',
   color: 'black',

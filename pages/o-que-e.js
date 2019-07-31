@@ -9,6 +9,7 @@ import Img from '../components/base/Image'
 import { Consumer } from '../components/base/Context'
 import { getAbout } from '../lib/backend'
 import { RichText } from 'prismic-reactjs'
+import MenuLang from '../components/MenuLang'
 
 const P = ({children}) => <Paragraph style={{maxWidth: 710}}>{children}</Paragraph>
 
@@ -43,8 +44,12 @@ export default class Oquee extends React.Component {
             </ContentWrapper>
           </div>
 
+
           <div className='about' style={{background: '#dfdfdf'}}>
             <ContentWrapper style={pageStyle}>
+              <div className='menu-lang-about'>
+                <MenuLang />
+              </div>
               <div className='rich-text content'>
                 {RichText.render(content)}
               </div>
@@ -83,6 +88,11 @@ export default class Oquee extends React.Component {
               color: white;
               font-family: 'Source Serif Pro', serif;
               position: relative;
+            }
+            .menu-lang-about {
+              max-width: 710px;
+              margin: 0 auto;
+              text-align: right;
             }
             .about-banner {
               background-color: #dfdfdf;
