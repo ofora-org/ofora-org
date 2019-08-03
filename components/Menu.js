@@ -11,8 +11,8 @@ const locale = {
     actions: "Ações & imaginações;"
   },
   en: {
-    about: "What it is;",
-    actions: "Actions & imaginations;"
+    about: "About;",
+    actions: "Acts & imaginations;"
   }
 }
 

@@ -32,7 +32,7 @@ class LogoWithMenu extends React.Component {
           {!menuVisible && <span style={textStyle}>{slogan}</span>}
         </div>
         <Menu visible={menuVisible} onBgClick={this.toggleMenu} />
-        <ResearchBanner />
+        {/* <ResearchBanner /> */}
         <style jsx>{`
           .root {
             position: fixed;

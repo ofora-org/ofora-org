@@ -13,25 +13,25 @@ const MenuLang = () =>
           href={{ pathname: '' }}
           style={{ ...lang === 'br' && langActive }}
         >
-          br
+          PT
         </MenuLink>{' / '}
         <MenuLink
           onClick={context && context.setLangEn}
           href={{ pathname: '' }}
           style={{ ...lang === 'en' && langActive }}
         >
-          en
+          EN
         </MenuLink>
         <style jsx>{`
           .menu-lang {
-            // position: absolute;
-            // right: 20px;
+            position: relative;
+            right: 20px;
             font-weight: 600;
             font-size: 29px;
           }
           @media only screen and (min-width: 752px) {
             .menu.lang {
-              // top: 21px; right: 40px;
+              top: 21px; right: 40px;
             }
           }
         `}</style>

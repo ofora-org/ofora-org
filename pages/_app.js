@@ -10,6 +10,11 @@ class MainApp extends App {
         <Provider>
           <Component {...pageProps} />
         </Provider>
+        <style jsx global>{`
+          ul li {
+            margin-bottom: 1rem;
+          }
+        `}</style>
       </Container>
     )
   }
