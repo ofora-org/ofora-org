@@ -27,15 +27,16 @@ export default class Oquee extends React.Component {
         const data = locale[lang]
 
         const {
-          title_page, content, description, team_title, body, funding_title, funding_content
+          title_page, image_banner, video_banner, content, description, team_title, body, funding_title, funding_content
         } = data
 
         return <PageWrapper invert title="O que é" description="O Fora é sobre possibilidades de viver a cidade e acontece por meio de pesquisas sociais, manifestações culturais e ações no espaço público." cover='https://fora.cdn.prismic.io/fora/21c85cdcacb048a984d1150c855296cbda4b1095_fora-dobra-do-corpo-1-.jpg'>
           <div className='about-banner'>
             <video playsInline loop muted autoPlay>
-              <source src="static/oquee.mp4" type="video/mp4" />
+              <source src={video_banner.url} type="video/mp4"/>
               Your browser does not support the video tag.
             </video>
+            <img src={image_banner.url} style={{ margin: '0 auto' }} />
           </div>
 
           <div className='about-title'>
@@ -96,8 +97,12 @@ export default class Oquee extends React.Component {
             }
             .about-banner {
               background-color: #dfdfdf;
+              text-align: center;
             }
             .about-banner video {
+              width: 100%;
+            }
+            .about-banner img {
               width: 100%;
             }
             .about-title {
@@ -171,6 +176,14 @@ export default class Oquee extends React.Component {
               .info .grid {
                 grid-template-columns: 1fr 1fr 1fr 1fr;
               }
+            }
+            @media only screen and (orientation: landscape) {
+              .about-banner img { display: none; }
+              .about-banner video { display: block; }
+            }
+            @media only screen and (orientation: portrait) {
+              .about-banner img { display: block; }
+              .about-banner video { display: none; }
             }
           `}</style>
         </PageWrapper>
