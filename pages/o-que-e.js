@@ -32,7 +32,7 @@ export default class Oquee extends React.Component {
 
         return <PageWrapper invert title="O que é" description="O Fora é sobre possibilidades de viver a cidade e acontece por meio de pesquisas sociais, manifestações culturais e ações no espaço público." cover='https://fora.cdn.prismic.io/fora/21c85cdcacb048a984d1150c855296cbda4b1095_fora-dobra-do-corpo-1-.jpg'>
           <div className='about-banner'>
-            <video playsinline loop muted autoPlay>
+            <video playsInline loop muted autoPlay>
               <source src="static/oquee.mp4" type="video/mp4" />
               Your browser does not support the video tag.
             </video>
