@@ -11,7 +11,7 @@ const MenuLang = () =>
           href={{ pathname: '' }}
         >
           Pt
-        </MenuLink>{' / '}
+        </MenuLink>{' - '}
         <MenuLink
           onClick={context && context.setLangEn}
           href={{ pathname: '' }}

@@ -92,7 +92,8 @@ export default class Oquee extends React.Component {
               position: relative;
             }
             .menu-lang-about {
-              position: fixed;
+              position: absolute;
+              color: white;
               right: 21px;
               top: 20px;
               font-family: 'Source Serif Pro', serif;
@@ -169,7 +170,7 @@ export default class Oquee extends React.Component {
               .info .grid > div {
                 margin-bottom: 0;
               }
-              .menu-lang-about { top: 32px; }
+              .menu-lang-about { top: 32px; right: 29px }
             }
             @media only screen and (min-width: 1050px) {
               .info .grid {
