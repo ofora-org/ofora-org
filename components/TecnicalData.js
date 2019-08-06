@@ -1,5 +1,5 @@
 import React from 'react'
-import P from '~/components/base/Paragraph'
+import P from './base/Paragraph'
 
 const TecnicalData = ({ tecnicalData }) => {
   console.log(tecnicalData)

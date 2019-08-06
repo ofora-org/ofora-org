@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-import { DesktopOnly } from '~/components/struct/Media'
+import { DesktopOnly } from './struct/Media'
 
 export default class FloatingTitle extends React.Component {
   state = {

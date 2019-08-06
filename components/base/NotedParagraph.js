@@ -1,6 +1,6 @@
 import React from 'react'
-import P from '~/components/base/Paragraph'
-import { MobileOnly, DesktopOnly } from '~/components/struct/Media'
+import P from './Paragraph'
+import { MobileOnly, DesktopOnly } from '../struct/Media'
 
 const NotedParagraph = ({ text, note, style }) => (
   <div style={{ ...baseStyle, ...style }}>

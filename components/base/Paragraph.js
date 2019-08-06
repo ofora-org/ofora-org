@@ -1,5 +1,5 @@
 import React from 'react'
-import { MobileOnly, DesktopOnly } from '~/components/struct/Media'
+import { MobileOnly, DesktopOnly } from '../struct/Media'
 import { RichText } from 'prismic-reactjs'
 
 export default class ResponsiveParagraph extends React.Component {

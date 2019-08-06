@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from '~/components/base/Link'
+import Link from './base/Link'
 
 const TagsTeaser = ({ tags }) => {
   if (!tags.length) return false

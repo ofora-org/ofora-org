@@ -1,5 +1,5 @@
 import React from 'react'
-import Image from '~/components/base/Image'
+import Image from './base/Image'
 import Link from './base/Link'
 
 export default class SliderTunnelImage extends React.Component {

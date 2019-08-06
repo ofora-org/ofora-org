@@ -1,9 +1,9 @@
 import React from 'react'
-import { getAuthors } from '~/lib/backend'
-import PageWrapper from '~/components/struct/PageWrapper'
-import ContentWrapper from '~/components/struct/ContentWrapper'
-import Title from '~/components/Title'
-import MenuLink from '~/components/MenuLink'
+import { getAuthors } from '../lib/backend'
+import PageWrapper from '../components/struct/PageWrapper'
+import ContentWrapper from '../components/struct/ContentWrapper'
+import Title from '../components/Title'
+import MenuLink from '../components/MenuLink'
 
 export default class pageAuthors extends React.Component {
   static async getInitialProps () {

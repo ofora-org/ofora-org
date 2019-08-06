@@ -1,8 +1,8 @@
 import React from 'react'
-import Video from '~/components/base/Video'
-import Image from '~/components/base/Image'
-import Modal from '~/components/struct/Modal'
-import Gallery from '~/components/base/Gallery'
+import Video from './Video'
+import Image from './Image'
+import Modal from '../struct/Modal'
+import Gallery from './Gallery'
 
 const GalleryModal = ({ items, onBgClick, visible, wrapperProps, onChangeItem, ...props }) =>
   <Modal

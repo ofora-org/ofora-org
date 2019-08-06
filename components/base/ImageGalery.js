@@ -1,8 +1,8 @@
 import React from 'react'
 import { withState, withHandlers, compose, withProps } from 'recompose'
-import Image from '~/components/base/Image'
-import Video from '~/components/base/Video'
-import MenuLink from '~/components/MenuLink'
+import Image from './Image'
+import Video from './Video'
+import MenuLink from '../MenuLink'
 import GalleryModal from './GalleryModal'
 import Gallery from './Gallery'
 

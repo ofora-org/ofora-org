@@ -1,6 +1,6 @@
 import React from 'react'
-import ImageGrid from '~/components/ImageGrid'
-import ContentWrapper from '~/components/struct/ContentWrapper'
+import ImageGrid from './ImageGrid'
+import ContentWrapper from './struct/ContentWrapper'
 
 export const RelatedContentWrapper = ({ related }) => (
   related.length > 0 &&
