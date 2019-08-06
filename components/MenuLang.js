@@ -29,8 +29,4 @@ const MenuLang = () =>
     }}
   </Consumer>
 
-const langActive = {
-  color: 'rgb(0,17,254)'
-}
-
 export default MenuLang
