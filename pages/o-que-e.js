@@ -92,7 +92,7 @@ export default class Oquee extends React.Component {
               position: relative;
             }
             .menu-lang-about {
-              position: absolute;
+              position: fixed;
               color: white;
               right: 21px;
               top: 20px;

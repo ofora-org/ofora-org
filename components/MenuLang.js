@@ -24,6 +24,11 @@ const MenuLang = () =>
             font-weight: 600;
             font-size: 29px;
           }
+          @media only screen and (min-width: 752px) {
+            .menu-lang {
+              font-size: 41px;
+            }
+          }
         `}</style>
       </div>
     }}
