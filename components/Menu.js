@@ -71,7 +71,7 @@ export default class Menu extends React.Component {
             @media only screen and (min-width: 752px) {
               .menu { font-size: 41px }
               .mainMenu { top: 21px; left: 175px; }
-              .menu.lang { top: 32px; right: 29px }
+              .menu.lang { top: 21px; right: 29px }
               .secondaryMenu { right: 29px }
             }
           `}</style>
