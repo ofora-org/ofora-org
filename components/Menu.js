@@ -60,7 +60,7 @@ export default class Menu extends React.Component {
               top: 55px; left: 20px;
             }
             .menu.lang {
-              right: 20px;
+              right: 21px;
               top: 20px;
             }
             .secondaryMenu {
@@ -71,7 +71,7 @@ export default class Menu extends React.Component {
             @media only screen and (min-width: 752px) {
               .menu { font-size: 41px }
               .mainMenu { top: 21px; left: 175px; }
-              .menu.lang { right: 40px; top: 32px; }
+              .menu.lang { top: 32px; }
             }
           `}</style>
         </Modal>

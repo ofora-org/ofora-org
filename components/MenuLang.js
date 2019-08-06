@@ -10,13 +10,13 @@ const MenuLang = () =>
           onClick={context && context.setLangBr}
           href={{ pathname: '' }}
         >
-          PT
+          Pt
         </MenuLink>{' / '}
         <MenuLink
           onClick={context && context.setLangEn}
           href={{ pathname: '' }}
         >
-          EN
+          En
         </MenuLink>
         <style jsx>{`
           .menu-lang {

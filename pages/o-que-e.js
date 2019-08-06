@@ -30,7 +30,11 @@ export default class Oquee extends React.Component {
           title_page, image_banner, video_banner, content, description, team_title, body, funding_title, funding_content
         } = data
 
-        return <PageWrapper invert title="O que é" description="O Fora é sobre possibilidades de viver a cidade e acontece por meio de pesquisas sociais, manifestações culturais e ações no espaço público." cover='https://fora.cdn.prismic.io/fora/21c85cdcacb048a984d1150c855296cbda4b1095_fora-dobra-do-corpo-1-.jpg'>
+        return <PageWrapper invert title="O que é" description="O Fora é sobre possibilidades de viver a cidade e acontece por meio de pesquisas sociais, manifestações culturais e ações no espaço público." cover='https://fora.cdn.prismic.io/fora/21c85cdcacb048a984d1150c855296cbda4b1095_fora-dobra-do-corpo-1-.jpg'>          
+          <div className='menu-lang-about'>
+            <MenuLang />
+          </div>
+
           <div className='about-banner'>
             <video playsInline loop muted autoPlay>
               <source src={video_banner.url} type="video/mp4"/>
@@ -48,9 +52,6 @@ export default class Oquee extends React.Component {
 
           <div className='about' style={{background: '#dfdfdf'}}>
             <ContentWrapper style={pageStyle}>
-              <div className='menu-lang-about'>
-                <MenuLang />
-              </div>
               <div className='rich-text content'>
                 {RichText.render(content)}
               </div>
@@ -91,9 +92,11 @@ export default class Oquee extends React.Component {
               position: relative;
             }
             .menu-lang-about {
-              max-width: 710px;
-              margin: 0 auto;
-              text-align: right;
+              position: fixed;
+              right: 21px;
+              top: 20px;
+              font-family: 'Source Serif Pro', serif;
+              z-index: 1;
             }
             .about-banner {
               background-color: #dfdfdf;
@@ -166,6 +169,7 @@ export default class Oquee extends React.Component {
               .info .grid > div {
                 margin-bottom: 0;
               }
+              .menu-lang-about { top: 32px; }
             }
             @media only screen and (min-width: 1050px) {
               .info .grid {
