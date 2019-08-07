@@ -170,7 +170,9 @@ export default class Oquee extends React.Component {
               .info .grid > div {
                 margin-bottom: 0;
               }
-              .menu-lang-about { top: 32px; right: 29px }
+              .menu-lang-about {
+                right: 29px;
+              }
             }
             @media only screen and (min-width: 1050px) {
               .info .grid {
