@@ -52,7 +52,7 @@ export default class Oquee extends React.Component {
 
           <div className='about' style={{background: '#dfdfdf'}}>
             <ContentWrapper style={pageStyle}>
-              <div className='rich-text content'>
+              <div className='rich-text content' id="about">
                 {RichText.render(content)}
               </div>
               <div className='rich-text description'>
