@@ -66,14 +66,18 @@ export default class ImageGridItem extends React.Component {
   }
 
   renderPhotos = () => {
-    const photos = this.props.data.photos || [{photo: this.props.data.cover}]
-    const photosOrVideo = photos.length < 1 ? [{photo: {thumb: {
-      url: this.props.data.videos[0].video.thumbnail_url,
-      dimensions: {
-        height: this.props.data.videos[0].video.height,
-        width: this.props.data.videos[0].video.width,
-      }
-    }}}] : photos
+    const photos = this.props.data.photos || [{ photo: this.props.data.cover }]
+    const photosOrVideo = photos.length < 1
+      ? this.props.data.videos.map((video, index) => ({
+        photo: { [`${index === 0 ? 'cover' : 'thumb'}`]: {
+          url: video.video.thumbnail_url,
+          dimensions: {
+            height: video.video.height,
+            width: video.video.width,
+          }
+        } }
+      })) : photos
+
     return (
       <div>
         {photosOrVideo[2] && <div style={{ ...imageWrapperStyle, transform: 'translate3d(21px, -21px, 0)' }}>

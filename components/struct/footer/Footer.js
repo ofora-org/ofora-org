@@ -44,7 +44,7 @@ export default class Footer extends React.Component {
             </a>
           </ContentWrapper>
           <ContentWrapper  style={{background: 'white', paddingTop: 0 }}>
-            <img src='static/cnpj.png' width='30px' />
+            <img src='/static/cnpj.png' width='30px' />
             <span className='ccText'>
               CNPJ nº 14.113.581/0001-82, São Paulo (SP), Brasil
             </span>
